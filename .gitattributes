@@ -1,0 +1,16 @@
+# Normaliza los archivos de texto a LF dentro del repositorio
+* text=auto eol=lf
+
+# Trata estos formatos como binarios (Git no debe tocar sus saltos de línea)
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.mp3 binary
+*.mp4 binary
+*.wav binary
+*.woff binary
+*.woff2 binary

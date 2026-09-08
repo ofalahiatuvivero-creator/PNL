@@ -1,0 +1,29 @@
+{
+  "name": "raices-pnl",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Raíces - Aplicación de PNL y sanación emocional",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "lucide-react": "^0.454.0",
+    "next": "^14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^3.4.14"
+  },
+  "overrides": {
+    "postcss": "^8.5.28"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}

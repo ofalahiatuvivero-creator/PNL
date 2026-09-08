@@ -1,0 +1,69 @@
+{
+  "_comentario": "DICCIONARIO DE ENFERMEDADES EMOCIONALES. El administrador puede añadir todas las entradas que necesite copiando la estructura. Campos: nombre (dolencia física/emocional), patron (patrón de pensamiento que la origina), nuevoModelo (nueva creencia sanadora), accionPNL (ejercicio o práctica recomendada). El campo 'ejercicioId' es opcional y enlaza con un ejercicio del módulo PNL.",
+  "entradas": [
+    {
+      "id": "ansiedad",
+      "nombre": "Ansiedad",
+      "patron": "Desconfianza en el fluir de la vida. Vivir anticipando peligros futuros que aún no han ocurrido y sentir que debo controlarlo todo para estar a salvo.",
+      "nuevoModelo": "Estoy a salvo en el momento presente. Confío en que soy capaz de afrontar lo que llegue, cuando llegue.",
+      "accionPNL": "Practica el 'Cambio de Submodalidades' para reducir la intensidad de la imagen que te angustia, acompañado de respiración cuadrada.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "migrana",
+      "nombre": "Migraña / Dolor de cabeza",
+      "patron": "Autoexigencia y presión mental. Resistencia a fluir, deseo de que todo salga perfecto y crítica hacia uno mismo cuando no ocurre.",
+      "nuevoModelo": "Me permito soltar la exigencia. Suelto la necesidad de ser perfecto/a y me relajo en el proceso de la vida.",
+      "accionPNL": "El 'Espejo Amable' ayuda a suavizar el diálogo interno crítico que tensa el cuerpo.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "garganta",
+      "nombre": "Problemas de garganta",
+      "patron": "Palabras retenidas. Sentir que no puedo expresar lo que siento, tragarme la rabia o el miedo a ser juzgado si hablo.",
+      "nuevoModelo": "Tengo derecho a expresar quién soy. Mi voz importa y la comunico con calma y respeto.",
+      "accionPNL": "Usa el 'Ancla de Recursos' para acceder a un estado de seguridad antes de una conversación difícil.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "insomnio",
+      "nombre": "Insomnio",
+      "patron": "Mente que no se apaga por miedo a soltar el control. Culpa o preocupación que se reactivan al llegar el silencio de la noche.",
+      "nuevoModelo": "Con amor suelto el día de hoy. Me entrego al descanso confiando en que mañana sabré responder.",
+      "accionPNL": "La 'Respiración Cuadrada' y la meditación 'Tu refugio seguro' preparan el cuerpo para dormir.",
+      "ejercicioId": "respiracion-cuadrada"
+    },
+    {
+      "id": "gastritis",
+      "nombre": "Gastritis / Problemas digestivos",
+      "patron": "Dificultad para 'digerir' situaciones o personas. Preocupación sostenida y miedo a lo nuevo o desconocido.",
+      "nuevoModelo": "Asimilo la vida con calma. Elijo qué me nutre y suelto con paz lo que no puedo cambiar.",
+      "accionPNL": "Trabaja el 'Cambio de Submodalidades' sobre la situación que 'no puedes digerir'.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "espalda",
+      "nombre": "Dolor de espalda (zona lumbar)",
+      "patron": "Sensación de falta de apoyo o de cargar con responsabilidades ajenas. Miedo relacionado con lo económico o la seguridad.",
+      "nuevoModelo": "La vida me sostiene. Confío en el apoyo que tengo y suelto las cargas que no me corresponden.",
+      "accionPNL": "El 'Círculo de Excelencia' ayuda a reconectar con tu propia fuerza y sensación de sostén.",
+      "ejercicioId": "circulo-de-excelencia"
+    },
+    {
+      "id": "piel",
+      "nombre": "Afecciones de la piel",
+      "patron": "Sentirse amenazado o herido por el entorno. Ansiedad y miedo antiguo a no ser aceptado tal como se es.",
+      "nuevoModelo": "Estoy en paz conmigo. Me acepto y me protejo con amor; el mundo es un lugar seguro para mí.",
+      "accionPNL": "Refuerza tu autoestima con 'El Espejo Amable' de forma diaria.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "hipertension",
+      "nombre": "Tensión alta (emocional)",
+      "patron": "Problema emocional no resuelto que se mantiene contenido durante mucho tiempo. Exceso de control y dificultad para delegar.",
+      "nuevoModelo": "Suelto el pasado con alegría. Elijo la paz y permito que la vida fluya a través de mí.",
+      "accionPNL": "Practica el 'Ancla de Recursos' para instalar un estado de calma accesible al instante.",
+      "ejercicioId": "ancla-de-recursos"
+    }
+  ]
+}

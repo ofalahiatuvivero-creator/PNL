@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------------------------------------
+   ESTILOS GLOBALES
+   Base cálida y suave para toda la aplicación.
+   ------------------------------------------------------------- */
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-cream text-ink font-sans antialiased;
+  }
+
+  /* Títulos con la serif suave por defecto */
+  h1, h2, h3 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  /* Contenedor mobile-first: centra el contenido y limita el ancho en
+     pantallas grandes, simulando la experiencia de una app de móvil. */
+  .app-shell {
+    @apply mx-auto w-full max-w-md min-h-screen bg-cream relative;
+  }
+
+  /* Tarjeta base reutilizable */
+  .card {
+    @apply bg-white rounded-3xl shadow-card p-5;
+  }
+
+  /* Botón primario cálido */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-sage-500
+           px-6 py-3 font-display font-semibold text-white transition
+           hover:bg-sage-600 active:scale-[0.98] disabled:opacity-40
+           disabled:cursor-not-allowed disabled:hover:bg-sage-500;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+           border border-sage-200 bg-white px-6 py-3 font-display font-semibold
+           text-sage-600 transition hover:bg-sage-50 active:scale-[0.98];
+  }
+}
+
+@layer utilities {
+  /* Oculta la barra de scroll en carruseles horizontales (chips, etc.) */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Barra de desplazamiento discreta */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #DECBAB;
+  border-radius: 9999px;
+}

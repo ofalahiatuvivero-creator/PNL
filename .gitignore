@@ -1,0 +1,28 @@
+# dependencias
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# producción
+/build
+
+# entorno
+.env*.local
+
+# sistema
+.DS_Store
+*.pem
+Thumbs.db
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# herramientas locales de Claude Code (no necesarias para desplegar)
+.claude/
+
+# instalador (no forma parte del proyecto)
+Claude Setup.exe
