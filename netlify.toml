@@ -1,0 +1,11 @@
+# Configuración de despliegue en Netlify para la app Next.js "Raíces".
+# Netlify detecta Next.js automáticamente, pero dejamos esto explícito
+# para evitar cualquier ambigüedad en la detección del framework.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Runtime oficial de Netlify para Next.js (App Router, SSR, etc.).
+# Netlify lo instala automáticamente durante el build.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
