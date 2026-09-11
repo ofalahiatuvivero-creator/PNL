@@ -54,7 +54,7 @@ app/                         Rutas (App Router de Next.js)
 │   └── corazones-gemelos/
 │       ├── page.jsx         Preparación OBLIGATORIA (aviso + checklist)
 │       └── reproducir/      Reproductor (protegido por la preparación)
-├── diccionario/page.jsx     Módulo 5 · Diccionario de enfermedades emocionales
+├── diccionario/page.jsx     Módulo 5 · Diccionario Bio-Emocional (A-Z)
 ├── biblioteca/page.jsx      Módulo 6 · Biblioteca (visor de PDF + subida)
 ├── diario/page.jsx          Mi Espacio · Diario emocional + check-in de ánimo
 └── icon.svg                 Ícono de la app (favicon)
@@ -79,7 +79,7 @@ editarse sin tocar el diseño:
 | `data/playlist.js` | Pistas de la Zona Zen (música, frecuencias, afirmaciones). |
 | `data/meditations.js` | Meditaciones guiadas (incluida Corazones Gemelos). |
 | `data/preparation.js` | Aviso médico y checklist de ejercicios previos. |
-| `data/dictionary.json` | Entradas del diccionario emocional. |
+| `data/dictionary.json` | Entradas del diccionario bio-emocional (A-Z). |
 | `data/books.js` | Libros de la biblioteca. |
 | `data/moods.js` | Estados de ánimo del check-in del diario. |
 
@@ -130,5 +130,5 @@ El acceso directo al reproductor por URL redirige de nuevo a la preparación.
 - La subida de PDF desde la Biblioteca permite **visualizar** un documento al
   instante durante la sesión. Para guardarlos de forma permanente se necesita
   conectar un almacenamiento/servidor (backend).
-- El diccionario emocional es una guía de reflexión y **no sustituye** el
+- El diccionario bio-emocional es una guía de reflexión y **no sustituye** el
   diagnóstico ni el tratamiento médico profesional.

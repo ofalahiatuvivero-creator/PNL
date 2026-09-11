@@ -32,8 +32,8 @@ const pilares = [
   },
   {
     href: '/diccionario',
-    titulo: 'Diccionario Emocional',
-    descripcion: 'Descubre el mensaje de tu cuerpo.',
+    titulo: 'Diccionario Bio-Emocional',
+    descripcion: 'Descubre el mensaje emocional de tu cuerpo.',
     icon: 'BookHeart',
     color: 'sage',
   },

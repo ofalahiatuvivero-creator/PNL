@@ -7,8 +7,8 @@ import { ChevronDown, Brain, Sprout, Sparkles } from 'lucide-react';
 /**
  * DictionaryEntry
  * -------------------------------------------------------------
- * Tarjeta expandible (acordeón) de una entrada del diccionario de
- * enfermedades emocionales. Muestra:
+ * Tarjeta expandible (acordeón) de una entrada del diccionario
+ * bio-emocional. Muestra:
  *   - Patrón de pensamiento que la causa
  *   - Nuevo modelo mental (creencia sanadora)
  *   - Acción PNL recomendada (con enlace al ejercicio si existe)
@@ -26,8 +26,15 @@ export default function DictionaryEntry({ entry }) {
         className="flex w-full items-center justify-between gap-3 p-4 text-left"
         aria-expanded={open}
       >
-        <span className="font-display text-base font-semibold text-ink">
-          {entry.nombre}
+        <span className="min-w-0">
+          <span className="block font-display text-base font-semibold text-ink">
+            {entry.nombre}
+          </span>
+          {entry.sistema && (
+            <span className="mt-1 inline-block rounded-full bg-sage-50 px-2.5 py-0.5 text-[11px] font-medium text-sage-600">
+              {entry.sistema}
+            </span>
+          )}
         </span>
         <ChevronDown
           className={`h-5 w-5 shrink-0 text-sage-500 transition-transform ${open ? 'rotate-180' : ''}`}

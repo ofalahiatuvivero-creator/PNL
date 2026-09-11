@@ -14,7 +14,7 @@ const links = [
   { href: '/', label: 'Inicio', icon: Home },
   { href: '/ejercicios', label: 'PNL', icon: Sparkles },
   { href: '/zen', label: 'Zen', icon: Wind },
-  { href: '/diccionario', label: 'Emociones', icon: BookHeart },
+  { href: '/diccionario', label: 'Bio-Emo', icon: BookHeart },
   { href: '/biblioteca', label: 'Libros', icon: Library },
 ];
 

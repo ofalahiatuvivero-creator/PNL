@@ -1,69 +1,568 @@
 {
-  "_comentario": "DICCIONARIO DE ENFERMEDADES EMOCIONALES. El administrador puede añadir todas las entradas que necesite copiando la estructura. Campos: nombre (dolencia física/emocional), patron (patrón de pensamiento que la origina), nuevoModelo (nueva creencia sanadora), accionPNL (ejercicio o práctica recomendada). El campo 'ejercicioId' es opcional y enlaza con un ejercicio del módulo PNL.",
+  "_comentario": "DICCIONARIO BIO-EMOCIONAL. Contenido original inspirado en los patrones generales de la biodescodificación (no reproduce ninguna obra con derechos de autor). Es una guía de reflexión emocional, NO un diagnóstico médico. El administrador puede añadir todas las entradas que necesite copiando la estructura. Campos: nombre (dolencia física/emocional), sistema (zona/aparato del cuerpo, para agrupar), patron (conflicto emocional que suele estar detrás), nuevoModelo (nueva creencia sanadora), accionPNL (práctica recomendada). 'ejercicioId' es opcional y enlaza con un ejercicio del módulo PNL.",
+  "nota": "La biodescodificación propone que muchas dolencias físicas guardan relación con emociones y conflictos internos. Esta información es una guía de autoconocimiento y acompañamiento emocional; NO sustituye el diagnóstico ni el tratamiento de un profesional de la salud. Escúchate con cariño y consulta siempre a tu médico.",
   "entradas": [
     {
-      "id": "ansiedad",
-      "nombre": "Ansiedad",
-      "patron": "Desconfianza en el fluir de la vida. Vivir anticipando peligros futuros que aún no han ocurrido y sentir que debo controlarlo todo para estar a salvo.",
-      "nuevoModelo": "Estoy a salvo en el momento presente. Confío en que soy capaz de afrontar lo que llegue, cuando llegue.",
-      "accionPNL": "Practica el 'Cambio de Submodalidades' para reducir la intensidad de la imagen que te angustia, acompañado de respiración cuadrada.",
-      "ejercicioId": "cambio-submodalidades"
-    },
-    {
-      "id": "migrana",
-      "nombre": "Migraña / Dolor de cabeza",
-      "patron": "Autoexigencia y presión mental. Resistencia a fluir, deseo de que todo salga perfecto y crítica hacia uno mismo cuando no ocurre.",
-      "nuevoModelo": "Me permito soltar la exigencia. Suelto la necesidad de ser perfecto/a y me relajo en el proceso de la vida.",
-      "accionPNL": "El 'Espejo Amable' ayuda a suavizar el diálogo interno crítico que tensa el cuerpo.",
+      "id": "acne",
+      "nombre": "Acné",
+      "sistema": "Piel",
+      "patron": "Rechazo a la propia imagen y conflicto con la identidad. Sentir que no gusto como soy o querer marcar distancia con los demás.",
+      "nuevoModelo": "Me acepto y me quiero tal como soy hoy. Mi valor no depende de mi aspecto.",
+      "accionPNL": "Trabaja el 'Espejo Amable' a diario para suavizar la mirada crítica hacia ti.",
       "ejercicioId": "espejo-amable"
     },
     {
+      "id": "acido-urico",
+      "nombre": "Ácido úrico / Gota",
+      "sistema": "Sistema óseo y metabólico",
+      "patron": "Necesidad de dominar y de tener el control, con impaciencia y rigidez ante quienes no hacen las cosas 'a mi manera'.",
+      "nuevoModelo": "Suelto el control de lo que no me corresponde. Dejo que la vida y los demás fluyan a su ritmo.",
+      "accionPNL": "Practica la 'Respiración Cuadrada' cuando notes impaciencia o necesidad de mandar."
+    },
+    {
+      "id": "alergias",
+      "nombre": "Alergias",
+      "sistema": "Sistema inmunitario",
+      "patron": "Rechazo intenso a algo o a alguien. Vale la pena preguntarse: ¿a qué o a quién me volví 'alérgico' emocionalmente?",
+      "nuevoModelo": "Estoy a salvo. Puedo poner límites sanos sin necesidad de rechazar la vida.",
+      "accionPNL": "Usa el 'Cambio de Submodalidades' sobre la situación o persona que te genera rechazo.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "amigdalitis",
+      "nombre": "Amigdalitis / Anginas",
+      "sistema": "Garganta",
+      "patron": "Algo (un 'bocado' emocional, unas palabras) que no puedo tragar ni expresar. Enfado o miedo que se queda atascado.",
+      "nuevoModelo": "Me permito expresar lo que siento con calma. Mi voz tiene derecho a salir.",
+      "accionPNL": "El 'Ancla de Recursos' te da seguridad para decir lo que necesitas.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "ansiedad",
+      "nombre": "Ansiedad",
+      "sistema": "Mente y emociones",
+      "patron": "Anticipar peligros que aún no ocurren y sentir que debo controlarlo todo para estar a salvo. Desconfianza en el fluir de la vida.",
+      "nuevoModelo": "Estoy a salvo en el presente. Confío en que sabré responder a lo que llegue, cuando llegue.",
+      "accionPNL": "Reduce la intensidad de la imagen que te angustia con el 'Cambio de Submodalidades'.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "artritis",
+      "nombre": "Artritis / Artrosis",
+      "sistema": "Sistema óseo y articular",
+      "patron": "Autocrítica y rigidez interior. Sentir que no se me valora y guardar resentimiento sin poder soltarlo.",
+      "nuevoModelo": "Me trato con flexibilidad y ternura. Suelto los reproches y elijo la paz.",
+      "accionPNL": "El 'Espejo Amable' ablanda el diálogo interno duro que tensa el cuerpo.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "asma",
+      "nombre": "Asma",
+      "sistema": "Aparato respiratorio",
+      "patron": "Sensación de ahogo emocional, de que 'me falta espacio' para ser yo. A veces, exceso de protección o de presencia de alguien.",
+      "nuevoModelo": "Tengo derecho a mi propio espacio y a respirar mi vida. Estoy seguro/a siendo yo.",
+      "accionPNL": "Acompaña tu calma con la 'Respiración Cuadrada' y la Respiración Guiada de la Zona Zen.",
+      "ejercicioId": "respiracion-cuadrada"
+    },
+    {
+      "id": "bronquitis",
+      "nombre": "Bronquitis",
+      "sistema": "Aparato respiratorio",
+      "patron": "Tensiones y discusiones en el ambiente cercano (familia, hogar). El clima emocional se ha vuelto irrespirable.",
+      "nuevoModelo": "Elijo la calma en mi entorno. Lo que otros discuten no tiene por qué habitar en mí.",
+      "accionPNL": "Crea un 'Ancla de Recursos' de calma para volver a ella en los momentos tensos.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "bruxismo",
+      "nombre": "Bruxismo (rechinar los dientes)",
+      "sistema": "Sistema nervioso",
+      "patron": "Rabia y tensión contenidas durante el día que no encuentran salida y se descargan de noche apretando la mandíbula.",
+      "nuevoModelo": "Encuentro maneras sanas de soltar mi tensión. Puedo relajar la mandíbula y descansar.",
+      "accionPNL": "Antes de dormir, haz la Respiración Guiada de la Zona Zen para descargar la tensión."
+    },
+    {
+      "id": "calculos-renales",
+      "nombre": "Cálculos renales (piedras)",
+      "sistema": "Aparato urinario",
+      "patron": "Pensamientos y emociones que se han 'endurecido': rencores antiguos y miedos que no se disuelven.",
+      "nuevoModelo": "Disuelvo con amor lo que ya no necesito cargar. Dejo fluir mis emociones.",
+      "accionPNL": "Usa el 'Cambio de Submodalidades' para ablandar un recuerdo o rencor que aún pesa.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "cervicalgia",
+      "nombre": "Cervicales (dolor cervical)",
+      "sistema": "Sistema óseo y articular",
+      "patron": "Rigidez ante otras opiniones o posturas, testarudez, o el peso de sostener demasiadas responsabilidades a la vez.",
+      "nuevoModelo": "Me permito mirar la vida desde otros ángulos. Suelto la carga que no me toca sostener.",
+      "accionPNL": "El 'Círculo de Excelencia' te ayuda a reconectar con tu fuerza y soltar el peso.",
+      "ejercicioId": "circulo-de-excelencia"
+    },
+    {
+      "id": "ciatica",
+      "nombre": "Ciática",
+      "sistema": "Sistema óseo y nervioso",
+      "patron": "Miedo por el dinero o el futuro, sensación de no tener apoyo o de caminar sin base segura.",
+      "nuevoModelo": "La vida me sostiene. Confío en mis recursos y avanzo con paso firme.",
+      "accionPNL": "Refuerza tu sensación de sostén con el 'Círculo de Excelencia'.",
+      "ejercicioId": "circulo-de-excelencia"
+    },
+    {
+      "id": "cistitis",
+      "nombre": "Cistitis",
+      "sistema": "Aparato urinario",
+      "patron": "Enfado o decepción en el propio 'territorio' (pareja, hogar, trabajo). Sentirse invadido o dolido por alguien cercano.",
+      "nuevoModelo": "Marco mis límites con calma. Mi territorio es seguro y yo decido en él.",
+      "accionPNL": "Practica el 'Ancla de Recursos' para responder desde la serenidad, no desde el enfado.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "colesterol",
+      "nombre": "Colesterol alto",
+      "sistema": "Sistema circulatorio",
+      "patron": "Dificultad para disfrutar y recibir la alegría de la vida. Los 'canales' del placer y la ilusión se sienten obstruidos.",
+      "nuevoModelo": "Me abro a recibir alegría y placer. Merezco disfrutar de las cosas buenas.",
+      "accionPNL": "Ancla un estado de alegría con el 'Ancla de Recursos' y actívalo cada día.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "colon-irritable",
+      "nombre": "Colon irritable",
+      "sistema": "Aparato digestivo",
+      "patron": "Miedo e inseguridad, aferrarse a lo vivido sin poder soltar. Retener 'lo sucio' o desagradable de una situación.",
+      "nuevoModelo": "Suelto lo que ya cumplió su función. Confío y me permito soltar sin miedo.",
+      "accionPNL": "El 'Cambio de Submodalidades' ayuda a soltar una situación que sigues reteniendo.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "depresion",
+      "nombre": "Depresión",
+      "sistema": "Mente y emociones",
+      "patron": "Pérdida de sentido o de ilusión, rabia dirigida hacia dentro y desconexión del propio deseo de vivir.",
+      "nuevoModelo": "Poco a poco reconecto con lo que me hace bien. Merezco luz, y hoy elijo un pequeño paso hacia ella.",
+      "accionPNL": "Empieza suave con 'El Espejo Amable'. Si el malestar es intenso o prolongado, busca apoyo profesional.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "dermatitis",
+      "nombre": "Dermatitis / Eczema",
+      "sistema": "Piel",
+      "patron": "Sentirse herido por el contacto o la cercanía de alguien. Conflicto de separación o de contacto no resuelto.",
+      "nuevoModelo": "Estoy en paz con mi piel y con mi entorno. Elijo con quién y cómo me acerco.",
+      "accionPNL": "Fortalece tu autoestima y tu calma con 'El Espejo Amable'.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "diabetes",
+      "nombre": "Diabetes",
+      "sistema": "Sistema endocrino",
+      "patron": "Sensación de falta de dulzura en la vida, control excesivo y tristeza por algo que se anhelaba y no llegó.",
+      "nuevoModelo": "La dulzura vive en mí y la creo cada día. Suelto el control y me permito disfrutar el presente.",
+      "accionPNL": "Ancla momentos de dulzura y disfrute con el 'Ancla de Recursos'.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "diarrea",
+      "nombre": "Diarrea",
+      "sistema": "Aparato digestivo",
+      "patron": "Querer expulsar cuanto antes una situación que asusta, sin darse tiempo para asimilarla.",
+      "nuevoModelo": "Me doy el tiempo que necesito. Puedo asimilar la vida con calma y seguridad.",
+      "accionPNL": "La 'Respiración Cuadrada' te ayuda a frenar y volver al presente.",
+      "ejercicioId": "respiracion-cuadrada"
+    },
+    {
+      "id": "dolor-cabeza",
+      "nombre": "Dolor de cabeza / Cefalea",
+      "sistema": "Cabeza",
+      "patron": "Autoexigencia y exceso de pensamiento. No permitirse fallar y querer que todo salga perfecto.",
+      "nuevoModelo": "Suelto la exigencia. Me permito descansar la mente y ser suficiente tal como soy.",
+      "accionPNL": "Suaviza tu diálogo interno con 'El Espejo Amable'.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "espalda",
+      "nombre": "Dolor de espalda",
+      "sistema": "Sistema óseo y articular",
+      "patron": "Sentir el peso de responsabilidades (a menudo ajenas) y falta de apoyo. La zona lumbar suele ligarse al miedo económico.",
+      "nuevoModelo": "La vida me sostiene. Suelto las cargas que no me corresponden y confío en mi apoyo.",
+      "accionPNL": "El 'Círculo de Excelencia' reconecta con tu propia fuerza y sostén.",
+      "ejercicioId": "circulo-de-excelencia"
+    },
+    {
+      "id": "estrenimiento",
+      "nombre": "Estreñimiento",
+      "sistema": "Aparato digestivo",
+      "patron": "Aferrarse al pasado y al control, con miedo a soltar o a que 'falte'. Dificultad para dejar ir personas, cosas o ideas.",
+      "nuevoModelo": "Suelto con confianza lo que ya pasó. Hay espacio para lo nuevo cuando dejo ir.",
+      "accionPNL": "Trabaja el desapego de una situación concreta con el 'Cambio de Submodalidades'.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "faringitis",
+      "nombre": "Faringitis",
+      "sistema": "Garganta",
+      "patron": "Palabras o enojo tragados, miedo a expresar lo que de verdad se siente.",
+      "nuevoModelo": "Me doy permiso para hablar mi verdad con respeto. Mi voz importa.",
+      "accionPNL": "El 'Ancla de Recursos' te da seguridad antes de una conversación difícil.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "fibromialgia",
+      "nombre": "Fibromialgia",
+      "sistema": "Sistema óseo y nervioso",
+      "patron": "Agotamiento por darlo todo a los demás, desvalorización profunda y no permitirse descansar ni recibir.",
+      "nuevoModelo": "Me cuido con la misma entrega con la que cuido a otros. Merezco descanso y ternura.",
+      "accionPNL": "Practica 'El Espejo Amable' y date permiso real para parar y respirar.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "fiebre",
+      "nombre": "Fiebre",
+      "sistema": "Sistema inmunitario",
+      "patron": "Rabia que 'quema' por dentro. El cuerpo se activa intensamente para resolver un conflicto.",
+      "nuevoModelo": "Reconozco mi enfado y lo dejo salir de forma sana. Después, vuelvo a la calma.",
+      "accionPNL": "Cuando baje la intensidad, usa la Respiración Guiada para regresar al equilibrio."
+    },
+    {
       "id": "garganta",
-      "nombre": "Problemas de garganta",
-      "patron": "Palabras retenidas. Sentir que no puedo expresar lo que siento, tragarme la rabia o el miedo a ser juzgado si hablo.",
-      "nuevoModelo": "Tengo derecho a expresar quién soy. Mi voz importa y la comunico con calma y respeto.",
-      "accionPNL": "Usa el 'Ancla de Recursos' para acceder a un estado de seguridad antes de una conversación difícil.",
+      "nombre": "Garganta (dolor)",
+      "sistema": "Garganta",
+      "patron": "No expresar la propia verdad; tragarse las palabras por miedo a ser juzgado.",
+      "nuevoModelo": "Tengo derecho a expresar quién soy. Comunico con calma y respeto.",
+      "accionPNL": "Accede a un estado de seguridad con el 'Ancla de Recursos' antes de hablar.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "gastritis",
+      "nombre": "Gastritis / Estómago",
+      "sistema": "Aparato digestivo",
+      "patron": "No poder 'digerir' a alguien o una contrariedad. Preocupación rumiada y miedo a lo nuevo.",
+      "nuevoModelo": "Asimilo la vida con calma. Elijo qué me nutre y suelto lo que no puedo cambiar.",
+      "accionPNL": "Trabaja con el 'Cambio de Submodalidades' aquello que 'no puedes digerir'.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "gripe",
+      "nombre": "Gripe / Resfriado",
+      "sistema": "Aparato respiratorio",
+      "patron": "Saturación y necesidad de parar. A veces, una contrariedad menor con alguien del entorno.",
+      "nuevoModelo": "Escucho a mi cuerpo cuando pide descanso. Parar también es cuidarme.",
+      "accionPNL": "Regálate una pausa consciente con la Respiración Guiada de la Zona Zen."
+    },
+    {
+      "id": "hemorroides",
+      "nombre": "Hemorroides",
+      "sistema": "Aparato digestivo",
+      "patron": "Presión y miedo relacionados con lo material o con plazos; cargar tensión sin poder soltarla.",
+      "nuevoModelo": "Suelto la presión que me impongo. Confío en que tengo lo necesario y puedo relajarme.",
+      "accionPNL": "Libera tensión con la 'Respiración Cuadrada'.",
+      "ejercicioId": "respiracion-cuadrada"
+    },
+    {
+      "id": "herpes-labial",
+      "nombre": "Herpes labial",
+      "sistema": "Piel",
+      "patron": "Culpa o vergüenza ligada a algo dicho, al afecto o a la sexualidad. Reproche hacia uno mismo.",
+      "nuevoModelo": "Me perdono y me acepto. Puedo hablar y amar sin castigarme.",
+      "accionPNL": "Reconcíliate contigo mismo/a con 'El Espejo Amable'.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "higado",
+      "nombre": "Hígado",
+      "sistema": "Aparato digestivo",
+      "patron": "Miedo a la carencia y a la falta, junto con rabia e injusticias acumuladas.",
+      "nuevoModelo": "Tengo lo suficiente y confío en la abundancia de la vida. Suelto la injusticia con paz.",
+      "accionPNL": "Transforma la carga de una injusticia con el 'Cambio de Submodalidades'.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "hipertension",
+      "nombre": "Hipertensión (tensión alta)",
+      "sistema": "Sistema circulatorio",
+      "patron": "Un conflicto emocional contenido durante mucho tiempo, con exceso de control y dificultad para delegar.",
+      "nuevoModelo": "Suelto el pasado con alegría. Elijo la paz y permito que la vida fluya a través de mí.",
+      "accionPNL": "Instala un estado de calma accesible al instante con el 'Ancla de Recursos'.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "hipotiroidismo",
+      "nombre": "Hipotiroidismo",
+      "sistema": "Sistema endocrino",
+      "patron": "Sentirse frenado o resignado, con la sensación de 'para qué intentarlo' o de no poder avanzar.",
+      "nuevoModelo": "Recupero mi ritmo y mi voz. Puedo avanzar hacia lo que deseo, paso a paso.",
+      "accionPNL": "Reactiva tu motivación con el 'Círculo de Excelencia'.",
+      "ejercicioId": "circulo-de-excelencia"
+    },
+    {
+      "id": "infecciones",
+      "nombre": "Infecciones recurrentes",
+      "sistema": "Sistema inmunitario",
+      "patron": "Sensación de estar siempre 'en guerra' o a la defensiva, con límites poco claros que agotan las defensas.",
+      "nuevoModelo": "Estoy a salvo. Pongo límites claros y suelto la lucha constante.",
+      "accionPNL": "Ancla la sensación de seguridad con el 'Ancla de Recursos'.",
       "ejercicioId": "ancla-de-recursos"
     },
     {
       "id": "insomnio",
       "nombre": "Insomnio",
-      "patron": "Mente que no se apaga por miedo a soltar el control. Culpa o preocupación que se reactivan al llegar el silencio de la noche.",
-      "nuevoModelo": "Con amor suelto el día de hoy. Me entrego al descanso confiando en que mañana sabré responder.",
-      "accionPNL": "La 'Respiración Cuadrada' y la meditación 'Tu refugio seguro' preparan el cuerpo para dormir.",
+      "sistema": "Sistema nervioso",
+      "patron": "Mente que no se apaga por miedo a soltar el control. Preocupaciones que se reactivan con el silencio de la noche.",
+      "nuevoModelo": "Con amor suelto el día de hoy. Me entrego al descanso confiando en el mañana.",
+      "accionPNL": "La 'Respiración Cuadrada' y la meditación 'Tu refugio seguro' preparan el descanso.",
       "ejercicioId": "respiracion-cuadrada"
     },
     {
-      "id": "gastritis",
-      "nombre": "Gastritis / Problemas digestivos",
-      "patron": "Dificultad para 'digerir' situaciones o personas. Preocupación sostenida y miedo a lo nuevo o desconocido.",
-      "nuevoModelo": "Asimilo la vida con calma. Elijo qué me nutre y suelto con paz lo que no puedo cambiar.",
-      "accionPNL": "Trabaja el 'Cambio de Submodalidades' sobre la situación que 'no puedes digerir'.",
-      "ejercicioId": "cambio-submodalidades"
-    },
-    {
-      "id": "espalda",
-      "nombre": "Dolor de espalda (zona lumbar)",
-      "patron": "Sensación de falta de apoyo o de cargar con responsabilidades ajenas. Miedo relacionado con lo económico o la seguridad.",
-      "nuevoModelo": "La vida me sostiene. Confío en el apoyo que tengo y suelto las cargas que no me corresponden.",
-      "accionPNL": "El 'Círculo de Excelencia' ayuda a reconectar con tu propia fuerza y sensación de sostén.",
-      "ejercicioId": "circulo-de-excelencia"
-    },
-    {
-      "id": "piel",
-      "nombre": "Afecciones de la piel",
-      "patron": "Sentirse amenazado o herido por el entorno. Ansiedad y miedo antiguo a no ser aceptado tal como se es.",
-      "nuevoModelo": "Estoy en paz conmigo. Me acepto y me protejo con amor; el mundo es un lugar seguro para mí.",
-      "accionPNL": "Refuerza tu autoestima con 'El Espejo Amable' de forma diaria.",
+      "id": "jaqueca",
+      "nombre": "Jaqueca / Migraña",
+      "sistema": "Cabeza",
+      "patron": "Presión por el deber y la perfección, con la mente sobrecargada y la autoexigencia como norma.",
+      "nuevoModelo": "Me permito soltar la exigencia. Suelto la necesidad de ser perfecto/a y me relajo.",
+      "accionPNL": "Ablanda el diálogo interno crítico con 'El Espejo Amable'.",
       "ejercicioId": "espejo-amable"
     },
     {
-      "id": "hipertension",
-      "nombre": "Tensión alta (emocional)",
-      "patron": "Problema emocional no resuelto que se mantiene contenido durante mucho tiempo. Exceso de control y dificultad para delegar.",
-      "nuevoModelo": "Suelto el pasado con alegría. Elijo la paz y permito que la vida fluya a través de mí.",
-      "accionPNL": "Practica el 'Ancla de Recursos' para instalar un estado de calma accesible al instante.",
+      "id": "juanetes",
+      "nombre": "Juanetes",
+      "sistema": "Sistema óseo y articular",
+      "patron": "Incomodidad al avanzar en la vida; resistencia a dar ciertos pasos o a seguir cierta dirección.",
+      "nuevoModelo": "Camino mi vida con libertad. Elijo mis pasos y avanzo a mi manera.",
+      "accionPNL": "Visualiza tu avance con seguridad usando la 'Técnica del Swish'.",
+      "ejercicioId": "tecnica-del-swish"
+    },
+    {
+      "id": "laringitis",
+      "nombre": "Laringitis / Afonía",
+      "sistema": "Garganta",
+      "patron": "Un enfado tan fuerte que 'quita la voz', o miedo a hablar con autoridad y a hacerse escuchar.",
+      "nuevoModelo": "Mi voz es válida y puede sostenerse con firmeza y respeto.",
+      "accionPNL": "Accede a tu seguridad y firmeza con el 'Ancla de Recursos'.",
       "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "lumbago",
+      "nombre": "Lumbago (dolor lumbar)",
+      "sistema": "Sistema óseo y articular",
+      "patron": "Miedo económico y sensación de falta de sostén; cargar más de lo que se puede.",
+      "nuevoModelo": "Confío en mi capacidad de sostenerme. Suelto el exceso de carga.",
+      "accionPNL": "Recupera tu sensación de fuerza con el 'Círculo de Excelencia'.",
+      "ejercicioId": "circulo-de-excelencia"
+    },
+    {
+      "id": "mareos",
+      "nombre": "Mareos / Vértigo",
+      "sistema": "Sistema nervioso",
+      "patron": "Sentir que se pierde el control o querer huir de una situación que desborda.",
+      "nuevoModelo": "Encuentro mi centro. Estoy firme y a salvo aquí y ahora.",
+      "accionPNL": "Vuelve a tu eje con la 'Respiración Cuadrada'.",
+      "ejercicioId": "respiracion-cuadrada"
+    },
+    {
+      "id": "nauseas",
+      "nombre": "Náuseas",
+      "sistema": "Aparato digestivo",
+      "patron": "Rechazo a algo o alguien que resulta difícil de 'tragar' o aceptar.",
+      "nuevoModelo": "Elijo qué acepto en mi vida. Puedo decir no a lo que me hace daño.",
+      "accionPNL": "Reduce el impacto de aquello que rechazas con el 'Cambio de Submodalidades'.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "nerviosismo",
+      "nombre": "Nerviosismo",
+      "sistema": "Sistema nervioso",
+      "patron": "Anticipación y exceso de alerta; el cuerpo permanece en tensión esperando lo que pueda pasar.",
+      "nuevoModelo": "Puedo estar en calma. Confío en mí y suelto la alerta constante.",
+      "accionPNL": "Regula tu activación con la 'Respiración Cuadrada'.",
+      "ejercicioId": "respiracion-cuadrada"
+    },
+    {
+      "id": "obesidad",
+      "nombre": "Sobrepeso / Obesidad",
+      "sistema": "Sistema endocrino y emocional",
+      "patron": "Buscar protección ante el mundo o consuelo y seguridad en la comida. A veces, una 'coraza' para sentirse a salvo.",
+      "nuevoModelo": "Estoy seguro/a siendo yo. Me cuido con amor y encuentro consuelo en formas que me nutren.",
+      "accionPNL": "Ancla la sensación de seguridad sin recurrir a la comida con el 'Ancla de Recursos'.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "ojos",
+      "nombre": "Problemas de visión (ojos)",
+      "sistema": "Órganos de los sentidos",
+      "patron": "No querer ver algo de la propia vida, del presente o del futuro que resulta incómodo o doloroso.",
+      "nuevoModelo": "Me permito mirar mi vida con claridad y sin miedo. Lo que veo, lo puedo afrontar.",
+      "accionPNL": "Transforma la imagen que te asusta ver con la 'Técnica del Swish'.",
+      "ejercicioId": "tecnica-del-swish"
+    },
+    {
+      "id": "otitis",
+      "nombre": "Otitis (dolor de oídos)",
+      "sistema": "Órganos de los sentidos",
+      "patron": "No querer oír algo que duele o incomoda: palabras, discusiones o una verdad difícil.",
+      "nuevoModelo": "Puedo escuchar la vida con serenidad y elegir qué dejo entrar en mí.",
+      "accionPNL": "Baja la intensidad de esas palabras con el 'Cambio de Submodalidades'.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "ovarios",
+      "nombre": "Ovarios / Quistes ováricos",
+      "sistema": "Aparato reproductor",
+      "patron": "Conflicto con la creatividad, la maternidad o una pérdida no elaborada.",
+      "nuevoModelo": "Honro mi capacidad de crear y de cuidar. Doy espacio a mi proceso con ternura.",
+      "accionPNL": "Acompaña el duelo o el anhelo con 'El Espejo Amable' y mucha autocompasión.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "piel",
+      "nombre": "Piel (afecciones en general)",
+      "sistema": "Piel",
+      "patron": "Sentirse amenazado o herido por el entorno. Conflicto de contacto y de separación con los demás.",
+      "nuevoModelo": "Estoy en paz conmigo. Me acepto y me protejo con amor; el mundo es un lugar seguro para mí.",
+      "accionPNL": "Refuerza tu autoestima a diario con 'El Espejo Amable'.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "prostata",
+      "nombre": "Próstata",
+      "sistema": "Aparato reproductor",
+      "patron": "Preocupaciones por el rol masculino, la descendencia o sentirse desvalorizado con el paso del tiempo.",
+      "nuevoModelo": "Mi valor no depende de la edad ni de un rol. Me reconozco y me respeto.",
+      "accionPNL": "Reconecta con tu valía usando el 'Círculo de Excelencia'.",
+      "ejercicioId": "circulo-de-excelencia"
+    },
+    {
+      "id": "quistes",
+      "nombre": "Quistes",
+      "sistema": "General",
+      "patron": "Un dolor o rencor antiguo que quedó 'encapsulado'; algo no llorado ni soltado que se guarda por dentro.",
+      "nuevoModelo": "Me permito sentir y soltar lo que guardé. Al soltarlo, me libero.",
+      "accionPNL": "Da salida a esa emoción retenida con el 'Cambio de Submodalidades'.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "rinitis",
+      "nombre": "Rinitis / Alergia nasal",
+      "sistema": "Aparato respiratorio",
+      "patron": "Irritación con alguien cercano o con el ambiente: 'algo (o alguien) me molesta y no lo soporto'.",
+      "nuevoModelo": "Elijo cómo me afecta mi entorno. Puedo poner distancia sana con lo que me irrita.",
+      "accionPNL": "Rebaja la carga de esa persona o situación con el 'Cambio de Submodalidades'.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "rinones",
+      "nombre": "Riñones",
+      "sistema": "Aparato urinario",
+      "patron": "Miedo profundo y tensiones en las relaciones; también, poca valoración de lo propio.",
+      "nuevoModelo": "Suelto el miedo antiguo. Confío en la vida y valoro lo que soy y lo que tengo.",
+      "accionPNL": "Trabaja un miedo concreto con el 'Cambio de Submodalidades'.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "rodillas",
+      "nombre": "Rodillas",
+      "sistema": "Sistema óseo y articular",
+      "patron": "Orgullo y falta de flexibilidad; dificultad para ceder, para inclinarse o para avanzar con humildad.",
+      "nuevoModelo": "Me permito doblarme sin romperme. Avanzo con flexibilidad y humildad.",
+      "accionPNL": "Suaviza la rigidez interior con 'El Espejo Amable'.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "sinusitis",
+      "nombre": "Sinusitis",
+      "sistema": "Cabeza y vías respiratorias",
+      "patron": "Irritación con una persona con la que se convive de cerca, y tristeza contenida que no se expresa.",
+      "nuevoModelo": "Me doy permiso para sentir y expresar. Puedo convivir sin guardarme el malestar.",
+      "accionPNL": "Da espacio a esa tristeza con 'El Espejo Amable' y una respiración consciente.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "taquicardia",
+      "nombre": "Taquicardia / Palpitaciones",
+      "sistema": "Sistema circulatorio",
+      "patron": "Miedo o alerta intensa; el corazón se acelera anticipando un peligro o una emoción desbordante.",
+      "nuevoModelo": "Mi corazón puede latir en calma. Estoy a salvo en este momento.",
+      "accionPNL": "Regula el ritmo con la 'Respiración Cuadrada'.",
+      "ejercicioId": "respiracion-cuadrada"
+    },
+    {
+      "id": "tiroides",
+      "nombre": "Tiroides (glándula)",
+      "sistema": "Sistema endocrino",
+      "patron": "Sensación de que 'el tiempo apremia' o de ir demasiado lento/rápido; dificultad para decidir a qué ritmo vivir.",
+      "nuevoModelo": "Vivo a mi propio ritmo. Confío en mis tiempos y en mis decisiones.",
+      "accionPNL": "Recupera seguridad para decidir con el 'Ancla de Recursos'.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "tos",
+      "nombre": "Tos",
+      "sistema": "Aparato respiratorio",
+      "patron": "Deseo de 'sacar' algo de dentro que molesta, o de llamar la atención sobre lo que incomoda.",
+      "nuevoModelo": "Me permito expresar lo que necesito sacar. Mi malestar merece ser escuchado.",
+      "accionPNL": "Practica expresar lo retenido con seguridad usando el 'Ancla de Recursos'.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "tunel-carpiano",
+      "nombre": "Túnel carpiano",
+      "sistema": "Sistema óseo y nervioso",
+      "patron": "Rigidez en el 'hacer', exceso de trabajo o esfuerzo y sensación de falta de reconocimiento.",
+      "nuevoModelo": "Suelto la rigidez en lo que hago. Me permito parar y reconozco mi propio esfuerzo.",
+      "accionPNL": "Reconoce tu valor con 'El Espejo Amable' y date pausas reales.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "ulcera",
+      "nombre": "Úlcera gástrica",
+      "sistema": "Aparato digestivo",
+      "patron": "Preocupación que 'corroe', autoexigencia y un miedo sostenido que no se calma.",
+      "nuevoModelo": "Me trato con paciencia. Suelto la preocupación y confío en que puedo con esto.",
+      "accionPNL": "Calma la rumiación con la 'Respiración Cuadrada' y el 'Cambio de Submodalidades'.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "unas",
+      "nombre": "Uñas (morderse / debilidad)",
+      "sistema": "Piel",
+      "patron": "Nervios y necesidad de control, con frustración por los detalles o por no llegar a todo.",
+      "nuevoModelo": "Suelto el control de los detalles. Puedo estar tranquilo/a aunque no todo sea perfecto.",
+      "accionPNL": "Baja la ansiedad con la 'Respiración Cuadrada'.",
+      "ejercicioId": "respiracion-cuadrada"
+    },
+    {
+      "id": "varices",
+      "nombre": "Várices",
+      "sistema": "Sistema circulatorio",
+      "patron": "Sentirse cargado y sin salida, o permanecer en un lugar o situación que 'pesa' y no deja avanzar.",
+      "nuevoModelo": "Me doy permiso para moverme y elegir. Suelto lo que me retiene y me pesa.",
+      "accionPNL": "Visualiza un cambio de rumbo posible con la 'Técnica del Swish'.",
+      "ejercicioId": "tecnica-del-swish"
+    },
+    {
+      "id": "vejiga",
+      "nombre": "Vejiga",
+      "sistema": "Aparato urinario",
+      "patron": "Sentirse 'marcado' por el territorio o las circunstancias; miedo o enfado que no se suelta.",
+      "nuevoModelo": "Reclamo mi espacio con calma. Suelto el enfado y el miedo que ya no me sirven.",
+      "accionPNL": "Libera la carga con el 'Cambio de Submodalidades'.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "vesicula",
+      "nombre": "Vesícula biliar",
+      "sistema": "Aparato digestivo",
+      "patron": "Rabia, reproches e injusticias 'amargas' que no se han expresado y se guardan.",
+      "nuevoModelo": "Expreso mi enojo de forma sana y lo suelto. Elijo la paz por encima del rencor.",
+      "accionPNL": "Transforma un reproche antiguo con el 'Cambio de Submodalidades'.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "zumbido-oidos",
+      "nombre": "Zumbido de oídos (acúfenos)",
+      "sistema": "Órganos de los sentidos",
+      "patron": "No querer escuchar cierto 'ruido' externo o interno; búsqueda de silencio y descanso mental.",
+      "nuevoModelo": "Me permito el silencio y la calma. Elijo a qué presto atención.",
+      "accionPNL": "Cultiva el silencio interior con la Respiración Guiada de la Zona Zen."
     }
   ]
 }
