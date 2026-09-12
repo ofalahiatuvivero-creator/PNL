@@ -16,7 +16,7 @@ export const meditations = [
     descripcion:
       'Una meditación de bendición y sanación que abre el corazón hacia el planeta entero. Requiere una preparación previa.',
     requierePreparacion: true, // activa la pantalla de preparación obligatoria
-    src: '/audios/placeholder.mp3', // <-- reemplazar por el mp3 real
+    src: '/audios/corazones-gemelos.mp3', // audio real de la meditación
     color: 'terracotta',
   },
   {
