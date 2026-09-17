@@ -6,38 +6,42 @@
  *
  * >>> PARA EL ADMINISTRADOR <<<
  * 1. Sube los PDF a la carpeta /public/libros/
- * 2. Cambia el campo "pdf" por la ruta real, p. ej. '/libros/mi-libro.pdf'
- * 3. (Opcional) Sube una imagen de portada a /public/portadas/ y añade
+ * 2. Añade el libro a la lista con su "pdf" apuntando al archivo,
+ *    p. ej. pdf: '/libros/mi-libro.pdf'
+ * 3. (Opcional) Portada real: sube una imagen a /public/portadas/ y añade
  *    el campo "portada": '/portadas/mi-portada.jpg'. Si no la incluyes,
- *    se mostrará una portada generada automáticamente.
+ *    se muestra una portada de color generada automáticamente.
+ * 4. "color" acepta: 'sage' | 'terracotta' | 'sand'.
+ *
+ * La biblioteca se irá ampliando con el tiempo; basta con añadir entradas.
  */
 export const books = [
   {
     id: 'introduccion-pnl',
     titulo: 'Introducción a la PNL',
-    autor: 'Equipo Raíces',
+    autor: "O'Connor y Seymour",
     color: 'sage',
-    pdf: '/libros/placeholder.pdf', // <-- reemplazar por el PDF real
+    pdf: '/libros/introduccion-pnl.pdf',
   },
   {
-    id: 'sanar-emociones',
-    titulo: 'Sanar las emociones',
-    autor: 'Guía práctica',
+    id: 'emociones-toxicas',
+    titulo: 'Emociones tóxicas',
+    autor: 'Bernardo Stamateas',
     color: 'terracotta',
-    pdf: '/libros/placeholder.pdf',
+    pdf: '/libros/emociones-toxicas.pdf',
   },
   {
-    id: 'poder-de-la-respiracion',
-    titulo: 'El poder de la respiración',
-    autor: 'Bienestar diario',
+    id: 'ciencia-respiracion',
+    titulo: 'La ciencia de la respiración',
+    autor: 'El poder de respirar',
     color: 'sand',
-    pdf: '/libros/placeholder.pdf',
+    pdf: '/libros/ciencia-respiracion.pdf',
   },
   {
-    id: 'afirmaciones-que-sanan',
-    titulo: 'Afirmaciones que sanan',
-    autor: 'Colección Raíces',
+    id: 'afirmaciones-curacion',
+    titulo: 'Afirmaciones para la curación',
+    autor: 'Afirmaciones que sanan',
     color: 'sage',
-    pdf: '/libros/placeholder.pdf',
+    pdf: '/libros/afirmaciones-curacion.pdf',
   },
 ];
