@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Play, Pause, Music2 } from 'lucide-react';
+import { Play, Pause, Music2, Clock } from 'lucide-react';
 
 /**
  * Playlist
@@ -29,6 +29,7 @@ export default function Playlist({ tracks }) {
   const seleccionar = async (track) => {
     const audio = audioRef.current;
     if (!audio) return;
+    if (track.proximamente) return; // pista aún no disponible
 
     // Si es la pista activa, alterna play/pausa.
     if (activeId === track.id) {
@@ -62,33 +63,55 @@ export default function Playlist({ tracks }) {
       <audio ref={audioRef} preload="none" />
       <ul className="space-y-2">
         {tracks.map((track) => {
+          const pending = !!track.proximamente;
           const isActive = activeId === track.id;
           const isPlaying = isActive && playing;
           return (
             <li key={track.id}>
               <button
                 onClick={() => seleccionar(track)}
-                className={`flex w-full items-center gap-4 rounded-3xl p-3 text-left transition ${
-                  isActive ? 'bg-sage-100' : 'bg-white hover:bg-sand-50'
-                } shadow-card`}
+                disabled={pending}
+                className={`flex w-full items-center gap-4 rounded-3xl p-3 text-left transition shadow-card ${
+                  pending
+                    ? 'cursor-not-allowed bg-white/60'
+                    : isActive
+                    ? 'bg-sage-100'
+                    : 'bg-white hover:bg-sand-50'
+                }`}
               >
                 <span
                   className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl transition ${
-                    isPlaying ? 'bg-sage-500 text-white' : 'bg-sand-100 text-sage-500'
+                    pending
+                      ? 'bg-sand-100 text-ink-light'
+                      : isPlaying
+                      ? 'bg-sage-500 text-white'
+                      : 'bg-sand-100 text-sage-500'
                   }`}
                 >
-                  {isPlaying ? <Pause className="h-5 w-5" /> : <Play className="h-5 w-5 translate-x-0.5" />}
+                  {pending ? (
+                    <Clock className="h-5 w-5" />
+                  ) : isPlaying ? (
+                    <Pause className="h-5 w-5" />
+                  ) : (
+                    <Play className="h-5 w-5 translate-x-0.5" />
+                  )}
                 </span>
                 <div className="min-w-0 flex-1">
-                  <p className="truncate font-display text-sm font-semibold text-ink">
+                  <p className={`truncate font-display text-sm font-semibold ${pending ? 'text-ink-light' : 'text-ink'}`}>
                     {track.titulo}
                   </p>
                   <p className="truncate text-xs text-ink-soft">{track.autor}</p>
                 </div>
-                <span className="flex items-center gap-1 text-[11px] font-medium text-ink-light">
-                  <Music2 className="h-3 w-3" />
-                  {track.duracion}
-                </span>
+                {pending ? (
+                  <span className="shrink-0 rounded-full bg-sand-100 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-ink-light">
+                    Próximamente
+                  </span>
+                ) : (
+                  <span className="flex items-center gap-1 text-[11px] font-medium text-ink-light">
+                    <Music2 className="h-3 w-3" />
+                    {track.duracion}
+                  </span>
+                )}
               </button>
             </li>
           );

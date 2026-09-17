@@ -12,7 +12,7 @@ export const meditations = [
     id: 'corazones-gemelos',
     titulo: 'Meditación de los Corazones Gemelos',
     maestro: 'Master Choa Kok Sui',
-    duracion: '21:00',
+    duracion: '40:10',
     descripcion:
       'Una meditación de bendición y sanación que abre el corazón hacia el planeta entero. Requiere una preparación previa.',
     requierePreparacion: true, // activa la pantalla de preparación obligatoria
