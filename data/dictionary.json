@@ -1,5 +1,5 @@
 {
-  "_comentario": "DICCIONARIO BIO-EMOCIONAL. Contenido original inspirado en los patrones generales de la biodescodificación (no reproduce ninguna obra con derechos de autor). Es una guía de reflexión emocional, NO un diagnóstico médico. El administrador puede añadir todas las entradas que necesite copiando la estructura. Campos: nombre (dolencia física/emocional), sistema (zona/aparato del cuerpo, para agrupar), patron (conflicto emocional que suele estar detrás), nuevoModelo (nueva creencia sanadora), accionPNL (práctica recomendada). 'ejercicioId' es opcional y enlaza con un ejercicio del módulo PNL.",
+  "_comentario": "DICCIONARIO BIO-EMOCIONAL. Contenido original inspirado en los patrones generales de la biodescodificación (no reproduce ninguna obra con derechos de autor). Es una guía de reflexión emocional, NO un diagnóstico médico. El administrador puede añadir todas las entradas que necesite copiando la estructura. Campos: nombre (dolencia física/emocional), sistema (zona/aparato del cuerpo, para agrupar), patron (conflicto emocional que suele estar detrás), nuevoModelo (nueva creencia sanadora), accionPNL (práctica recomendada), paraQue (reflexión opcional: '¿para qué podría estar aquí?'). 'ejercicioId' es opcional y enlaza con un ejercicio del módulo PNL.",
   "nota": "La biodescodificación propone que muchas dolencias físicas guardan relación con emociones y conflictos internos. Esta información es una guía de autoconocimiento y acompañamiento emocional; NO sustituye el diagnóstico ni el tratamiento de un profesional de la salud. Escúchate con cariño y consulta siempre a tu médico.",
   "entradas": [
     {
@@ -563,6 +563,224 @@
       "patron": "No querer escuchar cierto 'ruido' externo o interno; búsqueda de silencio y descanso mental.",
       "nuevoModelo": "Me permito el silencio y la calma. Elijo a qué presto atención.",
       "accionPNL": "Cultiva el silencio interior con la Respiración Guiada de la Zona Zen."
+    },
+    {
+      "id": "hombros",
+      "nombre": "Hombros (dolor)",
+      "sistema": "Sistema óseo y articular",
+      "patron": "Sentir que cargas con demasiadas responsabilidades, muchas veces ajenas. El peso de obligaciones que agobian.",
+      "nuevoModelo": "Suelto lo que no me corresponde. Puedo pedir ayuda y repartir la carga.",
+      "accionPNL": "El 'Círculo de Excelencia' te reconecta con tu fuerza para sostenerte sin agotarte.",
+      "paraQue": "Quizá te invita a soltar un peso que no es tuyo y a pedir apoyo.",
+      "ejercicioId": "circulo-de-excelencia"
+    },
+    {
+      "id": "torticolis",
+      "nombre": "Tortícolis (cuello rígido)",
+      "sistema": "Sistema óseo y articular",
+      "patron": "Rigidez ante una situación o decisión; no querer 'ver' o mirar hacia cierto lado, con tensión contenida.",
+      "nuevoModelo": "Me permito mirar la vida desde varios ángulos, con flexibilidad.",
+      "accionPNL": "Trabaja la rigidez interior con 'El Espejo Amable'.",
+      "paraQue": "Tal vez te pide flexibilidad para considerar otro punto de vista.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "codo",
+      "nombre": "Codo (epicondilitis)",
+      "sistema": "Sistema óseo y articular",
+      "patron": "Resistencia a adaptarte a un cambio o a hacer algo de una forma nueva; rigidez en el 'cómo hago las cosas'.",
+      "nuevoModelo": "Me adapto con suavidad a lo nuevo. Puedo cambiar sin forzarme.",
+      "accionPNL": "Visualiza el cambio con calma usando la 'Técnica del Swish'.",
+      "paraQue": "Quizá te invita a flexibilizar tu manera de hacer las cosas.",
+      "ejercicioId": "tecnica-del-swish"
+    },
+    {
+      "id": "manos",
+      "nombre": "Manos (dolor, rigidez)",
+      "sistema": "Sistema óseo y articular",
+      "patron": "Dificultad para 'tomar' o 'soltar' algo en la vida; tensión en el dar y recibir o en controlar los detalles.",
+      "nuevoModelo": "Doy y recibo con confianza. Suelto lo que ya no necesito sostener.",
+      "accionPNL": "Suaviza el exceso de control con la 'Respiración Cuadrada'.",
+      "paraQue": "Puede recordarte soltar aquello a lo que te aferras.",
+      "ejercicioId": "respiracion-cuadrada"
+    },
+    {
+      "id": "caderas",
+      "nombre": "Caderas",
+      "sistema": "Sistema óseo y articular",
+      "patron": "Miedo a avanzar o a tomar decisiones importantes; sentirse bloqueado al dar un paso grande.",
+      "nuevoModelo": "Avanzo con seguridad. Confío en mi capacidad de sostener mis decisiones.",
+      "accionPNL": "Refuerza tu seguridad para decidir con el 'Ancla de Recursos'.",
+      "paraQue": "Tal vez te invita a decidir y a avanzar sin miedo.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "tobillos",
+      "nombre": "Tobillos (esguinces)",
+      "sistema": "Sistema óseo y articular",
+      "patron": "Inseguridad o falta de flexibilidad ante un cambio de dirección en la vida; miedo a comprometerte con un nuevo rumbo.",
+      "nuevoModelo": "Me muevo con flexibilidad. Puedo cambiar de rumbo con seguridad.",
+      "accionPNL": "El 'Círculo de Excelencia' te da una base firme para avanzar.",
+      "paraQue": "Quizá te pide flexibilidad para tomar una nueva dirección.",
+      "ejercicioId": "circulo-de-excelencia"
+    },
+    {
+      "id": "osteoporosis",
+      "nombre": "Osteoporosis",
+      "sistema": "Sistema óseo y articular",
+      "patron": "Sensación de haber perdido estructura o sostén interno; sentir que se derrumba lo que te sostenía, o desvalorización profunda.",
+      "nuevoModelo": "Tengo una estructura interna firme. Me sostengo con mi propio valor.",
+      "accionPNL": "Reconstruye tu sensación de valía con 'El Espejo Amable'.",
+      "paraQue": "Puede invitarte a reconocer y reforzar tu propio sostén interior.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "calambres",
+      "nombre": "Calambres musculares",
+      "sistema": "Sistema óseo y nervioso",
+      "patron": "Tensión y esfuerzo excesivo; aferrarse con fuerza por miedo a soltar o a no poder.",
+      "nuevoModelo": "Me permito soltar y relajar. No tengo que sostenerlo todo con tanta fuerza.",
+      "accionPNL": "Libera la tensión con la 'Respiración Cuadrada'.",
+      "paraQue": "Tal vez te pide aflojar donde te estás esforzando de más.",
+      "ejercicioId": "respiracion-cuadrada"
+    },
+    {
+      "id": "dientes",
+      "nombre": "Dientes / caries",
+      "sistema": "Boca y dientes",
+      "patron": "Dificultad para 'morder' la vida o tomar decisiones; sentir que no puedes defender lo tuyo o mostrar tu fuerza.",
+      "nuevoModelo": "Tengo derecho a decidir y a defender lo que es mío, con firmeza y calma.",
+      "accionPNL": "Accede a tu firmeza con el 'Ancla de Recursos'.",
+      "paraQue": "Quizá te invita a tomar una decisión que vienes postergando.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "encias",
+      "nombre": "Encías (sangrado, gingivitis)",
+      "sistema": "Boca y dientes",
+      "patron": "Inseguridad al sostener una decisión ya tomada; falta de confianza en lo que se ha elegido.",
+      "nuevoModelo": "Confío en mis decisiones y me sostengo en ellas con seguridad.",
+      "accionPNL": "Refuerza la confianza en tus elecciones con el 'Círculo de Excelencia'.",
+      "paraQue": "Puede pedirte sostener con confianza lo que ya decidiste.",
+      "ejercicioId": "circulo-de-excelencia"
+    },
+    {
+      "id": "mandibula",
+      "nombre": "Mandíbula (tensión / ATM)",
+      "sistema": "Boca y dientes",
+      "patron": "Rabia o palabras contenidas que se 'aprietan'; tensión por no expresar lo que se siente.",
+      "nuevoModelo": "Me permito expresar lo que siento y soltar la tensión acumulada.",
+      "accionPNL": "Gana seguridad para expresarte con el 'Ancla de Recursos'.",
+      "paraQue": "Tal vez te invita a decir algo que llevas tiempo guardándote.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "aftas",
+      "nombre": "Aftas / llagas en la boca",
+      "sistema": "Boca y dientes",
+      "patron": "Palabras 'ácidas' o reproches que no se dijeron, o enojo con uno mismo por algo que sí se dijo.",
+      "nuevoModelo": "Elijo mis palabras con amabilidad, también hacia mí. Me perdono.",
+      "accionPNL": "Suaviza el diálogo interno con 'El Espejo Amable'.",
+      "paraQue": "Quizá te pide revisar algo que dijiste o callaste con dureza.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "utero",
+      "nombre": "Útero / Matriz (miomas, molestias)",
+      "sistema": "Aparato reproductor",
+      "patron": "Conflicto con el 'hogar' interior, la creatividad o la maternidad; un nido o un proyecto que no se siente seguro.",
+      "nuevoModelo": "Creo un espacio interno seguro y fértil para lo que deseo gestar.",
+      "accionPNL": "Crea tu lugar seguro con la meditación 'Tu refugio seguro'.",
+      "paraQue": "Puede invitarte a cuidar tu 'nido' interno y lo que quieres crear."
+    },
+    {
+      "id": "reglas-dolorosas",
+      "nombre": "Reglas dolorosas (dismenorrea)",
+      "sistema": "Aparato reproductor",
+      "patron": "Rechazo o conflicto con la propia feminidad o con el ciclo; exigencia y tensión en torno a 'ser mujer'.",
+      "nuevoModelo": "Honro mi ciclo y mi feminidad. Me permito descansar y fluir con mi cuerpo.",
+      "accionPNL": "Acompáñate con la 'Respiración Cuadrada' y mucha autocompasión.",
+      "paraQue": "Tal vez te pide reconciliarte con tu feminidad y darte descanso.",
+      "ejercicioId": "respiracion-cuadrada"
+    },
+    {
+      "id": "menopausia",
+      "nombre": "Menopausia / sofocos",
+      "sistema": "Sistema endocrino",
+      "patron": "Miedo a dejar de ser valiosa o atractiva con los cambios; resistencia a una nueva etapa de la vida.",
+      "nuevoModelo": "Abrazo esta etapa con sabiduría. Mi valor crece con mi experiencia.",
+      "accionPNL": "Reconoce tu valor en esta etapa con 'El Espejo Amable'.",
+      "paraQue": "Puede invitarte a abrazar una nueva etapa con amor propio.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "senos",
+      "nombre": "Senos / Mamas (nódulos, molestias)",
+      "sistema": "Aparato reproductor",
+      "patron": "Exceso de cuidado y preocupación por los demás (el 'nido'), olvidándose de una misma; dar sin recibir.",
+      "nuevoModelo": "Me cuido a mí también. Puedo nutrir a otros sin abandonarme.",
+      "accionPNL": "Reequilibra el dar y recibir con 'El Espejo Amable'.",
+      "paraQue": "Quizá te recuerda incluirte a ti en tus cuidados."
+    },
+    {
+      "id": "corazon",
+      "nombre": "Corazón / opresión en el pecho",
+      "sistema": "Sistema circulatorio",
+      "patron": "Falta de alegría o de amor en la vida; cargar con demasiado y olvidarse de disfrutar; un conflicto afectivo profundo.",
+      "nuevoModelo": "Abro mi corazón a la alegría y al amor. Merezco disfrutar y ser amado/a.",
+      "accionPNL": "Ancla momentos de alegría y afecto con el 'Ancla de Recursos'.",
+      "paraQue": "Puede invitarte a devolver la alegría y el amor a tu día a día.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "mala-circulacion",
+      "nombre": "Mala circulación (manos y pies fríos)",
+      "sistema": "Sistema circulatorio",
+      "patron": "Dificultad para dejar fluir la alegría o el afecto; retraerse o 'enfriarse' ante la vida o los demás.",
+      "nuevoModelo": "Dejo fluir mi calor y mi alegría. Me permito acercarme y disfrutar.",
+      "accionPNL": "Reconecta con tu energía con el 'Círculo de Excelencia'.",
+      "paraQue": "Tal vez te pide volver a dejar circular tu alegría y tu afecto.",
+      "ejercicioId": "circulo-de-excelencia"
+    },
+    {
+      "id": "anemia",
+      "nombre": "Anemia",
+      "sistema": "Equilibrio general",
+      "patron": "Falta de alegría de vivir o de 'fuerza vital'; sentir que falta sostén o motivación profunda.",
+      "nuevoModelo": "Recupero mis ganas de vivir. La energía y la alegría vuelven a mí.",
+      "accionPNL": "Reactiva tu motivación con el 'Círculo de Excelencia'.",
+      "paraQue": "Puede invitarte a reconectar con aquello que te da vida.",
+      "ejercicioId": "circulo-de-excelencia"
+    },
+    {
+      "id": "cicatrices",
+      "nombre": "Cicatrices y queloides",
+      "sistema": "Piel",
+      "patron": "Heridas emocionales que siguen presentes y 'siguen creciendo'; dificultad para cerrar o soltar un dolor del pasado.",
+      "nuevoModelo": "Permito que mis heridas sanen. Suelto el pasado con compasión.",
+      "accionPNL": "Reduce la carga de un recuerdo doloroso con el 'Cambio de Submodalidades'.",
+      "paraQue": "Tal vez te pide cerrar y sanar una herida que sigue abierta por dentro.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "caida-cabello",
+      "nombre": "Caída del cabello (alopecia)",
+      "sistema": "Piel",
+      "patron": "Estrés intenso, miedo o sensación de haber perdido protección y seguridad; preocupación que 'desgasta'.",
+      "nuevoModelo": "Estoy a salvo. Suelto el estrés y confío en que puedo con esto.",
+      "accionPNL": "Baja el estrés con la 'Respiración Cuadrada'.",
+      "paraQue": "Quizá te pide soltar un estrés o un miedo que te sobrepasa.",
+      "ejercicioId": "respiracion-cuadrada"
+    },
+    {
+      "id": "fatiga-cronica",
+      "nombre": "Fatiga crónica / agotamiento",
+      "sistema": "Mente y emociones",
+      "patron": "Darlo todo por los demás o por el deber sin descanso; pérdida de motivación o de sentido; resistencia a parar.",
+      "nuevoModelo": "Me doy permiso para descansar y para decir que no. Mi energía también importa.",
+      "accionPNL": "Reconoce tus límites con 'El Espejo Amable' y date pausas reales.",
+      "paraQue": "Puede invitarte a parar, poner límites y reconectar con lo que te ilusiona.",
+      "ejercicioId": "espejo-amable"
     }
   ]
 }

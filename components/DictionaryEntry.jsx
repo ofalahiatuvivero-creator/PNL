@@ -65,6 +65,18 @@ export default function DictionaryEntry({ entry }) {
             texto={entry.accionPNL}
           />
 
+          {/* ¿Para qué? — invitación a la reflexión */}
+          {entry.paraQue && (
+            <div className="rounded-2xl bg-terracotta-50 p-3">
+              <p className="font-display text-xs font-bold uppercase tracking-wide text-terracotta-500">
+                ¿Para qué podría estar aquí?
+              </p>
+              <p className="mt-1 text-sm italic leading-relaxed text-ink-soft">
+                {entry.paraQue}
+              </p>
+            </div>
+          )}
+
           {entry.ejercicioId && (
             <Link
               href={`/ejercicios/${entry.ejercicioId}`}
