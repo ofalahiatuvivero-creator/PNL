@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { HeartHandshake, ChevronRight } from 'lucide-react';
+import { HeartHandshake, ChevronRight, Leaf } from 'lucide-react';
 import Greeting from '@/components/Greeting';
 import AffirmationCard from '@/components/AffirmationCard';
 import DailyCheckIn from '@/components/DailyCheckIn';
@@ -92,6 +92,27 @@ export default function DashboardPage() {
             </p>
           </div>
           <ChevronRight className="h-5 w-5 text-terracotta-500" />
+        </Link>
+      </section>
+
+      {/* Invitación a la herbolaria */}
+      <section className="mt-3 animate-fade-up" style={{ animationDelay: '300ms' }}>
+        <Link
+          href="/herbolaria"
+          className="flex items-center gap-4 rounded-3xl bg-sage-100 p-5 shadow-card transition hover:-translate-y-0.5 hover:shadow-soft"
+        >
+          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sage-500 text-white">
+            <Leaf className="h-6 w-6" />
+          </span>
+          <div className="flex-1">
+            <h3 className="font-display text-base font-semibold text-sage-700">
+              Herbolaria
+            </h3>
+            <p className="text-xs text-sage-700/80">
+              Medicina botánica: plantas que acompañan tu bienestar.
+            </p>
+          </div>
+          <ChevronRight className="h-5 w-5 text-sage-600" />
         </Link>
       </section>
 

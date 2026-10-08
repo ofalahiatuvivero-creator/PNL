@@ -3,8 +3,9 @@
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { Clock, ChevronLeft, ChevronRight, RotateCcw, Check } from 'lucide-react';
+import { Clock, ChevronLeft, ChevronRight, RotateCcw, Check, Headphones } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
+import AudioPlayer from '@/components/AudioPlayer';
 import Icon from '@/components/Icon';
 import { getExerciseById, getCategory } from '@/data/exercises';
 
@@ -64,6 +65,20 @@ export default function EjercicioDetallePage() {
   return (
     <main className="flex min-h-[calc(100vh-6rem)] flex-col">
       <PageHeader title={exercise.titulo} subtitle={category?.nombre} />
+
+      {/* Guía en audio (persistente): ideal para hacer el ejercicio con los
+          ojos cerrados. Aparece solo si el ejercicio tiene audio asignado. */}
+      {exercise.audio && (
+        <div className="px-5 pb-3 pt-1">
+          <div className="rounded-3xl bg-sage-50 p-4">
+            <p className="mb-3 flex items-center gap-2 font-display text-sm font-semibold text-sage-700">
+              <Headphones className="h-4 w-4" />
+              Guía en audio · ideal para cerrar los ojos
+            </p>
+            <AudioPlayer src={exercise.audio} />
+          </div>
+        </div>
+      )}
 
       <div className="flex flex-1 flex-col px-5 pb-6">
         {/* PANTALLA DE CIERRE */}

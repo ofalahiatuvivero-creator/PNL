@@ -8,6 +8,12 @@
  *   - Cambiar la categoría para reagrupar tarjetas.
  *
  * "icon" es el nombre de un icono de lucide-react (https://lucide.dev/icons).
+ *
+ * AUDIO-GUÍA (opcional): para que un ejercicio se pueda ESCUCHAR con los
+ * ojos cerrados, sube la narración a /public/audios/ y añade al ejercicio
+ * el campo:  audio: '/audios/mi-narracion.mp3'
+ * Aparecerá un reproductor arriba del ejercicio. Si no hay "audio", solo
+ * se muestran los pasos para leer.
  */
 
 // Categorías / necesidades. El color se usa como acento de la tarjeta.
