@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Play, Pause, Music2, Clock } from 'lucide-react';
+import { Play, Pause, Music2, Clock, ExternalLink } from 'lucide-react';
 
 /**
  * Playlist
@@ -67,6 +67,35 @@ export default function Playlist({ tracks }) {
   };
 
   const renderTrack = (track) => {
+    // Pistas enlazadas a su fuente oficial (p. ej. mantras en Spotify):
+    // se abren fuera de la app, respetando los derechos del artista.
+    if (track.enlace) {
+      return (
+        <li key={track.id}>
+          <a
+            href={track.enlace}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex w-full items-center gap-4 rounded-3xl bg-white p-3 text-left shadow-card transition hover:bg-sand-50"
+          >
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sage-100 text-sage-600">
+              <Music2 className="h-5 w-5" />
+            </span>
+            <div className="min-w-0 flex-1">
+              <p className="truncate font-display text-sm font-semibold text-ink">
+                {track.titulo}
+              </p>
+              <p className="truncate text-xs text-ink-soft">{track.autor}</p>
+            </div>
+            <span className="flex shrink-0 items-center gap-1 text-[11px] font-semibold text-sage-600">
+              {track.plataforma || 'Escuchar'}
+              <ExternalLink className="h-3 w-3" />
+            </span>
+          </a>
+        </li>
+      );
+    }
+
     const pending = !!track.proximamente;
     const isActive = activeId === track.id;
     const isPlaying = isActive && playing;

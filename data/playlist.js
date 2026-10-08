@@ -11,28 +11,30 @@
  */
 export const playlist = [
   // --- Mantras (Deva Premal & Miten) ---
+  // Se enlazan a su fuente oficial (Spotify) en lugar de alojar los mp3,
+  // para respetar los derechos del artista y mantener la app ligera.
   {
     id: 'mantra-gayatri',
     titulo: 'Gayatri Mantra',
-    autor: 'Deva Premal & Miten · con Manose',
-    duracion: '08:02',
-    src: '/audios/mantra-gayatri.mp3',
+    autor: 'Deva Premal & Miten',
+    enlace: 'https://open.spotify.com/track/3BTsUEX16JovTGC96eZqzo',
+    plataforma: 'Spotify',
     tipo: 'mantras',
   },
   {
     id: 'mantra-om-namo',
     titulo: 'Om Namo Bhagavate',
     autor: 'Deva Premal & Miten',
-    duracion: '07:10',
-    src: '/audios/mantra-om-namo.mp3',
+    enlace: 'https://open.spotify.com/track/5FY6C5dESJpQNqyhWim3c7',
+    plataforma: 'Spotify',
     tipo: 'mantras',
   },
   {
     id: 'mantra-om-tare',
     titulo: 'Om Tare Tuttare',
-    autor: 'Deva Premal',
-    duracion: '07:20',
-    src: '/audios/mantra-om-tare.mp3',
+    autor: 'Deva Premal & Miten',
+    enlace: 'https://open.spotify.com/track/6rvkMmR7O0OyBufEsgHViF',
+    plataforma: 'Spotify',
     tipo: 'mantras',
   },
 
