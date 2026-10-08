@@ -22,23 +22,23 @@ export const meditations = [
   {
     id: 'escaneo-corporal',
     titulo: 'Escaneo corporal para soltar tensión',
-    maestro: 'Práctica de atención plena',
-    duracion: '12:00',
+    maestro: 'Gabriela Litschi · Atención plena',
+    duracion: '14:33',
     descripcion:
       'Recorre tu cuerpo con suavidad, liberando la tensión acumulada zona por zona.',
     requierePreparacion: false,
-    src: '/audios/placeholder.mp3',
+    src: '/audios/escaneo-corporal.mp3',
     color: 'sage',
   },
   {
     id: 'refugio-seguro',
     titulo: 'Tu refugio seguro',
-    maestro: 'Visualización guiada',
-    duracion: '10:00',
+    maestro: 'Gabriela Litschi · Visualización guiada',
+    duracion: '16:57',
     descripcion:
       'Crea un lugar interno de calma al que podrás volver siempre que lo necesites.',
     requierePreparacion: false,
-    src: '/audios/placeholder.mp3',
+    src: '/audios/refugio-seguro.mp3',
     color: 'sand',
   },
 ];
