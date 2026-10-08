@@ -6,13 +6,21 @@ import { Play, Pause, Music2, Clock } from 'lucide-react';
 /**
  * Playlist
  * -------------------------------------------------------------
- * Lista de reproducción para música PNL, frecuencias y afirmaciones.
- * Usa un único elemento <audio> compartido: al pulsar una pista se
+ * Lista de reproducción de la Zona Zen. Agrupa las pistas por "tipo"
+ * (Mantras, Afirmaciones, Frecuencias, Naturaleza) con un título por
+ * sección. Usa un único <audio> compartido: al pulsar una pista se
  * reproduce y las demás se pausan.
  *
  * Props:
- *   - tracks: array de { id, titulo, autor, duracion, src }
+ *   - tracks: array de { id, titulo, autor, duracion, src, tipo, proximamente? }
  */
+const GRUPOS = [
+  { tipo: 'mantras', label: 'Mantras' },
+  { tipo: 'afirmaciones', label: 'Afirmaciones' },
+  { tipo: 'frecuencias', label: 'Frecuencias' },
+  { tipo: 'naturaleza', label: 'Sonidos de la naturaleza' },
+];
+
 export default function Playlist({ tracks }) {
   const audioRef = useRef(null);
   const [activeId, setActiveId] = useState(null);
@@ -58,65 +66,82 @@ export default function Playlist({ tracks }) {
     }
   };
 
+  const renderTrack = (track) => {
+    const pending = !!track.proximamente;
+    const isActive = activeId === track.id;
+    const isPlaying = isActive && playing;
+    return (
+      <li key={track.id}>
+        <button
+          onClick={() => seleccionar(track)}
+          disabled={pending}
+          className={`flex w-full items-center gap-4 rounded-3xl p-3 text-left transition shadow-card ${
+            pending
+              ? 'cursor-not-allowed bg-white/60'
+              : isActive
+              ? 'bg-sage-100'
+              : 'bg-white hover:bg-sand-50'
+          }`}
+        >
+          <span
+            className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl transition ${
+              pending
+                ? 'bg-sand-100 text-ink-light'
+                : isPlaying
+                ? 'bg-sage-500 text-white'
+                : 'bg-sand-100 text-sage-500'
+            }`}
+          >
+            {pending ? (
+              <Clock className="h-5 w-5" />
+            ) : isPlaying ? (
+              <Pause className="h-5 w-5" />
+            ) : (
+              <Play className="h-5 w-5 translate-x-0.5" />
+            )}
+          </span>
+          <div className="min-w-0 flex-1">
+            <p className={`truncate font-display text-sm font-semibold ${pending ? 'text-ink-light' : 'text-ink'}`}>
+              {track.titulo}
+            </p>
+            <p className="truncate text-xs text-ink-soft">{track.autor}</p>
+          </div>
+          {pending ? (
+            <span className="shrink-0 rounded-full bg-sand-100 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-ink-light">
+              Próximamente
+            </span>
+          ) : (
+            <span className="flex items-center gap-1 text-[11px] font-medium text-ink-light">
+              <Music2 className="h-3 w-3" />
+              {track.duracion}
+            </span>
+          )}
+        </button>
+      </li>
+    );
+  };
+
+  // Agrupa en el orden definido; añade al final cualquier tipo no listado.
+  const grupos = GRUPOS.map((g) => ({
+    ...g,
+    items: tracks.filter((t) => t.tipo === g.tipo),
+  })).filter((g) => g.items.length > 0);
+  const sinTipo = tracks.filter((t) => !GRUPOS.some((g) => g.tipo === t.tipo));
+  if (sinTipo.length) grupos.push({ tipo: 'otros', label: 'Más', items: sinTipo });
+
   return (
     <div>
       <audio ref={audioRef} preload="none" />
-      <ul className="space-y-2">
-        {tracks.map((track) => {
-          const pending = !!track.proximamente;
-          const isActive = activeId === track.id;
-          const isPlaying = isActive && playing;
-          return (
-            <li key={track.id}>
-              <button
-                onClick={() => seleccionar(track)}
-                disabled={pending}
-                className={`flex w-full items-center gap-4 rounded-3xl p-3 text-left transition shadow-card ${
-                  pending
-                    ? 'cursor-not-allowed bg-white/60'
-                    : isActive
-                    ? 'bg-sage-100'
-                    : 'bg-white hover:bg-sand-50'
-                }`}
-              >
-                <span
-                  className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl transition ${
-                    pending
-                      ? 'bg-sand-100 text-ink-light'
-                      : isPlaying
-                      ? 'bg-sage-500 text-white'
-                      : 'bg-sand-100 text-sage-500'
-                  }`}
-                >
-                  {pending ? (
-                    <Clock className="h-5 w-5" />
-                  ) : isPlaying ? (
-                    <Pause className="h-5 w-5" />
-                  ) : (
-                    <Play className="h-5 w-5 translate-x-0.5" />
-                  )}
-                </span>
-                <div className="min-w-0 flex-1">
-                  <p className={`truncate font-display text-sm font-semibold ${pending ? 'text-ink-light' : 'text-ink'}`}>
-                    {track.titulo}
-                  </p>
-                  <p className="truncate text-xs text-ink-soft">{track.autor}</p>
-                </div>
-                {pending ? (
-                  <span className="shrink-0 rounded-full bg-sand-100 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-ink-light">
-                    Próximamente
-                  </span>
-                ) : (
-                  <span className="flex items-center gap-1 text-[11px] font-medium text-ink-light">
-                    <Music2 className="h-3 w-3" />
-                    {track.duracion}
-                  </span>
-                )}
-              </button>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="space-y-6">
+        {grupos.map((g) => (
+          <div key={g.tipo}>
+            <h3 className="mb-2 px-1 font-display text-sm font-bold text-sage-600">
+              {g.label}
+            </h3>
+            <ul className="space-y-2">{g.items.map(renderTrack)}</ul>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
