@@ -9,6 +9,7 @@
       "patron": "Rechazo a la propia imagen y conflicto con la identidad. Sentir que no gusto como soy o querer marcar distancia con los demás.",
       "nuevoModelo": "Me acepto y me quiero tal como soy hoy. Mi valor no depende de mi aspecto.",
       "accionPNL": "Trabaja el 'Espejo Amable' a diario para suavizar la mirada crítica hacia ti.",
+      "paraQue": "Quizá te invita a aceptarte tal como eres y a no esconder tu verdadero rostro.",
       "ejercicioId": "espejo-amable"
     },
     {
@@ -17,7 +18,8 @@
       "sistema": "Sistema óseo y metabólico",
       "patron": "Necesidad de dominar y de tener el control, con impaciencia y rigidez ante quienes no hacen las cosas 'a mi manera'.",
       "nuevoModelo": "Suelto el control de lo que no me corresponde. Dejo que la vida y los demás fluyan a su ritmo.",
-      "accionPNL": "Practica la 'Respiración Cuadrada' cuando notes impaciencia o necesidad de mandar."
+      "accionPNL": "Practica la 'Respiración Cuadrada' cuando notes impaciencia o necesidad de mandar.",
+      "paraQue": "Tal vez te pide soltar el control y permitir que los demás hagan a su manera."
     },
     {
       "id": "alergias",
@@ -26,6 +28,7 @@
       "patron": "Rechazo intenso a algo o a alguien. Vale la pena preguntarse: ¿a qué o a quién me volví 'alérgico' emocionalmente?",
       "nuevoModelo": "Estoy a salvo. Puedo poner límites sanos sin necesidad de rechazar la vida.",
       "accionPNL": "Usa el 'Cambio de Submodalidades' sobre la situación o persona que te genera rechazo.",
+      "paraQue": "Puede recordarte poner límites sanos sin rechazar la vida.",
       "ejercicioId": "cambio-submodalidades"
     },
     {
@@ -35,6 +38,7 @@
       "patron": "Algo (un 'bocado' emocional, unas palabras) que no puedo tragar ni expresar. Enfado o miedo que se queda atascado.",
       "nuevoModelo": "Me permito expresar lo que siento con calma. Mi voz tiene derecho a salir.",
       "accionPNL": "El 'Ancla de Recursos' te da seguridad para decir lo que necesitas.",
+      "paraQue": "Quizá te pide expresar eso que no has podido tragar ni decir.",
       "ejercicioId": "ancla-de-recursos"
     },
     {
@@ -44,6 +48,7 @@
       "patron": "Anticipar peligros que aún no ocurren y sentir que debo controlarlo todo para estar a salvo. Desconfianza en el fluir de la vida.",
       "nuevoModelo": "Estoy a salvo en el presente. Confío en que sabré responder a lo que llegue, cuando llegue.",
       "accionPNL": "Reduce la intensidad de la imagen que te angustia con el 'Cambio de Submodalidades'.",
+      "paraQue": "Tal vez te invita a volver al presente y confiar en que puedes con lo que venga.",
       "ejercicioId": "cambio-submodalidades"
     },
     {
@@ -53,6 +58,7 @@
       "patron": "Autocrítica y rigidez interior. Sentir que no se me valora y guardar resentimiento sin poder soltarlo.",
       "nuevoModelo": "Me trato con flexibilidad y ternura. Suelto los reproches y elijo la paz.",
       "accionPNL": "El 'Espejo Amable' ablanda el diálogo interno duro que tensa el cuerpo.",
+      "paraQue": "Puede pedirte más flexibilidad y menos autocrítica contigo.",
       "ejercicioId": "espejo-amable"
     },
     {
@@ -62,6 +68,7 @@
       "patron": "Sensación de ahogo emocional, de que 'me falta espacio' para ser yo. A veces, exceso de protección o de presencia de alguien.",
       "nuevoModelo": "Tengo derecho a mi propio espacio y a respirar mi vida. Estoy seguro/a siendo yo.",
       "accionPNL": "Acompaña tu calma con la 'Respiración Cuadrada' y la Respiración Guiada de la Zona Zen.",
+      "paraQue": "Quizá te invita a reclamar tu espacio y respirar tu propia vida.",
       "ejercicioId": "respiracion-cuadrada"
     },
     {
@@ -71,6 +78,7 @@
       "patron": "Tensiones y discusiones en el ambiente cercano (familia, hogar). El clima emocional se ha vuelto irrespirable.",
       "nuevoModelo": "Elijo la calma en mi entorno. Lo que otros discuten no tiene por qué habitar en mí.",
       "accionPNL": "Crea un 'Ancla de Recursos' de calma para volver a ella en los momentos tensos.",
+      "paraQue": "Tal vez te pide calma en un ambiente que se volvió tenso.",
       "ejercicioId": "ancla-de-recursos"
     },
     {
@@ -79,7 +87,8 @@
       "sistema": "Sistema nervioso",
       "patron": "Rabia y tensión contenidas durante el día que no encuentran salida y se descargan de noche apretando la mandíbula.",
       "nuevoModelo": "Encuentro maneras sanas de soltar mi tensión. Puedo relajar la mandíbula y descansar.",
-      "accionPNL": "Antes de dormir, haz la Respiración Guiada de la Zona Zen para descargar la tensión."
+      "accionPNL": "Antes de dormir, haz la Respiración Guiada de la Zona Zen para descargar la tensión.",
+      "paraQue": "Puede recordarte soltar, de día, la tensión que aprietas de noche."
     },
     {
       "id": "calculos-renales",
@@ -88,6 +97,7 @@
       "patron": "Pensamientos y emociones que se han 'endurecido': rencores antiguos y miedos que no se disuelven.",
       "nuevoModelo": "Disuelvo con amor lo que ya no necesito cargar. Dejo fluir mis emociones.",
       "accionPNL": "Usa el 'Cambio de Submodalidades' para ablandar un recuerdo o rencor que aún pesa.",
+      "paraQue": "Quizá te invita a disolver rencores que has dejado endurecer.",
       "ejercicioId": "cambio-submodalidades"
     },
     {
@@ -97,6 +107,7 @@
       "patron": "Rigidez ante otras opiniones o posturas, testarudez, o el peso de sostener demasiadas responsabilidades a la vez.",
       "nuevoModelo": "Me permito mirar la vida desde otros ángulos. Suelto la carga que no me toca sostener.",
       "accionPNL": "El 'Círculo de Excelencia' te ayuda a reconectar con tu fuerza y soltar el peso.",
+      "paraQue": "Tal vez te pide mirar la situación desde otro ángulo y soltar peso.",
       "ejercicioId": "circulo-de-excelencia"
     },
     {
@@ -106,6 +117,7 @@
       "patron": "Miedo por el dinero o el futuro, sensación de no tener apoyo o de caminar sin base segura.",
       "nuevoModelo": "La vida me sostiene. Confío en mis recursos y avanzo con paso firme.",
       "accionPNL": "Refuerza tu sensación de sostén con el 'Círculo de Excelencia'.",
+      "paraQue": "Puede invitarte a confiar en tu sostén y avanzar sin miedo al futuro.",
       "ejercicioId": "circulo-de-excelencia"
     },
     {
@@ -115,6 +127,7 @@
       "patron": "Enfado o decepción en el propio 'territorio' (pareja, hogar, trabajo). Sentirse invadido o dolido por alguien cercano.",
       "nuevoModelo": "Marco mis límites con calma. Mi territorio es seguro y yo decido en él.",
       "accionPNL": "Practica el 'Ancla de Recursos' para responder desde la serenidad, no desde el enfado.",
+      "paraQue": "Quizá te pide marcar tus límites en tu propio territorio.",
       "ejercicioId": "ancla-de-recursos"
     },
     {
@@ -124,6 +137,7 @@
       "patron": "Dificultad para disfrutar y recibir la alegría de la vida. Los 'canales' del placer y la ilusión se sienten obstruidos.",
       "nuevoModelo": "Me abro a recibir alegría y placer. Merezco disfrutar de las cosas buenas.",
       "accionPNL": "Ancla un estado de alegría con el 'Ancla de Recursos' y actívalo cada día.",
+      "paraQue": "Tal vez te invita a volver a recibir y disfrutar la alegría de la vida.",
       "ejercicioId": "ancla-de-recursos"
     },
     {
@@ -133,6 +147,7 @@
       "patron": "Miedo e inseguridad, aferrarse a lo vivido sin poder soltar. Retener 'lo sucio' o desagradable de una situación.",
       "nuevoModelo": "Suelto lo que ya cumplió su función. Confío y me permito soltar sin miedo.",
       "accionPNL": "El 'Cambio de Submodalidades' ayuda a soltar una situación que sigues reteniendo.",
+      "paraQue": "Puede pedirte soltar lo vivido en vez de retenerlo por miedo.",
       "ejercicioId": "cambio-submodalidades"
     },
     {
@@ -142,6 +157,7 @@
       "patron": "Pérdida de sentido o de ilusión, rabia dirigida hacia dentro y desconexión del propio deseo de vivir.",
       "nuevoModelo": "Poco a poco reconecto con lo que me hace bien. Merezco luz, y hoy elijo un pequeño paso hacia ella.",
       "accionPNL": "Empieza suave con 'El Espejo Amable'. Si el malestar es intenso o prolongado, busca apoyo profesional.",
+      "paraQue": "Quizá te invita a reconectar, de a poco, con lo que te da sentido.",
       "ejercicioId": "espejo-amable"
     },
     {
@@ -151,6 +167,7 @@
       "patron": "Sentirse herido por el contacto o la cercanía de alguien. Conflicto de separación o de contacto no resuelto.",
       "nuevoModelo": "Estoy en paz con mi piel y con mi entorno. Elijo con quién y cómo me acerco.",
       "accionPNL": "Fortalece tu autoestima y tu calma con 'El Espejo Amable'.",
+      "paraQue": "Tal vez te pide elegir con quién y cómo te acercas, cuidando tu piel.",
       "ejercicioId": "espejo-amable"
     },
     {
@@ -160,6 +177,7 @@
       "patron": "Sensación de falta de dulzura en la vida, control excesivo y tristeza por algo que se anhelaba y no llegó.",
       "nuevoModelo": "La dulzura vive en mí y la creo cada día. Suelto el control y me permito disfrutar el presente.",
       "accionPNL": "Ancla momentos de dulzura y disfrute con el 'Ancla de Recursos'.",
+      "paraQue": "Puede recordarte crear tu propia dulzura y soltar el control.",
       "ejercicioId": "ancla-de-recursos"
     },
     {
@@ -169,6 +187,7 @@
       "patron": "Querer expulsar cuanto antes una situación que asusta, sin darse tiempo para asimilarla.",
       "nuevoModelo": "Me doy el tiempo que necesito. Puedo asimilar la vida con calma y seguridad.",
       "accionPNL": "La 'Respiración Cuadrada' te ayuda a frenar y volver al presente.",
+      "paraQue": "Quizá te invita a darte tiempo para asimilar, sin huir.",
       "ejercicioId": "respiracion-cuadrada"
     },
     {
@@ -178,6 +197,7 @@
       "patron": "Autoexigencia y exceso de pensamiento. No permitirse fallar y querer que todo salga perfecto.",
       "nuevoModelo": "Suelto la exigencia. Me permito descansar la mente y ser suficiente tal como soy.",
       "accionPNL": "Suaviza tu diálogo interno con 'El Espejo Amable'.",
+      "paraQue": "Tal vez te pide descansar la mente y soltar la exigencia.",
       "ejercicioId": "espejo-amable"
     },
     {
@@ -187,6 +207,7 @@
       "patron": "Sentir el peso de responsabilidades (a menudo ajenas) y falta de apoyo. La zona lumbar suele ligarse al miedo económico.",
       "nuevoModelo": "La vida me sostiene. Suelto las cargas que no me corresponden y confío en mi apoyo.",
       "accionPNL": "El 'Círculo de Excelencia' reconecta con tu propia fuerza y sostén.",
+      "paraQue": "Puede invitarte a soltar cargas que no te corresponden.",
       "ejercicioId": "circulo-de-excelencia"
     },
     {
@@ -196,6 +217,7 @@
       "patron": "Aferrarse al pasado y al control, con miedo a soltar o a que 'falte'. Dificultad para dejar ir personas, cosas o ideas.",
       "nuevoModelo": "Suelto con confianza lo que ya pasó. Hay espacio para lo nuevo cuando dejo ir.",
       "accionPNL": "Trabaja el desapego de una situación concreta con el 'Cambio de Submodalidades'.",
+      "paraQue": "Quizá te pide dejar ir el pasado para hacer espacio a lo nuevo.",
       "ejercicioId": "cambio-submodalidades"
     },
     {
@@ -205,6 +227,7 @@
       "patron": "Palabras o enojo tragados, miedo a expresar lo que de verdad se siente.",
       "nuevoModelo": "Me doy permiso para hablar mi verdad con respeto. Mi voz importa.",
       "accionPNL": "El 'Ancla de Recursos' te da seguridad antes de una conversación difícil.",
+      "paraQue": "Tal vez te invita a decir, con calma, lo que has callado.",
       "ejercicioId": "ancla-de-recursos"
     },
     {
@@ -214,6 +237,7 @@
       "patron": "Agotamiento por darlo todo a los demás, desvalorización profunda y no permitirse descansar ni recibir.",
       "nuevoModelo": "Me cuido con la misma entrega con la que cuido a otros. Merezco descanso y ternura.",
       "accionPNL": "Practica 'El Espejo Amable' y date permiso real para parar y respirar.",
+      "paraQue": "Puede recordarte cuidarte a ti con la misma entrega que das a otros.",
       "ejercicioId": "espejo-amable"
     },
     {
@@ -222,7 +246,8 @@
       "sistema": "Sistema inmunitario",
       "patron": "Rabia que 'quema' por dentro. El cuerpo se activa intensamente para resolver un conflicto.",
       "nuevoModelo": "Reconozco mi enfado y lo dejo salir de forma sana. Después, vuelvo a la calma.",
-      "accionPNL": "Cuando baje la intensidad, usa la Respiración Guiada para regresar al equilibrio."
+      "accionPNL": "Cuando baje la intensidad, usa la Respiración Guiada para regresar al equilibrio.",
+      "paraQue": "Quizá te pide reconocer un enojo y dejarlo salir de forma sana."
     },
     {
       "id": "garganta",
@@ -231,6 +256,7 @@
       "patron": "No expresar la propia verdad; tragarse las palabras por miedo a ser juzgado.",
       "nuevoModelo": "Tengo derecho a expresar quién soy. Comunico con calma y respeto.",
       "accionPNL": "Accede a un estado de seguridad con el 'Ancla de Recursos' antes de hablar.",
+      "paraQue": "Tal vez te invita a expresar tu verdad con respeto.",
       "ejercicioId": "ancla-de-recursos"
     },
     {
@@ -240,6 +266,7 @@
       "patron": "No poder 'digerir' a alguien o una contrariedad. Preocupación rumiada y miedo a lo nuevo.",
       "nuevoModelo": "Asimilo la vida con calma. Elijo qué me nutre y suelto lo que no puedo cambiar.",
       "accionPNL": "Trabaja con el 'Cambio de Submodalidades' aquello que 'no puedes digerir'.",
+      "paraQue": "Puede pedirte soltar una preocupación que estás rumiando.",
       "ejercicioId": "cambio-submodalidades"
     },
     {
@@ -248,7 +275,8 @@
       "sistema": "Aparato respiratorio",
       "patron": "Saturación y necesidad de parar. A veces, una contrariedad menor con alguien del entorno.",
       "nuevoModelo": "Escucho a mi cuerpo cuando pide descanso. Parar también es cuidarme.",
-      "accionPNL": "Regálate una pausa consciente con la Respiración Guiada de la Zona Zen."
+      "accionPNL": "Regálate una pausa consciente con la Respiración Guiada de la Zona Zen.",
+      "paraQue": "Quizá te invita a parar y darte el descanso que necesitas."
     },
     {
       "id": "hemorroides",
@@ -257,6 +285,7 @@
       "patron": "Presión y miedo relacionados con lo material o con plazos; cargar tensión sin poder soltarla.",
       "nuevoModelo": "Suelto la presión que me impongo. Confío en que tengo lo necesario y puedo relajarme.",
       "accionPNL": "Libera tensión con la 'Respiración Cuadrada'.",
+      "paraQue": "Tal vez te pide soltar la presión que tú misma te impones.",
       "ejercicioId": "respiracion-cuadrada"
     },
     {
@@ -266,6 +295,7 @@
       "patron": "Culpa o vergüenza ligada a algo dicho, al afecto o a la sexualidad. Reproche hacia uno mismo.",
       "nuevoModelo": "Me perdono y me acepto. Puedo hablar y amar sin castigarme.",
       "accionPNL": "Reconcíliate contigo mismo/a con 'El Espejo Amable'.",
+      "paraQue": "Puede recordarte perdonarte y hablar sin castigarte.",
       "ejercicioId": "espejo-amable"
     },
     {
@@ -275,6 +305,7 @@
       "patron": "Miedo a la carencia y a la falta, junto con rabia e injusticias acumuladas.",
       "nuevoModelo": "Tengo lo suficiente y confío en la abundancia de la vida. Suelto la injusticia con paz.",
       "accionPNL": "Transforma la carga de una injusticia con el 'Cambio de Submodalidades'.",
+      "paraQue": "Quizá te invita a soltar una injusticia y confiar en la abundancia.",
       "ejercicioId": "cambio-submodalidades"
     },
     {
@@ -284,6 +315,7 @@
       "patron": "Un conflicto emocional contenido durante mucho tiempo, con exceso de control y dificultad para delegar.",
       "nuevoModelo": "Suelto el pasado con alegría. Elijo la paz y permito que la vida fluya a través de mí.",
       "accionPNL": "Instala un estado de calma accesible al instante con el 'Ancla de Recursos'.",
+      "paraQue": "Tal vez te pide soltar un conflicto contenido y elegir la paz.",
       "ejercicioId": "ancla-de-recursos"
     },
     {
@@ -293,6 +325,7 @@
       "patron": "Sentirse frenado o resignado, con la sensación de 'para qué intentarlo' o de no poder avanzar.",
       "nuevoModelo": "Recupero mi ritmo y mi voz. Puedo avanzar hacia lo que deseo, paso a paso.",
       "accionPNL": "Reactiva tu motivación con el 'Círculo de Excelencia'.",
+      "paraQue": "Puede invitarte a recuperar tu ritmo y tu voz.",
       "ejercicioId": "circulo-de-excelencia"
     },
     {
@@ -302,6 +335,7 @@
       "patron": "Sensación de estar siempre 'en guerra' o a la defensiva, con límites poco claros que agotan las defensas.",
       "nuevoModelo": "Estoy a salvo. Pongo límites claros y suelto la lucha constante.",
       "accionPNL": "Ancla la sensación de seguridad con el 'Ancla de Recursos'.",
+      "paraQue": "Quizá te pide bajar la guardia y poner límites claros.",
       "ejercicioId": "ancla-de-recursos"
     },
     {
@@ -311,6 +345,7 @@
       "patron": "Mente que no se apaga por miedo a soltar el control. Preocupaciones que se reactivan con el silencio de la noche.",
       "nuevoModelo": "Con amor suelto el día de hoy. Me entrego al descanso confiando en el mañana.",
       "accionPNL": "La 'Respiración Cuadrada' y la meditación 'Tu refugio seguro' preparan el descanso.",
+      "paraQue": "Tal vez te invita a soltar el día y confiar en el descanso.",
       "ejercicioId": "respiracion-cuadrada"
     },
     {
@@ -320,6 +355,7 @@
       "patron": "Presión por el deber y la perfección, con la mente sobrecargada y la autoexigencia como norma.",
       "nuevoModelo": "Me permito soltar la exigencia. Suelto la necesidad de ser perfecto/a y me relajo.",
       "accionPNL": "Ablanda el diálogo interno crítico con 'El Espejo Amable'.",
+      "paraQue": "Puede recordarte soltar la perfección y el exceso de deber.",
       "ejercicioId": "espejo-amable"
     },
     {
@@ -329,6 +365,7 @@
       "patron": "Incomodidad al avanzar en la vida; resistencia a dar ciertos pasos o a seguir cierta dirección.",
       "nuevoModelo": "Camino mi vida con libertad. Elijo mis pasos y avanzo a mi manera.",
       "accionPNL": "Visualiza tu avance con seguridad usando la 'Técnica del Swish'.",
+      "paraQue": "Quizá te pide avanzar en la vida a tu manera, sin incomodidad.",
       "ejercicioId": "tecnica-del-swish"
     },
     {
@@ -338,6 +375,7 @@
       "patron": "Un enfado tan fuerte que 'quita la voz', o miedo a hablar con autoridad y a hacerse escuchar.",
       "nuevoModelo": "Mi voz es válida y puede sostenerse con firmeza y respeto.",
       "accionPNL": "Accede a tu seguridad y firmeza con el 'Ancla de Recursos'.",
+      "paraQue": "Tal vez te invita a recuperar tu voz y hacerte escuchar.",
       "ejercicioId": "ancla-de-recursos"
     },
     {
@@ -347,6 +385,7 @@
       "patron": "Miedo económico y sensación de falta de sostén; cargar más de lo que se puede.",
       "nuevoModelo": "Confío en mi capacidad de sostenerme. Suelto el exceso de carga.",
       "accionPNL": "Recupera tu sensación de fuerza con el 'Círculo de Excelencia'.",
+      "paraQue": "Puede pedirte confiar en tu sostén y soltar el exceso de carga.",
       "ejercicioId": "circulo-de-excelencia"
     },
     {
@@ -356,6 +395,7 @@
       "patron": "Sentir que se pierde el control o querer huir de una situación que desborda.",
       "nuevoModelo": "Encuentro mi centro. Estoy firme y a salvo aquí y ahora.",
       "accionPNL": "Vuelve a tu eje con la 'Respiración Cuadrada'.",
+      "paraQue": "Quizá te invita a volver a tu centro cuando algo te desborda.",
       "ejercicioId": "respiracion-cuadrada"
     },
     {
@@ -365,6 +405,7 @@
       "patron": "Rechazo a algo o alguien que resulta difícil de 'tragar' o aceptar.",
       "nuevoModelo": "Elijo qué acepto en mi vida. Puedo decir no a lo que me hace daño.",
       "accionPNL": "Reduce el impacto de aquello que rechazas con el 'Cambio de Submodalidades'.",
+      "paraQue": "Tal vez te pide reconocer qué o a quién te cuesta aceptar.",
       "ejercicioId": "cambio-submodalidades"
     },
     {
@@ -374,6 +415,7 @@
       "patron": "Anticipación y exceso de alerta; el cuerpo permanece en tensión esperando lo que pueda pasar.",
       "nuevoModelo": "Puedo estar en calma. Confío en mí y suelto la alerta constante.",
       "accionPNL": "Regula tu activación con la 'Respiración Cuadrada'.",
+      "paraQue": "Puede recordarte que puedes bajar la alerta y confiar.",
       "ejercicioId": "respiracion-cuadrada"
     },
     {
@@ -383,6 +425,7 @@
       "patron": "Buscar protección ante el mundo o consuelo y seguridad en la comida. A veces, una 'coraza' para sentirse a salvo.",
       "nuevoModelo": "Estoy seguro/a siendo yo. Me cuido con amor y encuentro consuelo en formas que me nutren.",
       "accionPNL": "Ancla la sensación de seguridad sin recurrir a la comida con el 'Ancla de Recursos'.",
+      "paraQue": "Quizá te invita a sentirte segura siendo tú, sin coraza.",
       "ejercicioId": "ancla-de-recursos"
     },
     {
@@ -392,6 +435,7 @@
       "patron": "No querer ver algo de la propia vida, del presente o del futuro que resulta incómodo o doloroso.",
       "nuevoModelo": "Me permito mirar mi vida con claridad y sin miedo. Lo que veo, lo puedo afrontar.",
       "accionPNL": "Transforma la imagen que te asusta ver con la 'Técnica del Swish'.",
+      "paraQue": "Tal vez te pide mirar, sin miedo, algo que no querías ver.",
       "ejercicioId": "tecnica-del-swish"
     },
     {
@@ -401,6 +445,7 @@
       "patron": "No querer oír algo que duele o incomoda: palabras, discusiones o una verdad difícil.",
       "nuevoModelo": "Puedo escuchar la vida con serenidad y elegir qué dejo entrar en mí.",
       "accionPNL": "Baja la intensidad de esas palabras con el 'Cambio de Submodalidades'.",
+      "paraQue": "Puede invitarte a elegir qué dejas entrar en ti al escuchar.",
       "ejercicioId": "cambio-submodalidades"
     },
     {
@@ -410,6 +455,7 @@
       "patron": "Conflicto con la creatividad, la maternidad o una pérdida no elaborada.",
       "nuevoModelo": "Honro mi capacidad de crear y de cuidar. Doy espacio a mi proceso con ternura.",
       "accionPNL": "Acompaña el duelo o el anhelo con 'El Espejo Amable' y mucha autocompasión.",
+      "paraQue": "Quizá te pide honrar tu creatividad y acompañar tu proceso.",
       "ejercicioId": "espejo-amable"
     },
     {
@@ -419,6 +465,7 @@
       "patron": "Sentirse amenazado o herido por el entorno. Conflicto de contacto y de separación con los demás.",
       "nuevoModelo": "Estoy en paz conmigo. Me acepto y me protejo con amor; el mundo es un lugar seguro para mí.",
       "accionPNL": "Refuerza tu autoestima a diario con 'El Espejo Amable'.",
+      "paraQue": "Tal vez te invita a sentirte segura en el contacto con el mundo.",
       "ejercicioId": "espejo-amable"
     },
     {
@@ -428,6 +475,7 @@
       "patron": "Preocupaciones por el rol masculino, la descendencia o sentirse desvalorizado con el paso del tiempo.",
       "nuevoModelo": "Mi valor no depende de la edad ni de un rol. Me reconozco y me respeto.",
       "accionPNL": "Reconecta con tu valía usando el 'Círculo de Excelencia'.",
+      "paraQue": "Puede recordarte que tu valor no depende de la edad ni de un rol.",
       "ejercicioId": "circulo-de-excelencia"
     },
     {
@@ -437,6 +485,7 @@
       "patron": "Un dolor o rencor antiguo que quedó 'encapsulado'; algo no llorado ni soltado que se guarda por dentro.",
       "nuevoModelo": "Me permito sentir y soltar lo que guardé. Al soltarlo, me libero.",
       "accionPNL": "Da salida a esa emoción retenida con el 'Cambio de Submodalidades'.",
+      "paraQue": "Quizá te pide sentir y soltar algo que guardaste sin llorar.",
       "ejercicioId": "cambio-submodalidades"
     },
     {
@@ -446,6 +495,7 @@
       "patron": "Irritación con alguien cercano o con el ambiente: 'algo (o alguien) me molesta y no lo soporto'.",
       "nuevoModelo": "Elijo cómo me afecta mi entorno. Puedo poner distancia sana con lo que me irrita.",
       "accionPNL": "Rebaja la carga de esa persona o situación con el 'Cambio de Submodalidades'.",
+      "paraQue": "Tal vez te invita a poner distancia sana con lo que te irrita.",
       "ejercicioId": "cambio-submodalidades"
     },
     {
@@ -455,6 +505,7 @@
       "patron": "Miedo profundo y tensiones en las relaciones; también, poca valoración de lo propio.",
       "nuevoModelo": "Suelto el miedo antiguo. Confío en la vida y valoro lo que soy y lo que tengo.",
       "accionPNL": "Trabaja un miedo concreto con el 'Cambio de Submodalidades'.",
+      "paraQue": "Puede pedirte soltar un miedo antiguo y confiar en la vida.",
       "ejercicioId": "cambio-submodalidades"
     },
     {
@@ -464,6 +515,7 @@
       "patron": "Orgullo y falta de flexibilidad; dificultad para ceder, para inclinarse o para avanzar con humildad.",
       "nuevoModelo": "Me permito doblarme sin romperme. Avanzo con flexibilidad y humildad.",
       "accionPNL": "Suaviza la rigidez interior con 'El Espejo Amable'.",
+      "paraQue": "Quizá te invita a ceder y avanzar con humildad y flexibilidad.",
       "ejercicioId": "espejo-amable"
     },
     {
@@ -473,6 +525,7 @@
       "patron": "Irritación con una persona con la que se convive de cerca, y tristeza contenida que no se expresa.",
       "nuevoModelo": "Me doy permiso para sentir y expresar. Puedo convivir sin guardarme el malestar.",
       "accionPNL": "Da espacio a esa tristeza con 'El Espejo Amable' y una respiración consciente.",
+      "paraQue": "Tal vez te pide expresar una tristeza que has contenido.",
       "ejercicioId": "espejo-amable"
     },
     {
@@ -482,6 +535,7 @@
       "patron": "Miedo o alerta intensa; el corazón se acelera anticipando un peligro o una emoción desbordante.",
       "nuevoModelo": "Mi corazón puede latir en calma. Estoy a salvo en este momento.",
       "accionPNL": "Regula el ritmo con la 'Respiración Cuadrada'.",
+      "paraQue": "Puede recordarte que estás a salvo y tu corazón puede calmarse.",
       "ejercicioId": "respiracion-cuadrada"
     },
     {
@@ -491,6 +545,7 @@
       "patron": "Sensación de que 'el tiempo apremia' o de ir demasiado lento/rápido; dificultad para decidir a qué ritmo vivir.",
       "nuevoModelo": "Vivo a mi propio ritmo. Confío en mis tiempos y en mis decisiones.",
       "accionPNL": "Recupera seguridad para decidir con el 'Ancla de Recursos'.",
+      "paraQue": "Quizá te invita a vivir a tu propio ritmo y decidir con confianza.",
       "ejercicioId": "ancla-de-recursos"
     },
     {
@@ -500,6 +555,7 @@
       "patron": "Deseo de 'sacar' algo de dentro que molesta, o de llamar la atención sobre lo que incomoda.",
       "nuevoModelo": "Me permito expresar lo que necesito sacar. Mi malestar merece ser escuchado.",
       "accionPNL": "Practica expresar lo retenido con seguridad usando el 'Ancla de Recursos'.",
+      "paraQue": "Tal vez te pide sacar algo que te molesta por dentro.",
       "ejercicioId": "ancla-de-recursos"
     },
     {
@@ -509,6 +565,7 @@
       "patron": "Rigidez en el 'hacer', exceso de trabajo o esfuerzo y sensación de falta de reconocimiento.",
       "nuevoModelo": "Suelto la rigidez en lo que hago. Me permito parar y reconozco mi propio esfuerzo.",
       "accionPNL": "Reconoce tu valor con 'El Espejo Amable' y date pausas reales.",
+      "paraQue": "Puede invitarte a soltar la rigidez en el hacer y reconocerte.",
       "ejercicioId": "espejo-amable"
     },
     {
@@ -518,6 +575,7 @@
       "patron": "Preocupación que 'corroe', autoexigencia y un miedo sostenido que no se calma.",
       "nuevoModelo": "Me trato con paciencia. Suelto la preocupación y confío en que puedo con esto.",
       "accionPNL": "Calma la rumiación con la 'Respiración Cuadrada' y el 'Cambio de Submodalidades'.",
+      "paraQue": "Quizá te pide tratarte con paciencia y soltar la preocupación.",
       "ejercicioId": "cambio-submodalidades"
     },
     {
@@ -527,6 +585,7 @@
       "patron": "Nervios y necesidad de control, con frustración por los detalles o por no llegar a todo.",
       "nuevoModelo": "Suelto el control de los detalles. Puedo estar tranquilo/a aunque no todo sea perfecto.",
       "accionPNL": "Baja la ansiedad con la 'Respiración Cuadrada'.",
+      "paraQue": "Tal vez te invita a soltar el control de los detalles.",
       "ejercicioId": "respiracion-cuadrada"
     },
     {
@@ -536,6 +595,7 @@
       "patron": "Sentirse cargado y sin salida, o permanecer en un lugar o situación que 'pesa' y no deja avanzar.",
       "nuevoModelo": "Me doy permiso para moverme y elegir. Suelto lo que me retiene y me pesa.",
       "accionPNL": "Visualiza un cambio de rumbo posible con la 'Técnica del Swish'.",
+      "paraQue": "Puede recordarte moverte y elegir, soltando lo que te pesa.",
       "ejercicioId": "tecnica-del-swish"
     },
     {
@@ -545,6 +605,7 @@
       "patron": "Sentirse 'marcado' por el territorio o las circunstancias; miedo o enfado que no se suelta.",
       "nuevoModelo": "Reclamo mi espacio con calma. Suelto el enfado y el miedo que ya no me sirven.",
       "accionPNL": "Libera la carga con el 'Cambio de Submodalidades'.",
+      "paraQue": "Quizá te pide reclamar tu espacio y soltar el enfado.",
       "ejercicioId": "cambio-submodalidades"
     },
     {
@@ -554,6 +615,7 @@
       "patron": "Rabia, reproches e injusticias 'amargas' que no se han expresado y se guardan.",
       "nuevoModelo": "Expreso mi enojo de forma sana y lo suelto. Elijo la paz por encima del rencor.",
       "accionPNL": "Transforma un reproche antiguo con el 'Cambio de Submodalidades'.",
+      "paraQue": "Tal vez te invita a expresar y soltar reproches amargos.",
       "ejercicioId": "cambio-submodalidades"
     },
     {
@@ -562,7 +624,8 @@
       "sistema": "Órganos de los sentidos",
       "patron": "No querer escuchar cierto 'ruido' externo o interno; búsqueda de silencio y descanso mental.",
       "nuevoModelo": "Me permito el silencio y la calma. Elijo a qué presto atención.",
-      "accionPNL": "Cultiva el silencio interior con la Respiración Guiada de la Zona Zen."
+      "accionPNL": "Cultiva el silencio interior con la Respiración Guiada de la Zona Zen.",
+      "paraQue": "Puede pedirte el silencio y elegir a qué prestas atención."
     },
     {
       "id": "hombros",
@@ -781,6 +844,165 @@
       "accionPNL": "Reconoce tus límites con 'El Espejo Amable' y date pausas reales.",
       "paraQue": "Puede invitarte a parar, poner límites y reconectar con lo que te ilusiona.",
       "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "reflujo",
+      "nombre": "Reflujo / acidez",
+      "sistema": "Aparato digestivo",
+      "patron": "Algo que no puedes 'tragar' o que te genera rechazo, y que 'sube' como enojo o rabia contenida.",
+      "nuevoModelo": "Asimilo la vida con calma. Expreso lo que me molesta en vez de tragármelo.",
+      "accionPNL": "Rebaja la carga de lo que te irrita con el 'Cambio de Submodalidades'.",
+      "paraQue": "Quizá te pide sacar y expresar algo que te está quemando por dentro.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "hernia",
+      "nombre": "Hernia (discal o hiatal)",
+      "sistema": "Sistema óseo y digestivo",
+      "patron": "Sensación de ruptura por una sobrecarga, o por querer empujar más de lo que puedes; tensión entre esfuerzo y límite.",
+      "nuevoModelo": "Reconozco mis límites. No necesito forzarme para demostrar mi valor.",
+      "accionPNL": "Reconoce tus límites con 'El Espejo Amable'.",
+      "paraQue": "Tal vez te pide dejar de forzarte y pedir ayuda a tiempo.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "psoriasis",
+      "nombre": "Psoriasis",
+      "sistema": "Piel",
+      "patron": "Sentirse herido o 'atacado' por el entorno, con una coraza que protege de un contacto que duele; una separación no resuelta.",
+      "nuevoModelo": "Estoy a salvo en mi piel. Puedo abrirme al contacto con seguridad.",
+      "accionPNL": "Fortalece tu seguridad interior con 'El Espejo Amable'.",
+      "paraQue": "Quizá te invita a sanar una herida de contacto o separación.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "hongos",
+      "nombre": "Hongos / Candidiasis",
+      "sistema": "Piel",
+      "patron": "Sensación de estar 'invadido' o de perder terreno; irritación sostenida o relaciones que te drenan la energía.",
+      "nuevoModelo": "Recupero mi territorio y mi energía. Elijo lo que me nutre.",
+      "accionPNL": "Reconecta con tu fuerza con el 'Círculo de Excelencia'.",
+      "paraQue": "Tal vez te pide poner límites y recuperar tu espacio.",
+      "ejercicioId": "circulo-de-excelencia"
+    },
+    {
+      "id": "testiculos",
+      "nombre": "Testículos",
+      "sistema": "Aparato reproductor",
+      "patron": "Conflicto con la virilidad, la paternidad o el rol masculino; miedo a no 'estar a la altura' o una pérdida.",
+      "nuevoModelo": "Reconozco mi valor y mi fuerza. No tengo nada que demostrar.",
+      "accionPNL": "Reafirma tu valía con el 'Círculo de Excelencia'.",
+      "paraQue": "Puede invitarte a reconciliarte con tu propia fuerza y tu rol.",
+      "ejercicioId": "circulo-de-excelencia"
+    },
+    {
+      "id": "infertilidad",
+      "nombre": "Dificultad para concebir",
+      "sistema": "Aparato reproductor",
+      "patron": "A menudo se vive con miedo, mucho control o una presión intensa; el cuerpo puede expresar la necesidad de soltar y de sentirse a salvo.",
+      "nuevoModelo": "Suelto el control con amor y confío en mi proceso, sea cual sea.",
+      "accionPNL": "Crea calma y seguridad con la meditación 'Tu refugio seguro'.",
+      "paraQue": "Quizá te invita a soltar la exigencia y a cuidar tu paz interior."
+    },
+    {
+      "id": "verrugas",
+      "nombre": "Verrugas",
+      "sistema": "Piel",
+      "patron": "Algo de una misma que no se acepta o que se siente 'feo'; pequeñas creencias de rechazo hacia la propia imagen.",
+      "nuevoModelo": "Me acepto por completo. Suelto la idea de que algo en mí está mal.",
+      "accionPNL": "Suaviza tu autoimagen con 'El Espejo Amable'.",
+      "paraQue": "Tal vez te pide aceptar una parte de ti que rechazabas.",
+      "ejercicioId": "espejo-amable"
+    },
+    {
+      "id": "pulmones",
+      "nombre": "Pulmones / Bronquios",
+      "sistema": "Aparato respiratorio",
+      "patron": "Tristeza o miedo que 'quitan el aire'; sensación de no tener espacio ni libertad para vivir.",
+      "nuevoModelo": "Tengo derecho a respirar y a vivir con libertad. Me doy espacio.",
+      "accionPNL": "Recupera tu calma con la 'Respiración Cuadrada'.",
+      "paraQue": "Quizá te invita a darte aire y libertad en tu vida.",
+      "ejercicioId": "respiracion-cuadrada"
+    },
+    {
+      "id": "pancreas",
+      "nombre": "Páncreas",
+      "sistema": "Sistema endocrino",
+      "patron": "Conflicto con la 'dulzura' de la vida y con el control; resistencia a aceptar lo que es.",
+      "nuevoModelo": "Creo dulzura en mi vida y suelto la necesidad de controlarlo todo.",
+      "accionPNL": "Ancla momentos dulces con el 'Ancla de Recursos'.",
+      "paraQue": "Tal vez te pide volver a endulzar tu día a día.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "apendicitis",
+      "nombre": "Apendicitis",
+      "sistema": "Aparato digestivo",
+      "patron": "Rabia o miedo retenidos que se 'estancan'; la sensación de que algo no puede salir.",
+      "nuevoModelo": "Dejo salir lo que necesito soltar. No tengo que acumularlo.",
+      "accionPNL": "Libera lo retenido con el 'Cambio de Submodalidades'.",
+      "paraQue": "Puede invitarte a soltar una rabia o un miedo atascado.",
+      "ejercicioId": "cambio-submodalidades"
+    },
+    {
+      "id": "retencion-liquidos",
+      "nombre": "Retención de líquidos",
+      "sistema": "Equilibrio general",
+      "patron": "Aferrarse a algo o a alguien por miedo a soltar o a la pérdida; no dejar fluir las emociones.",
+      "nuevoModelo": "Suelto con confianza. Dejo fluir mis emociones y lo que ya no necesito.",
+      "accionPNL": "Practica soltar con la 'Respiración Cuadrada'.",
+      "paraQue": "Quizá te pide soltar algo (o a alguien) a lo que te aferras.",
+      "ejercicioId": "respiracion-cuadrada"
+    },
+    {
+      "id": "sudoracion",
+      "nombre": "Sudoración excesiva",
+      "sistema": "Sistema nervioso",
+      "patron": "Nervios, miedo a la exposición o a 'quedar mal'; tensión en lo social.",
+      "nuevoModelo": "Estoy a salvo siendo yo. Puedo mostrarme con tranquilidad.",
+      "accionPNL": "Ancla la calma con el 'Ancla de Recursos'.",
+      "paraQue": "Tal vez te pide sentirte segura mostrándote tal como eres.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "halitosis",
+      "nombre": "Mal aliento (halitosis)",
+      "sistema": "Boca y dientes",
+      "patron": "Pensamientos o emociones 'estancados' que no se expresan; rabia o reproches guardados.",
+      "nuevoModelo": "Expreso lo que siento con amabilidad y suelto lo que me pesa.",
+      "accionPNL": "Practica expresarte con seguridad usando el 'Ancla de Recursos'.",
+      "paraQue": "Puede invitarte a sacar algo que has guardado demasiado tiempo.",
+      "ejercicioId": "ancla-de-recursos"
+    },
+    {
+      "id": "herpes-zoster",
+      "nombre": "Herpes zóster (culebrilla)",
+      "sistema": "Piel",
+      "patron": "Estrés intenso y rabia o irritación contenida que 'recorre los nervios'; algo que te saca de quicio por dentro.",
+      "nuevoModelo": "Suelto la tensión acumulada. Me permito descansar y calmar mi sistema.",
+      "accionPNL": "Baja la activación con la 'Respiración Cuadrada'.",
+      "paraQue": "Quizá te pide soltar una irritación o un estrés que vienes aguantando.",
+      "ejercicioId": "respiracion-cuadrada"
+    },
+    {
+      "id": "hipoglucemia",
+      "nombre": "Hipoglucemia",
+      "sistema": "Sistema endocrino",
+      "patron": "Sensación de que 'falta dulzura' o de agotamiento por dar de más; dificultad para sostener la energía y la alegría.",
+      "nuevoModelo": "Me nutro de dulzura y descanso. Cuido mi energía.",
+      "accionPNL": "Reconecta con lo que te nutre con el 'Círculo de Excelencia'.",
+      "paraQue": "Tal vez te pide buscar la dulzura y el descanso que te faltan.",
+      "ejercicioId": "circulo-de-excelencia"
+    },
+    {
+      "id": "pies",
+      "nombre": "Pies (dolor, fascitis)",
+      "sistema": "Sistema óseo y articular",
+      "patron": "Miedo o inseguridad sobre el rumbo; sentir que no avanzas o que no tienes una base firme.",
+      "nuevoModelo": "Piso firme en mi camino. Avanzo con seguridad, paso a paso.",
+      "accionPNL": "Afianza tu base con el 'Círculo de Excelencia'.",
+      "paraQue": "Puede invitarte a confiar en tu camino y dar el siguiente paso.",
+      "ejercicioId": "circulo-de-excelencia"
     }
   ]
 }
