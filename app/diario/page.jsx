@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import { Flame, Trash2, PenLine, Check } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import MoodPicker from '@/components/MoodPicker';
+import MoodSphere from '@/components/MoodSphere';
 import { useLocalStorage } from '@/lib/storage';
 import { getMood, moodMessages } from '@/data/moods';
 
@@ -123,7 +124,8 @@ export default function DiarioPage() {
               onChange={(e) => setNota(e.target.value)}
               rows={4}
               placeholder="Escribe libremente… nadie más lo leerá."
-              className="w-full resize-none rounded-2xl border border-sand-200 bg-white p-3 text-sm text-ink placeholder:text-ink-light focus:border-sage-300 focus:outline-none focus:ring-2 focus:ring-sage-100"
+              style={{ background: 'var(--glass-strong)', borderColor: 'var(--glass-border)' }}
+              className="w-full resize-none rounded-2xl border p-3 text-sm text-ink backdrop-blur placeholder:text-ink-light focus:border-sage-300 focus:outline-none focus:ring-2 focus:ring-sage-100"
             />
           </div>
 
@@ -161,10 +163,10 @@ export default function DiarioPage() {
               {entries.map((e) => {
                 const m = getMood(e.mood);
                 return (
-                  <li key={e.id} className="rounded-3xl bg-white p-4 shadow-card">
+                  <li key={e.id} className="card !p-4">
                     <div className="flex items-start justify-between gap-3">
-                      <div className="flex items-center gap-2">
-                        {m && <span className="text-xl leading-none">{m.emoji}</span>}
+                      <div className="flex items-center gap-2.5">
+                        {m && <MoodSphere mood={m} size={30} />}
                         <div>
                           {m && (
                             <p className="font-display text-sm font-semibold text-ink">

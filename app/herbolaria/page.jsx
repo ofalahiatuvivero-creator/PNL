@@ -116,8 +116,8 @@ function CatChip({ active, onClick, label }) {
   return (
     <button
       onClick={onClick}
-      className={`shrink-0 rounded-full px-4 py-2 text-sm font-display font-medium transition ${
-        active ? 'bg-sage-500 text-white shadow-card' : 'bg-white text-ink-soft hover:bg-sage-50'
+      className={`shrink-0 rounded-full px-4 py-2 text-sm font-display font-medium transition-all duration-300 ease-agua ${
+        active ? 'bg-sage-500 text-white shadow-glow' : 'glass text-ink-soft'
       }`}
     >
       {label}

@@ -20,7 +20,7 @@ export default function DictionaryEntry({ entry }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="overflow-hidden rounded-3xl bg-white shadow-card">
+    <div className="glass overflow-hidden rounded-3xl">
       <button
         onClick={() => setOpen((o) => !o)}
         className="flex w-full items-center justify-between gap-3 p-4 text-left"

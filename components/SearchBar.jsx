@@ -20,7 +20,8 @@ export default function SearchBar({ value, onChange, placeholder = 'Buscar…' }
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full rounded-full border border-sand-200 bg-white py-3 pl-12 pr-11 text-sm text-ink placeholder:text-ink-light focus:border-sage-300 focus:outline-none focus:ring-2 focus:ring-sage-100"
+        style={{ background: 'var(--glass-strong)', borderColor: 'var(--glass-border)' }}
+        className="w-full rounded-full border py-3 pl-12 pr-11 text-sm text-ink backdrop-blur placeholder:text-ink-light focus:border-sage-300 focus:outline-none focus:ring-2 focus:ring-sage-100"
       />
       {value && (
         <button
