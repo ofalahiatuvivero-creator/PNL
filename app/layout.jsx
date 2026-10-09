@@ -2,6 +2,7 @@ import './globals.css';
 import { Nunito, Poppins, Lora } from 'next/font/google';
 import BottomNav from '@/components/BottomNav';
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
+import AmbientSound from '@/components/AmbientSound';
 
 /* -------------------------------------------------------------
    TIPOGRAFÍAS
@@ -59,6 +60,8 @@ export default function RootLayout({ children }) {
           {/* Navegación inferior fija (los 4 pilares + inicio) */}
           <BottomNav />
         </div>
+        {/* Música de ambiente global + botón flotante de sonido */}
+        <AmbientSound />
         {/* Registra el service worker (PWA / soporte sin conexión) */}
         <ServiceWorkerRegister />
       </body>
