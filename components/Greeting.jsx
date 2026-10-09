@@ -30,17 +30,14 @@ export default function Greeting() {
     setHour(new Date().getHours());
   }, []);
 
-  const { texto, sub, Icon } = getGreeting(hour ?? 9);
+  const { texto, sub } = getGreeting(hour ?? 9);
 
   return (
-    <div className="flex items-start justify-between gap-4">
-      <div>
-        <p className="font-display text-sm font-medium text-sage-600">{sub}</p>
-        <h1 className="mt-1 text-3xl font-bold text-ink">{texto}</h1>
-      </div>
-      <span className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-terracotta-100 text-terracotta-500">
-        <Icon className="h-6 w-6" />
-      </span>
+    <div>
+      <p className="eyebrow text-sage-600">{sub}</p>
+      <h1 className="mt-2 font-serif text-[2.7rem] font-light leading-[1.02] text-ink">
+        {texto}
+      </h1>
     </div>
   );
 }

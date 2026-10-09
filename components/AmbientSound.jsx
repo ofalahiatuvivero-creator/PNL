@@ -102,18 +102,14 @@ export default function AmbientSound() {
     <>
       <audio ref={audioRef} src="/audios/ambiente.mp3" loop preload="metadata" />
       {ready && (
-        <div className="pointer-events-none fixed bottom-24 left-1/2 z-40 w-full max-w-md -translate-x-1/2">
-          <div className="flex justify-end px-4">
-            <button
-              onClick={toggle}
-              aria-label={on ? 'Silenciar música de fondo' : 'Activar música de fondo'}
-              aria-pressed={on}
-              className="pointer-events-auto flex h-11 w-11 items-center justify-center rounded-full border border-sand-200 bg-white/90 text-sage-600 shadow-soft backdrop-blur transition hover:bg-sage-50 active:scale-95"
-            >
-              {on ? <Volume2 className="h-5 w-5" /> : <VolumeX className="h-5 w-5" />}
-            </button>
-          </div>
-        </div>
+        <button
+          onClick={toggle}
+          aria-label={on ? 'Silenciar música de fondo' : 'Activar música de fondo'}
+          aria-pressed={on}
+          className="glass flex h-11 w-11 items-center justify-center rounded-full text-ink-soft transition-transform duration-300 ease-agua active:scale-95"
+        >
+          {on ? <Volume2 className="h-5 w-5" /> : <VolumeX className="h-5 w-5" />}
+        </button>
       )}
     </>
   );

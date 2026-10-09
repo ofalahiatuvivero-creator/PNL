@@ -2,60 +2,313 @@
 @tailwind components;
 @tailwind utilities;
 
-/* -------------------------------------------------------------
-   ESTILOS GLOBALES
-   Base cálida y suave para toda la aplicación.
-   ------------------------------------------------------------- */
+/* =============================================================
+   SISTEMA "AURORA DE BOSQUE" · tokens por atmósfera
+   El atributo data-atmosfera en <html> (amanecer/dia/atardecer/noche)
+   intercambia estas variables. La transición es lenta (~2 s).
+   ============================================================= */
+
+/* --- Base LUZ (también sirve de amanecer y de fallback) --- */
+:root {
+  /* Acento salvia (puente con la marca) */
+  --sage-50: #F1F6EE;
+  --sage-100: #E3EDDA;
+  --sage-200: #C9D8B6;
+  --sage-300: #AEC492;
+  --sage-400: #8FAE78;
+  --sage-500: #6E874F;
+  --sage-600: #566E3D;
+  --sage-700: #42562F;
+  /* Arena / neutro cálido */
+  --sand-50: #FBF7F0;
+  --sand-100: #F4EEE2;
+  --sand-200: #E9DECA;
+  --sand-300: #DBCBAE;
+  --sand-400: #C7B48D;
+  --sand-500: #B0996E;
+  /* Terracota (acento puntual) */
+  --terracotta-50: #FBEEE7;
+  --terracotta-100: #F6DCCC;
+  --terracotta-200: #ECBEA3;
+  --terracotta-300: #E3A07F;
+  --terracotta-400: #E08E6D;
+  --terracotta-500: #C56F4F;
+  --terracotta-600: #A4573B;
+  /* Texto: verde-tinta profundo (nunca negro puro) */
+  --ink: #1F3B3A;
+  --ink-soft: #46605B;
+  --ink-light: #7C8F89;
+  /* Cristal */
+  --glass-bg: rgba(255, 255, 255, 0.46);
+  --glass-strong: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.55);
+  --shadow-aura: rgba(60, 92, 80, 0.26);
+  --glow: rgba(157, 197, 176, 0.5);
+  /* Fondo vivo (amanecer) */
+  --ground: #F6EFE6;
+  --mesh-1: #F4C9B8;
+  --mesh-2: #D9CCF5;
+  --mesh-3: #CDEBDF;
+  --mesh-4: #F6EFE6;
+  --grain-opacity: 0.05;
+  /* Esfera de luz */
+  --orb-a: #CDEBDF;
+  --orb-b: #D9CCF5;
+  --orb-c: #F4C9B8;
+}
+
+[data-atmosfera='dia'] {
+  --ground: #FBFAF7;
+  --mesh-1: #B8E3D3;
+  --mesh-2: #9DC5B0;
+  --mesh-3: #D6EEF0;
+  --mesh-4: #FBFAF7;
+  --shadow-aura: rgba(80, 120, 110, 0.22);
+  --glow: rgba(157, 197, 176, 0.5);
+  --orb-a: #B8E3D3;
+  --orb-b: #D6EEF0;
+  --orb-c: #CDEBDF;
+}
+
+[data-atmosfera='atardecer'] {
+  --ground: #F8EADF;
+  --mesh-1: #F2B8A2;
+  --mesh-2: #E9C6D6;
+  --mesh-3: #C9B8F0;
+  --mesh-4: #F3D9A4;
+  --shadow-aura: rgba(150, 92, 80, 0.26);
+  --glow: rgba(242, 184, 162, 0.5);
+  --orb-a: #F2B8A2;
+  --orb-b: #E9C6D6;
+  --orb-c: #F3D9A4;
+}
+
+/* --- NOCHE: modo oscuro real, cálido y descansado --- */
+[data-atmosfera='noche'] {
+  --sage-50: rgba(159, 227, 207, 0.09);
+  --sage-100: rgba(159, 227, 207, 0.14);
+  --sage-200: rgba(159, 227, 207, 0.24);
+  --sage-300: #4FB89A;
+  --sage-400: #5FC7A9;
+  --sage-500: #3FA88E;
+  --sage-600: #74D9BF;
+  --sage-700: #9FE3CF;
+  --sand-50: rgba(255, 255, 255, 0.04);
+  --sand-100: rgba(201, 184, 255, 0.10);
+  --sand-200: rgba(201, 184, 255, 0.17);
+  --sand-300: rgba(201, 184, 255, 0.26);
+  --sand-400: rgba(201, 184, 255, 0.42);
+  --sand-500: #9A8FD6;
+  --terracotta-50: rgba(201, 184, 255, 0.12);
+  --terracotta-100: rgba(201, 184, 255, 0.20);
+  --terracotta-200: rgba(201, 184, 255, 0.32);
+  --terracotta-300: #B9A6F0;
+  --terracotta-400: #C9B8FF;
+  --terracotta-500: #D6C9FF;
+  --terracotta-600: #E3DBFF;
+  --ink: #F3EFE8;
+  --ink-soft: #CFC9BB;
+  --ink-light: #9A9486;
+  --glass-bg: rgba(35, 43, 77, 0.44);
+  --glass-strong: rgba(28, 34, 62, 0.82);
+  --glass-border: rgba(201, 184, 255, 0.18);
+  --shadow-aura: rgba(0, 0, 0, 0.5);
+  --glow: rgba(201, 184, 255, 0.45);
+  --ground: #141A2E;
+  --mesh-1: #232B4D;
+  --mesh-2: #3A3466;
+  --mesh-3: #1C2440;
+  --mesh-4: #141A2E;
+  --grain-opacity: 0.045;
+  --orb-a: #9FE3CF;
+  --orb-b: #C9B8FF;
+  --orb-c: #3A3466;
+}
+
+/* La atmósfera transiciona despacio */
+html {
+  transition: background-color 2s ease;
+}
+:root,
+[data-atmosfera] {
+  --atm-fade: 2s;
+}
+
+/* =============================================================
+   BASE
+   ============================================================= */
 @layer base {
   html {
     -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
   }
-
   body {
-    @apply bg-cream text-ink font-sans antialiased;
+    background: var(--ground);
+    color: var(--ink);
+    transition: background-color 2s ease, color 2s ease;
+    @apply font-sans antialiased;
   }
-
-  /* Títulos con la serif suave por defecto */
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     @apply font-serif;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+  }
+  /* Etiquetas pequeñas en versales con interletrado amplio */
+  .eyebrow {
+    font-family: var(--font-manrope), system-ui, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    font-size: 0.68rem;
   }
 }
 
+/* =============================================================
+   SUPERFICIES (glassmorphism refinado)
+   ============================================================= */
 @layer components {
-  /* Contenedor mobile-first: centra el contenido y limita el ancho en
-     pantallas grandes, simulando la experiencia de una app de móvil. */
   .app-shell {
-    @apply mx-auto w-full max-w-md min-h-screen bg-cream relative;
+    @apply relative mx-auto w-full max-w-md;
+    min-height: 100svh;
   }
 
-  /* Tarjeta base reutilizable */
+  /* Tarjeta de vidrio esmerilado */
+  .card,
+  .glass {
+    position: relative;
+    background: var(--glass-bg);
+    backdrop-filter: blur(22px) saturate(140%);
+    -webkit-backdrop-filter: blur(22px) saturate(140%);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.75rem;
+    box-shadow: 0 14px 44px -22px var(--shadow-aura);
+  }
   .card {
-    @apply bg-white rounded-3xl shadow-card p-5;
+    padding: 1.25rem;
+  }
+  /* Brillo interior en el borde superior */
+  .card::before,
+  .glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.55),
+      rgba(255, 255, 255, 0)
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0.7;
   }
 
-  /* Botón primario cálido */
+  /* Botón primario: cristal con acento */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-sage-500
-           px-6 py-3 font-display font-semibold text-white transition
-           hover:bg-sage-600 active:scale-[0.98] disabled:opacity-40
-           disabled:cursor-not-allowed disabled:hover:bg-sage-500;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+           font-display font-semibold transition-all duration-300 ease-agua
+           active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40;
+    background: var(--sage-500);
+    color: #fff;
+    box-shadow: 0 10px 30px -10px var(--shadow-aura), 0 0 0 1px var(--glass-border) inset;
+  }
+  .btn-primary:hover {
+    background: var(--sage-600);
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full
-           border border-sage-200 bg-white px-6 py-3 font-display font-semibold
-           text-sage-600 transition hover:bg-sage-50 active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+           font-display font-semibold transition-all duration-300 ease-agua
+           active:scale-[0.98];
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid var(--glass-border);
+    color: var(--sage-600);
+  }
+
+  /* Halo de luz para íconos (reemplaza los cuadritos pastel) */
+  .halo {
+    position: relative;
+    isolation: isolate;
+  }
+  .halo::after {
+    content: '';
+    position: absolute;
+    inset: -30%;
+    border-radius: 999px;
+    background: radial-gradient(circle, var(--glow), transparent 70%);
+    z-index: -1;
+    opacity: 0.8;
   }
 }
 
+/* Fallback si no hay backdrop-filter */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .card,
+  .glass,
+  .btn-secondary {
+    background: var(--glass-strong);
+  }
+}
+
+/* =============================================================
+   ANIMACIONES (fondo vivo + esfera)
+   ============================================================= */
+@keyframes mesh-flotar {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(6%, -8%) scale(1.15); }
+  66% { transform: translate(-7%, 5%) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes orb-flotar {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(0, -10px); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes orb-respirar {
+  0% { transform: scale(0.9); }
+  40% { transform: scale(1.08); } /* inhalar ~4s */
+  100% { transform: scale(0.9); } /* exhalar ~6s */
+}
+@keyframes luciernaga {
+  0% { transform: translate(0, 0); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translate(var(--dx, 20px), var(--dy, -30px)); opacity: 0; }
+}
+
+/* =============================================================
+   UTILIDADES
+   ============================================================= */
 @layer utilities {
-  /* Oculta la barra de scroll en carruseles horizontales (chips, etc.) */
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
   .no-scrollbar::-webkit-scrollbar {
     display: none;
+  }
+  /* Difuminado en los bordes de un carrusel horizontal */
+  .fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  }
+}
+
+/* Accesibilidad: respetar movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
@@ -65,6 +318,6 @@
   height: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #DECBAB;
+  background: var(--sand-300);
   border-radius: 9999px;
 }
