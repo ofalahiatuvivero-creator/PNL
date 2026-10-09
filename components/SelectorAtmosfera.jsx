@@ -56,6 +56,27 @@ export default function SelectorAtmosfera() {
       /* ignore */
     }
     setPref(p);
+
+    // Si la URL fuerza una atmósfera (?atmosfera=), la respetamos (pruebas).
+    let urlAtm = null;
+    try {
+      urlAtm = new URLSearchParams(window.location.search).get('atmosfera');
+    } catch {
+      /* ignore */
+    }
+    const forzada = ['amanecer', 'dia', 'atardecer', 'noche'].includes(urlAtm);
+    if (forzada) {
+      document.documentElement.setAttribute('data-atmosfera', urlAtm);
+      try {
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', THEME_COLOR[urlAtm]);
+      } catch {
+        /* ignore */
+      }
+      setAtm(urlAtm);
+      return;
+    }
+
     setAtm(aplicar(p));
     const id = setInterval(() => {
       let cur = 'auto';
