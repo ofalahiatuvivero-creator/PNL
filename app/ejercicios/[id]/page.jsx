@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Clock, ChevronLeft, ChevronRight, RotateCcw, Check, Headphones } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import AudioPlayer from '@/components/AudioPlayer';
+import RaizProgreso from '@/components/RaizProgreso';
 import Icon from '@/components/Icon';
 import { getExerciseById, getCategory } from '@/data/exercises';
 
@@ -129,18 +130,13 @@ export default function EjercicioDetallePage() {
         ) : (
           /* PANTALLA DE UN PASO */
           <div className="flex flex-1 flex-col">
-            {/* Barra de progreso */}
+            {/* Progreso: una raíz que crece con cada paso */}
             <div className="mb-6">
-              <div className="mb-2 flex items-center justify-between text-xs font-medium text-ink-light">
+              <div className="mb-1 flex items-center justify-between text-xs font-medium text-ink-light">
                 <span>Paso {screen} de {total}</span>
                 <span>{progreso}%</span>
               </div>
-              <div className="h-2 w-full overflow-hidden rounded-full bg-sand-200">
-                <div
-                  className="h-full rounded-full bg-sage-500 transition-all duration-500"
-                  style={{ width: `${(screen / total) * 100}%` }}
-                />
-              </div>
+              <RaizProgreso fraccion={screen / total} total={total} />
             </div>
 
             {/* Contenido del paso */}
@@ -158,7 +154,7 @@ export default function EjercicioDetallePage() {
             <div className="mt-4 flex gap-3">
               <button
                 onClick={retroceder}
-                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-sand-200 bg-white text-ink-soft transition hover:bg-sand-100"
+                className="glass flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-ink-soft transition hover:bg-sage-100"
                 aria-label="Paso anterior"
               >
                 <ChevronLeft className="h-5 w-5" />

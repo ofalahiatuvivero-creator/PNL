@@ -66,10 +66,10 @@ function FilterChip({ active, onClick, label, icon }) {
   return (
     <button
       onClick={onClick}
-      className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-4 py-2 text-sm font-display font-medium transition ${
+      className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-4 py-2 text-sm font-display font-medium transition-all duration-300 ease-agua ${
         active
-          ? 'bg-sage-500 text-white shadow-card'
-          : 'bg-white text-ink-soft hover:bg-sage-50'
+          ? 'bg-sage-500 text-white shadow-glow'
+          : 'glass text-ink-soft'
       }`}
     >
       <Icon name={icon} className="h-4 w-4" />

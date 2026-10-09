@@ -6,14 +6,36 @@ import { meditations } from '@/data/meditations';
 /**
  * MEDITACIONES GUIADAS — Listado
  * -------------------------------------------------------------
- * Las meditaciones que requieren preparación (como Corazones Gemelos)
- * muestran un candado y enlazan a su pantalla de preparación obligatoria.
+ * Cada meditación se presenta con una esfera de luz del color de su
+ * energía. Las que requieren preparación (como Corazones Gemelos) muestran
+ * un candado sobre la esfera y enlazan a su pantalla de preparación.
+ * (La lógica de preparación obligatoria se conserva intacta.)
  */
-const accent = {
-  sage: 'bg-sage-100 text-sage-600',
-  terracotta: 'bg-terracotta-100 text-terracotta-500',
-  sand: 'bg-sand-200 text-sand-500',
+const ESFERA = {
+  terracotta: ['#F4C9B8', '#E08E6D'],
+  sage: ['#CDEBDF', '#9DC5B0'],
+  sand: ['#F3D9A4', '#E7C57A'],
 };
+
+function Esfera({ color, bloqueada }) {
+  const [a, b] = ESFERA[color] || ESFERA.sage;
+  return (
+    <span className="relative flex h-14 w-14 shrink-0 items-center justify-center">
+      <span
+        className="h-12 w-12 rounded-full"
+        style={{
+          background: `radial-gradient(circle at 34% 30%, rgba(255,255,255,0.85), transparent 46%), radial-gradient(circle at 66% 72%, ${b}, ${a})`,
+          boxShadow: `0 0 18px -4px ${b}, inset 0 0 14px rgba(255,255,255,0.35)`,
+        }}
+      />
+      {bloqueada && (
+        <span className="absolute -bottom-0.5 -right-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-terracotta-400 text-white shadow-card">
+          <Lock className="h-3 w-3" strokeWidth={2.5} />
+        </span>
+      )}
+    </span>
+  );
+}
 
 export default function MeditacionesPage() {
   return (
@@ -27,29 +49,20 @@ export default function MeditacionesPage() {
       <section className="space-y-3 px-5 pb-6">
         {meditations.map((m) => {
           // Corazones Gemelos y otras con preparación pasan por la pantalla previa.
-          const href = m.requierePreparacion
-            ? `/meditaciones/${m.id}`
-            : `/meditaciones/${m.id}`;
+          const href = `/meditaciones/${m.id}`;
           return (
             <Link
               key={m.id}
               href={href}
-              className="group block rounded-3xl bg-white p-5 shadow-card transition hover:-translate-y-0.5 hover:shadow-soft"
+              className="card group block transition-all duration-300 ease-agua hover:-translate-y-0.5 active:scale-[0.99]"
             >
               <div className="flex items-start gap-4">
-                <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${accent[m.color] || accent.sage}`}>
-                  <Clock className="h-6 w-6" />
-                </span>
+                <Esfera color={m.color} bloqueada={m.requierePreparacion} />
                 <div className="min-w-0 flex-1">
-                  <div className="flex items-center gap-2">
-                    <h3 className="font-display text-base font-semibold text-ink">
-                      {m.titulo}
-                    </h3>
-                    {m.requierePreparacion && (
-                      <Lock className="h-3.5 w-3.5 shrink-0 text-terracotta-400" />
-                    )}
-                  </div>
-                  <p className="text-xs font-medium text-sage-600">{m.maestro}</p>
+                  <h3 className="font-serif text-lg font-medium leading-tight text-ink">
+                    {m.titulo}
+                  </h3>
+                  <p className="mt-0.5 text-xs font-medium text-sage-600">{m.maestro}</p>
                   <p className="mt-2 text-sm leading-snug text-ink-soft">
                     {m.descripcion}
                   </p>

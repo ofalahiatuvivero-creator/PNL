@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Play, Pause, Music2, Clock, ExternalLink } from 'lucide-react';
+import EsferaDeLuz from '@/components/EsferaDeLuz';
 
 /**
  * Playlist
@@ -76,7 +77,7 @@ export default function Playlist({ tracks }) {
             href={track.enlace}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex w-full items-center gap-4 rounded-3xl bg-white p-3 text-left shadow-card transition hover:bg-sand-50"
+            className="glass flex w-full items-center gap-4 rounded-3xl p-3 text-left transition-colors hover:bg-sage-100"
           >
             <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sage-100 text-sage-600">
               <Music2 className="h-5 w-5" />
@@ -104,12 +105,12 @@ export default function Playlist({ tracks }) {
         <button
           onClick={() => seleccionar(track)}
           disabled={pending}
-          className={`flex w-full items-center gap-4 rounded-3xl p-3 text-left transition shadow-card ${
+          className={`glass flex w-full items-center gap-4 rounded-3xl p-3 text-left transition-colors ${
             pending
-              ? 'cursor-not-allowed bg-white/60'
+              ? 'cursor-not-allowed opacity-70'
               : isActive
               ? 'bg-sage-100'
-              : 'bg-white hover:bg-sand-50'
+              : 'hover:bg-sage-100'
           }`}
         >
           <span
@@ -117,7 +118,7 @@ export default function Playlist({ tracks }) {
               pending
                 ? 'bg-sand-100 text-ink-light'
                 : isPlaying
-                ? 'bg-sage-500 text-white'
+                ? 'bg-sage-500 text-white shadow-glow'
                 : 'bg-sand-100 text-sage-500'
             }`}
           >
@@ -158,9 +159,37 @@ export default function Playlist({ tracks }) {
   const sinTipo = tracks.filter((t) => !GRUPOS.some((g) => g.tipo === t.tipo));
   if (sinTipo.length) grupos.push({ tipo: 'otros', label: 'Más', items: sinTipo });
 
+  const activeTrack = tracks.find((t) => t.id === activeId);
+
   return (
     <div>
       <audio ref={audioRef} preload="none" />
+
+      {/* Sonando ahora: la esfera late con la música */}
+      {activeTrack && (
+        <div className="glass mb-6 flex items-center gap-4 rounded-3xl p-3 animate-fade-up">
+          <div className="shrink-0">
+            <EsferaDeLuz size={56} modo={playing ? 'reposo' : 'audio'} />
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="eyebrow text-sage-600">
+              {playing ? 'Sonando ahora' : 'En pausa'}
+            </p>
+            <p className="truncate font-serif text-base font-medium text-ink">
+              {activeTrack.titulo}
+            </p>
+            <p className="truncate text-xs text-ink-soft">{activeTrack.autor}</p>
+          </div>
+          <button
+            onClick={() => seleccionar(activeTrack)}
+            aria-label={playing ? 'Pausar' : 'Reproducir'}
+            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-sage-500 text-white shadow-glow transition active:scale-95"
+          >
+            {playing ? <Pause className="h-5 w-5" /> : <Play className="h-5 w-5 translate-x-0.5" />}
+          </button>
+        </div>
+      )}
+
       <div className="space-y-6">
         {grupos.map((g) => (
           <div key={g.tipo}>

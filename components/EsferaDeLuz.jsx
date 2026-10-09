@@ -10,6 +10,7 @@
  *   - size: diámetro en px (por defecto 180)
  *   - modo: 'reposo' | 'respiracion' | 'audio'
  *   - escala: escala manual (0–1.2) para control externo (p. ej. respiración)
+ *   - transMs: duración de la transición de escala cuando es controlada (ms)
  *   - duracion: duración del ciclo en 'respiracion' (ms) — informativo
  *   - className, style
  */
@@ -17,6 +18,7 @@ export default function EsferaDeLuz({
   size = 180,
   modo = 'reposo',
   escala = null,
+  transMs = 1000,
   className = '',
   style = {},
 }) {
@@ -56,7 +58,9 @@ export default function EsferaDeLuz({
             'radial-gradient(circle at 52% 44%, var(--orb-a), var(--orb-b))',
           boxShadow: 'inset 0 0 44px rgba(255,255,255,0.4), 0 0 60px -8px var(--glow)',
           transform: controlada ? `scale(${escala})` : undefined,
-          transition: controlada ? 'transform 1s cubic-bezier(0.65,0,0.35,1)' : undefined,
+          transition: controlada
+            ? `transform ${transMs}ms cubic-bezier(0.37,0,0.63,1)`
+            : undefined,
           animation: controlada ? 'orb-flotar 9s ease-in-out infinite' : animEsfera,
         }}
       />

@@ -17,13 +17,24 @@ import { Play, Pause, RotateCcw } from 'lucide-react';
  * Props:
  *   - src: ruta del audio (string)
  *   - titulo: nombre a mostrar (opcional)
+ *   - onPlayingChange: callback(bool) opcional cuando cambia reproducción
  */
-export default function AudioPlayer({ src, titulo }) {
+export default function AudioPlayer({ src, titulo, onPlayingChange }) {
   const audioRef = useRef(null);
   const [playing, setPlaying] = useState(false);
   const [current, setCurrent] = useState(0);
   const [duration, setDuration] = useState(0);
   const [error, setError] = useState(false);
+
+  // Avisa al componente padre (p. ej. para que la esfera lata con el audio).
+  const marcar = (p) => {
+    setPlaying(p);
+    try {
+      onPlayingChange?.(p);
+    } catch {
+      /* ignore */
+    }
+  };
 
   // Sincroniza el estado con los eventos del elemento <audio>.
   useEffect(() => {
@@ -32,7 +43,7 @@ export default function AudioPlayer({ src, titulo }) {
 
     const onTime = () => setCurrent(audio.currentTime);
     const onMeta = () => setDuration(audio.duration || 0);
-    const onEnd = () => setPlaying(false);
+    const onEnd = () => marcar(false);
     const onErr = () => setError(true);
 
     audio.addEventListener('timeupdate', onTime);
@@ -53,10 +64,10 @@ export default function AudioPlayer({ src, titulo }) {
     try {
       if (playing) {
         audio.pause();
-        setPlaying(false);
+        marcar(false);
       } else {
         await audio.play();
-        setPlaying(true);
+        marcar(true);
       }
     } catch {
       setError(true);
@@ -85,7 +96,7 @@ export default function AudioPlayer({ src, titulo }) {
   };
 
   return (
-    <div className="rounded-3xl bg-white p-5 shadow-card">
+    <div className="card p-5">
       {/* Elemento de audio real (oculto) */}
       <audio ref={audioRef} src={src} preload="metadata" />
 

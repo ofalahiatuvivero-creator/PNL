@@ -17,7 +17,7 @@ export default function ExerciseCard({ exercise, color = 'sage' }) {
   return (
     <Link
       href={`/ejercicios/${exercise.id}`}
-      className="group flex items-center gap-4 rounded-3xl bg-white p-4 shadow-card transition hover:-translate-y-0.5 hover:shadow-soft"
+      className="card group flex items-center gap-4 !p-4 transition-all duration-300 ease-agua hover:-translate-y-0.5 active:scale-[0.99]"
     >
       <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${accent[color]}`}>
         <Icon name={exercise.icon} className="h-6 w-6" />

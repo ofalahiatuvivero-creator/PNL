@@ -26,7 +26,7 @@ export default function ZenPage() {
       />
 
       {/* Selector de pestañas */}
-      <div className="mx-5 mb-6 flex gap-1 rounded-full bg-sand-100 p-1">
+      <div className="glass mx-5 mb-6 flex gap-1 rounded-full p-1">
         <TabButton active={tab === 'respiracion'} onClick={() => setTab('respiracion')} icon={Wind} label="Respiración" />
         <TabButton active={tab === 'musica'} onClick={() => setTab('musica')} icon={ListMusic} label="Música" />
       </div>
@@ -53,8 +53,8 @@ function TabButton({ active, onClick, icon: TabIcon, label }) {
   return (
     <button
       onClick={onClick}
-      className={`flex flex-1 items-center justify-center gap-2 rounded-full py-2.5 text-sm font-display font-semibold transition ${
-        active ? 'bg-white text-sage-600 shadow-card' : 'text-ink-soft'
+      className={`flex flex-1 items-center justify-center gap-2 rounded-full py-2.5 text-sm font-display font-semibold transition-all duration-300 ease-agua ${
+        active ? 'bg-sage-500 text-white shadow-glow' : 'text-ink-soft'
       }`}
     >
       <TabIcon className="h-4 w-4" />
