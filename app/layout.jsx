@@ -5,6 +5,7 @@ import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
 import AmbientSound from '@/components/AmbientSound';
 import FondoVivo from '@/components/FondoVivo';
 import SelectorAtmosfera from '@/components/SelectorAtmosfera';
+import Umbral from '@/components/Umbral';
 
 /* -------------------------------------------------------------
    TIPOGRAFÍAS — "Aurora de bosque"
@@ -93,6 +94,8 @@ export default function RootLayout({ children }) {
           </div>
         </div>
 
+        {/* Ritual de entrada (una vez por sesión) */}
+        <Umbral />
         {/* Registra el service worker (PWA / soporte sin conexión) */}
         <ServiceWorkerRegister />
       </body>
