@@ -78,10 +78,9 @@ export const playlist = [
   {
     id: 'lluvia-calma',
     titulo: 'Lluvia y calma',
-    autor: 'Sonidos de la naturaleza',
-    duracion: '—',
-    src: '/audios/placeholder.mp3', // pendiente: subir el audio real
+    autor: 'Lluvia, aves y agua · sonidos de la naturaleza',
+    duracion: '09:05',
+    src: '/audios/lluvia-calma.mp3',
     tipo: 'naturaleza',
-    proximamente: true,
   },
 ];
