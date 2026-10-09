@@ -21,6 +21,7 @@ import { Play, Pause, RotateCcw } from 'lucide-react';
  */
 export default function AudioPlayer({ src, titulo, onPlayingChange }) {
   const audioRef = useRef(null);
+  const fadeRef = useRef(null);
   const [playing, setPlaying] = useState(false);
   const [current, setCurrent] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -35,6 +36,28 @@ export default function AudioPlayer({ src, titulo, onPlayingChange }) {
       /* ignore */
     }
   };
+
+  // Transición suave de volumen para que no corte de golpe.
+  const fundir = (destino, ms, alTerminar) => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    clearInterval(fadeRef.current);
+    const inicio = audio.volume;
+    const pasos = Math.max(1, Math.round(ms / 40));
+    let i = 0;
+    fadeRef.current = setInterval(() => {
+      i += 1;
+      const v = inicio + (destino - inicio) * (i / pasos);
+      audio.volume = Math.min(1, Math.max(0, v));
+      if (i >= pasos) {
+        clearInterval(fadeRef.current);
+        alTerminar?.();
+      }
+    }, 40);
+  };
+
+  // Limpia el temporizador del fundido al desmontar.
+  useEffect(() => () => clearInterval(fadeRef.current), []);
 
   // Sincroniza el estado con los eventos del elemento <audio>.
   useEffect(() => {
@@ -63,11 +86,15 @@ export default function AudioPlayer({ src, titulo, onPlayingChange }) {
     if (!audio) return;
     try {
       if (playing) {
-        audio.pause();
         marcar(false);
+        // Baja el volumen y luego pausa (sin corte brusco).
+        fundir(0, 420, () => audio.pause());
       } else {
+        clearInterval(fadeRef.current);
+        audio.volume = 0;
         await audio.play();
         marcar(true);
+        fundir(1, 650);
       }
     } catch {
       setError(true);
