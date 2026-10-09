@@ -52,7 +52,7 @@ export default function DashboardPage() {
       {/* Marca / logo */}
       <section className="mb-1 flex flex-col items-center animate-fade-up">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/logo.webp" alt="Raíces" className="h-28 w-28 object-contain" />
+        <img src="/logo.png" alt="Raíces" className="h-32 w-32 object-contain" />
         <span className="-mt-4 font-serif text-2xl font-semibold text-sage-700">
           Raíces
         </span>
