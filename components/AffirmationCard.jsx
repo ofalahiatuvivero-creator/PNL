@@ -39,12 +39,14 @@ export default function AffirmationCard() {
         </div>
         <p className="font-serif text-[1.6rem] font-light leading-snug text-ink">
           {palabras.map((w, i) => (
-            <span
-              key={`${i}-${w}`}
-              className="inline-block animate-fade-up"
-              style={{ animationDelay: `${i * 85}ms` }}
-            >
-              {`${w} `}
+            <span key={`${i}-${w}`}>
+              <span
+                className="inline-block animate-fade-up"
+                style={{ animationDelay: `${i * 85}ms` }}
+              >
+                {w}
+              </span>
+              {i < palabras.length - 1 ? ' ' : ''}
             </span>
           ))}
         </p>

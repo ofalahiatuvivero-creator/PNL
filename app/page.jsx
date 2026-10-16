@@ -57,8 +57,8 @@ export default function DashboardPage() {
       {/* Marca discreta */}
       <div className="flex items-center gap-2 animate-fade-up">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/logo.png" alt="Raíces" className="h-9 w-9 object-contain" />
-        <span className="font-serif text-lg font-medium text-ink">Raíces</span>
+        <img src="/logo.png" alt="Raíces" className="h-12 w-12 object-contain" />
+        <span className="font-serif text-xl font-medium text-ink">Raíces</span>
       </div>
 
       {/* Saludo con esfera de luz */}
@@ -133,30 +133,11 @@ export default function DashboardPage() {
         </div>
       </section>
 
-      {/* Cierre con una raíz que se dibuja */}
+      {/* Cierre cálido */}
       <section className="mt-10 mb-4 text-center">
         <p className="font-serif text-lg font-light text-ink-soft">
           Respira profundo. Estamos aquí para ti.
         </p>
-        <svg
-          viewBox="0 0 200 46"
-          className="mx-auto mt-3 h-11 w-44"
-          aria-hidden="true"
-          fill="none"
-        >
-          <path
-            d="M100 2 V20 M100 20 C 84 24, 74 32, 58 40 M100 20 C 116 24, 126 32, 142 40 M100 20 C 96 30, 93 36, 90 44 M100 20 C 104 30, 107 36, 110 44"
-            stroke="var(--sage-500)"
-            strokeWidth="1.4"
-            strokeLinecap="round"
-            pathLength="1"
-            style={{
-              strokeDasharray: 1,
-              strokeDashoffset: 1,
-              animation: 'dibujar-raiz 2.6s cubic-bezier(0.22,1,0.36,1) 0.4s forwards',
-            }}
-          />
-        </svg>
       </section>
     </main>
   );
