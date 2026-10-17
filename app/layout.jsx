@@ -1,4 +1,5 @@
 import './globals.css';
+import Script from 'next/script';
 import { Fraunces, Manrope } from 'next/font/google';
 import BottomNav from '@/components/BottomNav';
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
@@ -98,6 +99,13 @@ export default function RootLayout({ children }) {
         <Umbral />
         {/* Registra el service worker (PWA / soporte sin conexión) */}
         <ServiceWorkerRegister />
+
+        {/* Analítica Umami (anónima y sin cookies) */}
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="c13741ac-895e-4868-8e13-0692d6353afe"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
