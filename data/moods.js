@@ -7,13 +7,20 @@
  */
 // Cada ánimo tiene una "esfera" de color [a, b] (degradado) y una
 // "sugerencia" amable que enlaza a algo existente en la app.
+// Paleta por PSICOLOGÍA DEL COLOR:
+//   feliz   -> amarillo dorado (alegría, energía, optimismo)
+//   calma   -> verde salvia    (equilibrio, paz, naturaleza)
+//   normal  -> neutro cálido    (serenidad, sin carga)
+//   ansioso -> lavanda/violeta  (nervios, tensión suavizada)
+//   triste  -> azul             (melancolía, "sentirse azul")
+//   cansado -> índigo apagado   (baja energía, sueño, noche)
 export const moods = [
   {
     id: 'feliz',
     label: 'Feliz',
     emoji: '😊',
     color: 'sage',
-    esfera: ['#F7DFA6', '#E9B869'],
+    esfera: ['#FFE08A', '#F5B32B'],
     sugerencia: { texto: 'Guarda este momento en tu diario', href: '/diario' },
   },
   {
@@ -21,7 +28,7 @@ export const moods = [
     label: 'En calma',
     emoji: '😌',
     color: 'sage',
-    esfera: ['#CFECE0', '#9DC5B0'],
+    esfera: ['#AEE3C7', '#5FB894'],
     sugerencia: { texto: 'Prolonga la calma con una respiración', href: '/zen' },
   },
   {
@@ -29,7 +36,7 @@ export const moods = [
     label: 'Normal',
     emoji: '😐',
     color: 'sand',
-    esfera: ['#FBFAF7', '#E0D8C8'],
+    esfera: ['#ECE1D0', '#C8B79C'],
     sugerencia: { texto: 'Un momento para ti en la Zona Zen', href: '/zen' },
   },
   {
@@ -37,7 +44,7 @@ export const moods = [
     label: 'Ansioso/a',
     emoji: '😰',
     color: 'terracotta',
-    esfera: ['#DED1F6', '#B9A6F0'],
+    esfera: ['#D9C2F2', '#A98AE0'],
     sugerencia: {
       texto: 'Prueba la Respiración Cuadrada',
       href: '/ejercicios/respiracion-cuadrada',
@@ -48,7 +55,7 @@ export const moods = [
     label: 'Triste',
     emoji: '😔',
     color: 'terracotta',
-    esfera: ['#CFDDF4', '#93B4DF'],
+    esfera: ['#A9CBF0', '#6B93D6'],
     sugerencia: {
       texto: 'El Espejo Amable, para hablarte con cariño',
       href: '/ejercicios/espejo-amable',
@@ -59,7 +66,7 @@ export const moods = [
     label: 'Cansado/a',
     emoji: '😴',
     color: 'sand',
-    esfera: ['#5B5F88', '#2F3150'],
+    esfera: ['#AAB0D6', '#6E73A6'],
     sugerencia: { texto: 'Afirmaciones para dormir, en la Zona Zen', href: '/zen' },
   },
 ];

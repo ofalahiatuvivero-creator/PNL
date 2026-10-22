@@ -61,14 +61,9 @@ export default function DashboardPage() {
         <span className="font-serif text-xl font-medium text-ink">Raíces</span>
       </div>
 
-      {/* Saludo con esfera de luz */}
-      <section className="relative mt-7 animate-fade-up">
-        <div className="pointer-events-none absolute right-0 top-1 opacity-90">
-          <EsferaDeLuz size={116} modo="reposo" />
-        </div>
-        <div className="relative max-w-[70%]">
-          <Greeting />
-        </div>
+      {/* Saludo */}
+      <section className="mt-7 animate-fade-up">
+        <Greeting />
       </section>
 
       {/* Afirmación del día */}
