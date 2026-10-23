@@ -44,7 +44,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: '#F6EFE6',
+  themeColor: '#17091F',
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
@@ -53,20 +53,21 @@ export const viewport = {
 /* Fija la atmósfera antes de pintar (evita el "flash" de tema). */
 const atmosferaScript = `(function(){try{
 var q=new URLSearchParams(location.search).get('atmosfera');
-var validas=['amanecer','dia','atardecer','noche'];
+var validas=['amanecer','dia','atardecer','noche','nebulosa'];
 var a;
 if(q&&validas.indexOf(q)>=0){a=q;}
-else{var p=localStorage.getItem('raices-atmosfera')||'auto';
-if(p==='noche'){a='noche';}else if(p==='claro'){a='dia';}
-else{var h=new Date().getHours();a=(h>=5&&h<11)?'amanecer':(h>=11&&h<17)?'dia':(h>=17&&h<20)?'atardecer':'noche';}}
+else{var p=localStorage.getItem('raices-atmosfera')||'nebulosa';
+if(p==='nebulosa'){a='nebulosa';}else if(p==='noche'){a='noche';}else if(p==='claro'){a='dia';}
+else if(p==='auto'){var h=new Date().getHours();a=(h>=5&&h<11)?'amanecer':(h>=11&&h<17)?'dia':(h>=17&&h<20)?'atardecer':'noche';}
+else{a='nebulosa';}}
 document.documentElement.setAttribute('data-atmosfera',a);
-}catch(e){document.documentElement.setAttribute('data-atmosfera','dia');}})();`;
+}catch(e){document.documentElement.setAttribute('data-atmosfera','nebulosa');}})();`;
 
 export default function RootLayout({ children }) {
   return (
     <html
       lang="es"
-      data-atmosfera="dia"
+      data-atmosfera="nebulosa"
       suppressHydrationWarning
       className={`${fraunces.variable} ${manrope.variable}`}
     >

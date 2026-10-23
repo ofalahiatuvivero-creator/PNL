@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Sunrise, Sun, Sunset, Moon, Check } from 'lucide-react';
+import { Sunrise, Sun, Sunset, Moon, Sparkles, Check } from 'lucide-react';
 
 /**
  * SelectorAtmosfera
@@ -18,6 +18,7 @@ const THEME_COLOR = {
   dia: '#FBFAF7',
   atardecer: '#F8EADF',
   noche: '#141A2E',
+  nebulosa: '#17091F',
 };
 
 function porHora() {
@@ -29,7 +30,14 @@ function porHora() {
 }
 
 function aplicar(pref) {
-  const atm = pref === 'noche' ? 'noche' : pref === 'claro' ? 'dia' : porHora();
+  const atm =
+    pref === 'nebulosa'
+      ? 'nebulosa'
+      : pref === 'noche'
+      ? 'noche'
+      : pref === 'claro'
+      ? 'dia'
+      : porHora();
   document.documentElement.setAttribute('data-atmosfera', atm);
   try {
     const meta = document.querySelector('meta[name="theme-color"]');
@@ -40,7 +48,7 @@ function aplicar(pref) {
   return atm;
 }
 
-const ICONO = { amanecer: Sunrise, dia: Sun, atardecer: Sunset, noche: Moon };
+const ICONO = { amanecer: Sunrise, dia: Sun, atardecer: Sunset, noche: Moon, nebulosa: Sparkles };
 
 export default function SelectorAtmosfera() {
   const [pref, setPref] = useState('auto');
@@ -49,9 +57,9 @@ export default function SelectorAtmosfera() {
   const ref = useRef(null);
 
   useEffect(() => {
-    let p = 'auto';
+    let p = 'nebulosa';
     try {
-      p = localStorage.getItem(KEY) || 'auto';
+      p = localStorage.getItem(KEY) || 'nebulosa';
     } catch {
       /* ignore */
     }
@@ -64,7 +72,7 @@ export default function SelectorAtmosfera() {
     } catch {
       /* ignore */
     }
-    const forzada = ['amanecer', 'dia', 'atardecer', 'noche'].includes(urlAtm);
+    const forzada = ['amanecer', 'dia', 'atardecer', 'noche', 'nebulosa'].includes(urlAtm);
     if (forzada) {
       document.documentElement.setAttribute('data-atmosfera', urlAtm);
       try {
@@ -112,6 +120,7 @@ export default function SelectorAtmosfera() {
 
   const Icono = ICONO[atm] || Sun;
   const opciones = [
+    { id: 'nebulosa', label: 'Nebulosa' },
     { id: 'auto', label: 'Automático' },
     { id: 'claro', label: 'Claro' },
     { id: 'noche', label: 'Noche' },

@@ -52,12 +52,85 @@ function Luciernagas() {
   );
 }
 
+/* Un destello de estrella con púas, la firma del James Webb. */
+function DestelloWebb({ left, top, size, color, delay }) {
+  return (
+    <svg
+      className="absolute"
+      viewBox="0 0 40 40"
+      style={{
+        left: `${left}%`,
+        top: `${top}%`,
+        width: size,
+        height: size,
+        marginLeft: -size / 2,
+        marginTop: -size / 2,
+        animation: `destello ${6 + (delay % 4)}s ease-in-out ${delay}s infinite`,
+      }}
+    >
+      <path
+        d="M20 0 L21.6 18.4 L40 20 L21.6 21.6 L20 40 L18.4 21.6 L0 20 L18.4 18.4 Z"
+        fill={color}
+      />
+      <circle cx="20" cy="20" r="2.4" fill="#fff" />
+    </svg>
+  );
+}
+
+/* Campo de estrellas + destellos Webb para la atmósfera Nebulosa. */
+function Estrellas() {
+  const estrellas = useMemo(
+    () =>
+      Array.from({ length: 70 }).map(() => ({
+        left: Math.random() * 100,
+        top: Math.random() * 100,
+        size: 1 + Math.random() * 2.2,
+        dur: 2.5 + Math.random() * 4,
+        delay: Math.random() * 5,
+        rosa: Math.random() > 0.6,
+      })),
+    []
+  );
+  const destellos = useMemo(
+    () => [
+      { left: 24, top: 18, size: 46, color: '#FFD6EA', delay: 0 },
+      { left: 72, top: 26, size: 34, color: '#BFD9FF', delay: 1.5 },
+      { left: 50, top: 46, size: 54, color: '#FFE9F4', delay: 0.8 },
+      { left: 16, top: 66, size: 30, color: '#FFC2DE', delay: 2.4 },
+      { left: 84, top: 72, size: 38, color: '#D9C2FF', delay: 1.1 },
+    ],
+    []
+  );
+  return (
+    <>
+      {estrellas.map((e, i) => (
+        <span
+          key={i}
+          className="absolute rounded-full"
+          style={{
+            left: `${e.left}%`,
+            top: `${e.top}%`,
+            width: e.size,
+            height: e.size,
+            background: e.rosa ? '#FFC2E2' : '#FFFFFF',
+            boxShadow: e.rosa ? '0 0 6px 1px rgba(255,150,205,0.8)' : '0 0 5px 1px rgba(255,255,255,0.7)',
+            animation: `titilar ${e.dur}s ease-in-out ${e.delay}s infinite`,
+          }}
+        />
+      ))}
+      {destellos.map((d, i) => (
+        <DestelloWebb key={`d-${i}`} {...d} />
+      ))}
+    </>
+  );
+}
+
 export default function FondoVivo() {
-  const [noche, setNoche] = useState(false);
+  const [atm, setAtm] = useState('dia');
 
   useEffect(() => {
     const check = () =>
-      setNoche(document.documentElement.getAttribute('data-atmosfera') === 'noche');
+      setAtm(document.documentElement.getAttribute('data-atmosfera') || 'dia');
     check();
     const obs = new MutationObserver(check);
     obs.observe(document.documentElement, {
@@ -66,6 +139,9 @@ export default function FondoVivo() {
     });
     return () => obs.disconnect();
   }, []);
+
+  const noche = atm === 'noche';
+  const nebulosa = atm === 'nebulosa';
 
   const blob = (styles, anim) => (
     <span
@@ -104,6 +180,7 @@ export default function FondoVivo() {
       />
 
       {noche && <Luciernagas />}
+      {nebulosa && <Estrellas />}
     </div>
   );
 }
