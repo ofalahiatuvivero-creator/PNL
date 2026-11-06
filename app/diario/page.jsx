@@ -4,7 +4,7 @@ import { useMemo, useState } from 'react';
 import { Flame, Trash2, PenLine, Check } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import MoodPicker from '@/components/MoodPicker';
-import MoodCat from '@/components/MoodCat';
+import MoodFace from '@/components/MoodFace';
 import { useLocalStorage } from '@/lib/storage';
 import { getMood, moodMessages } from '@/data/moods';
 
@@ -166,7 +166,7 @@ export default function DiarioPage() {
                   <li key={e.id} className="card !p-4">
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex items-center gap-2.5">
-                        {m && <MoodCat mood={m} size={34} />}
+                        {m && <MoodFace mood={m} size={34} />}
                         <div>
                           {m && (
                             <p className="font-display text-sm font-semibold text-ink">

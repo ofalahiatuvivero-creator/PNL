@@ -1,7 +1,7 @@
 'use client';
 
 import { moods } from '@/data/moods';
-import MoodCat from '@/components/MoodCat';
+import MoodFace from '@/components/MoodFace';
 
 /**
  * MoodPicker
@@ -27,7 +27,7 @@ export default function MoodPicker({ value, onSelect }) {
               active ? 'bg-sage-100' : 'hover:bg-sand-100'
             }`}
           >
-            <MoodCat mood={m} active={active} size={52} />
+            <MoodFace mood={m} active={active} size={52} />
             <span className="font-display text-xs font-medium text-ink-soft">
               {m.label}
             </span>

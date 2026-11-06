@@ -4,7 +4,7 @@ import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { ChevronRight, NotebookPen, Sparkles } from 'lucide-react';
 import MoodPicker from '@/components/MoodPicker';
-import MoodCat from '@/components/MoodCat';
+import MoodFace from '@/components/MoodFace';
 import { useLocalStorage } from '@/lib/storage';
 import { getMood, moodMessages } from '@/data/moods';
 
@@ -66,7 +66,7 @@ export default function DailyCheckIn() {
         )}
         <div className="card">
           <div className="flex items-center gap-3">
-            <MoodCat mood={m} active size={48} />
+            <MoodFace mood={m} active size={48} />
             <div>
               <p className="font-display text-sm font-semibold text-ink">
                 Hoy te sientes: {m?.label}
