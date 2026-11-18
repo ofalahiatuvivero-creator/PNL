@@ -35,12 +35,23 @@ export default function BottomNav() {
   const pathname = usePathname();
   const isActive = (href) =>
     href === '/' ? pathname === '/' : pathname.startsWith(href);
+  const activo = items.find((i) => isActive(i.href)) || items[0];
 
   return (
     <nav
       className="pointer-events-none fixed bottom-0 left-1/2 z-40 w-full max-w-md -translate-x-1/2"
       style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 0.6rem)' }}
     >
+      {/* Nombre de la sección actual */}
+      <div className="mb-2 flex justify-center">
+        <span
+          key={activo.href}
+          className="glass rounded-full px-4 py-1 font-display text-xs font-semibold text-ink animate-fade-up"
+        >
+          {activo.label}
+        </span>
+      </div>
+
       <div className="glass pointer-events-auto mx-3 flex items-center justify-between rounded-full p-1.5">
         {items.map(({ href, label, icon: I }) => {
           const active = isActive(href);
