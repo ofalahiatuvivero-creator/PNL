@@ -8,7 +8,7 @@
  *
  * Al cambiar la app, sube este número de versión para limpiar la caché anterior.
  */
-const CACHE = 'raices-v1';
+const CACHE = 'raices-v2';
 const CORE = ['/'];
 
 self.addEventListener('install', (event) => {

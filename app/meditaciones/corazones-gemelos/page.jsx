@@ -41,7 +41,7 @@ export default function PreparacionCorazonesPage() {
     <main>
       <PageHeader title="Preparación" subtitle={meditation?.titulo} />
 
-      <div className="space-y-5 px-5 pb-6">
+      <div className="space-y-5 px-5 pb-64">
         {/* Presentación cálida */}
         <div className="flex items-center gap-4 rounded-3xl bg-terracotta-100 p-5">
           <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-terracotta-400 text-white">
@@ -68,9 +68,13 @@ export default function PreparacionCorazonesPage() {
           <PreparationChecklist steps={preparationSteps} onChange={setListo} />
         </div>
 
-        {/* Botón de continuar (habilitado sólo si todo está marcado).
-            Barra inferior opaca para que el contenido no se transparente. */}
-        <div className="sticky bottom-24 -mx-5 border-t border-sand-200 bg-cream/95 px-5 py-3 backdrop-blur">
+      </div>
+
+      {/* Botón de continuar: barra FIJA encima de la navegación (no se
+          encima con la lista; el contenido tiene espacio inferior extra).
+          Se habilita sólo cuando todo está marcado. */}
+      <div className="fixed bottom-[5.2rem] left-1/2 z-30 w-full max-w-md -translate-x-1/2 px-4">
+        <div className="glass rounded-3xl p-3">
           <button onClick={continuar} disabled={!listo} className="btn-primary w-full">
             {listo ? 'Estoy listo/a, continuar' : 'Completa los ejercicios para continuar'}
             {listo && <ChevronRight className="h-5 w-5" />}

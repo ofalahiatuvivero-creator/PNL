@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Sparkles, HeartHandshake, BookHeart, Leaf, Library } from 'lucide-react';
+import { Sparkles, HeartHandshake, BookHeart, Leaf, Library, NotebookPen } from 'lucide-react';
 import Greeting from '@/components/Greeting';
 import AffirmationCard from '@/components/AffirmationCard';
 import DailyCheckIn from '@/components/DailyCheckIn';
@@ -30,10 +30,9 @@ const bento = [
   {
     href: '/diccionario',
     titulo: 'Diccionario Bio-Emocional',
-    desc: 'Descubre el mensaje emocional de tu cuerpo.',
+    desc: 'El mensaje emocional de tu cuerpo.',
     icon: BookHeart,
     glow: 'rgba(201,184,240,0.55)',
-    wide: true,
   },
   {
     href: '/herbolaria',
@@ -49,6 +48,13 @@ const bento = [
     icon: Library,
     glow: 'rgba(243,217,164,0.55)',
   },
+  {
+    href: '/diario',
+    titulo: 'Mi Diario',
+    desc: 'Tu espacio privado para escribir.',
+    icon: NotebookPen,
+    glow: 'rgba(224,142,109,0.5)',
+  },
 ];
 
 export default function DashboardPage() {
@@ -57,7 +63,7 @@ export default function DashboardPage() {
       {/* Marca discreta */}
       <div className="flex items-center gap-2 animate-fade-up">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/logo.png" alt="Raíces" className="h-12 w-12 object-contain" />
+        <img src="/logo-gold.png" alt="Raíces" className="h-12 w-12 object-contain" />
         <span className="font-serif text-xl font-medium text-ink">Raíces</span>
       </div>
 

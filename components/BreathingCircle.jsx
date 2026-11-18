@@ -14,8 +14,10 @@ import WimHof from '@/components/WimHof';
  *   - Diafragmática (soltar tensión)
  *   - Wim Hof (energía, por rondas) -> componente aparte con su aviso.
  *
- * La esfera se expande al inhalar y se recoge al exhalar. Incluye modo
- * inmersión y vibración suave al cambiar de fase.
+ * La esfera se expande al inhalar y se recoge al exhalar. El tamaño se
+ * anima FOTOGRAMA A FOTOGRAMA (requestAnimationFrame) actualizando una
+ * variable CSS, para que crezca de verdad aunque el dispositivo tenga
+ * activado "reducir movimiento" (que desactiva las transiciones CSS).
  */
 const TECNICAS = [
   {
@@ -26,7 +28,7 @@ const TECNICAS = [
     tipo: 'patron',
     fases: [
       { nombre: 'Inhala', dur: 2500, escala: 0.92 },
-      { nombre: 'Inhala un poco más', dur: 1100, escala: 1 },
+      { nombre: 'Inhala un poco más', dur: 1100, escala: 1.05 },
       { nombre: 'Exhala largo', dur: 6500, escala: 0.5 },
     ],
   },
@@ -37,7 +39,7 @@ const TECNICAS = [
     desc: 'Seis respiraciones por minuto. Inhala y exhala parejo, sin esfuerzo. Lo ideal: unos 5 minutos.',
     tipo: 'patron',
     fases: [
-      { nombre: 'Inhala', dur: 5000, escala: 1 },
+      { nombre: 'Inhala', dur: 5000, escala: 1.05 },
       { nombre: 'Exhala', dur: 5000, escala: 0.5 },
     ],
   },
@@ -48,7 +50,7 @@ const TECNICAS = [
     desc: 'Lleva el aire al vientre, no al pecho. La exhalación más larga que la inhalación activa la calma.',
     tipo: 'patron',
     fases: [
-      { nombre: 'Inhala al vientre', dur: 4000, escala: 1 },
+      { nombre: 'Inhala al vientre', dur: 4000, escala: 1.05 },
       { nombre: 'Exhala largo', dur: 6000, escala: 0.5 },
     ],
   },
@@ -60,6 +62,8 @@ const TECNICAS = [
   },
 ];
 
+const REPOSO = 0.72;
+
 function vibrar(ms) {
   try {
     if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(ms);
@@ -68,19 +72,23 @@ function vibrar(ms) {
   }
 }
 
+function easeInOut(t) {
+  return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+}
+
 /**
- * Esfera a nivel de módulo (identidad estable) para que la transición de
- * escala anime de verdad en vez de reiniciarse en cada render.
+ * Esfera que respira. El tamaño lo controla la variable CSS --resp-escala
+ * (heredada del contenedor), que el motor actualiza en cada fotograma.
  */
-function EsferaRespira({ size, activo, escala, transMs, fase }) {
+function EsferaRespira({ size, fase }) {
   return (
     <div className="relative flex items-center justify-center" style={{ height: size, width: size }}>
-      <EsferaDeLuz
-        size={size}
-        modo="respiracion"
-        escala={activo ? escala : 0.72}
-        transMs={activo ? transMs : 900}
-      />
+      <div
+        className="flex items-center justify-center"
+        style={{ transform: 'scale(var(--resp-escala, 0.72))', transformOrigin: 'center', willChange: 'transform' }}
+      >
+        <EsferaDeLuz size={size} modo="respiracion" escala={1} />
+      </div>
       <span className="pointer-events-none absolute px-6 text-center font-serif text-xl font-medium text-ink drop-shadow-sm">
         {fase || 'Respira'}
       </span>
@@ -91,61 +99,73 @@ function EsferaRespira({ size, activo, escala, transMs, fase }) {
 export default function BreathingCircle() {
   const [tecId, setTecId] = useState('suspiro');
   const [activo, setActivo] = useState(false);
-  const [idx, setIdx] = useState(0);
-  const [escala, setEscala] = useState(0.72);
-  const [transMs, setTransMs] = useState(900);
   const [inmersion, setInmersion] = useState(false);
-  const timer = useRef(null);
+  const [faseTxt, setFaseTxt] = useState(null);
+  const rootRef = useRef(null);
+  const rafRef = useRef(0);
 
   const tec = TECNICAS.find((t) => t.id === tecId) || TECNICAS[0];
   const esPatron = tec.tipo === 'patron';
-  const fases = esPatron ? tec.fases : [];
 
-  // Motor de patrón: recorre las fases en bucle.
-  useEffect(() => {
-    if (!esPatron || !activo) return;
-    const f = fases[idx];
-    setTransMs(f.dur);
-    setEscala(f.escala);
-    if (/Inhala/.test(f.nombre)) vibrar(16);
-    else if (/Exhala/.test(f.nombre)) vibrar([12, 40, 12]);
-    timer.current = setTimeout(() => setIdx((i) => (i + 1) % fases.length), f.dur);
-    return () => clearTimeout(timer.current);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activo, idx, tecId]);
-
-  // Al cambiar de técnica, reinicia el estado del motor de patrón.
-  useEffect(() => {
-    setActivo(false);
-    setIdx(0);
-    setEscala(0.72);
-    setTransMs(900);
-    clearTimeout(timer.current);
-  }, [tecId]);
-
-  const toggle = () => {
-    if (activo) {
-      setActivo(false);
-      clearTimeout(timer.current);
-      setEscala(0.72);
-      setTransMs(900);
-      setIdx(0);
-    } else {
-      setIdx(0);
-      setActivo(true);
-    }
+  const setEscalaVar = (s) => {
+    if (rootRef.current) rootRef.current.style.setProperty('--resp-escala', String(s));
   };
 
-  const faseActual = activo ? fases[idx]?.nombre : null;
+  // Reinicia al cambiar de técnica.
+  useEffect(() => {
+    setActivo(false);
+    setFaseTxt(null);
+    setEscalaVar(REPOSO);
+  }, [tecId]);
+
+  // Motor de respiración por fotogramas.
+  useEffect(() => {
+    if (!esPatron || !activo) {
+      cancelAnimationFrame(rafRef.current);
+      setEscalaVar(REPOSO);
+      setFaseTxt(null);
+      return;
+    }
+    const fases = tec.fases;
+    let idx = 0;
+    let from = REPOSO;
+    let to = fases[0].escala;
+    let inicio = performance.now();
+    setFaseTxt(fases[0].nombre);
+    vibrar(16);
+
+    const step = (now) => {
+      const fase = fases[idx];
+      const t = Math.min(1, (now - inicio) / fase.dur);
+      const s = from + (to - from) * easeInOut(t);
+      setEscalaVar(s);
+      if (t >= 1) {
+        idx = (idx + 1) % fases.length;
+        const sig = fases[idx];
+        from = s;
+        to = sig.escala;
+        inicio = now;
+        setFaseTxt(sig.nombre);
+        if (/Inhala/.test(sig.nombre)) vibrar(16);
+        else if (/Exhala/.test(sig.nombre)) vibrar([12, 40, 12]);
+      }
+      rafRef.current = requestAnimationFrame(step);
+    };
+    rafRef.current = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(rafRef.current);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activo, tecId, esPatron]);
+
+  const toggle = () => setActivo((a) => !a);
 
   const Selector = (
-    <div className="no-scrollbar -mx-1 flex gap-2 overflow-x-auto px-1">
+    <div className="grid w-full max-w-sm grid-cols-2 gap-2">
       {TECNICAS.map((t) => (
         <button
           key={t.id}
           onClick={() => setTecId(t.id)}
           aria-pressed={t.id === tecId}
-          className={`shrink-0 rounded-full px-4 py-2 text-sm font-display font-semibold transition-all duration-300 ease-agua ${
+          className={`rounded-2xl px-3 py-2.5 text-sm font-display font-semibold transition-all duration-300 ease-agua ${
             t.id === tecId ? 'bg-sage-500 text-white shadow-glow' : 'glass text-ink-soft'
           }`}
         >
@@ -156,13 +176,11 @@ export default function BreathingCircle() {
   );
 
   return (
-    <div className="flex flex-col items-center">
+    <div ref={rootRef} className="flex flex-col items-center" style={{ '--resp-escala': REPOSO }}>
       {Selector}
 
       {/* Propósito de la técnica */}
-      <p className="mt-4 text-center font-serif text-lg font-light text-ink">
-        {tec.para}
-      </p>
+      <p className="mt-5 text-center font-serif text-lg font-light text-ink">{tec.para}</p>
 
       {esPatron ? (
         <>
@@ -170,7 +188,7 @@ export default function BreathingCircle() {
           <div className="relative mt-5 flex h-72 w-72 items-center justify-center">
             <span className="absolute h-full w-full rounded-full border border-sage-200/40" />
             <span className="absolute h-[72%] w-[72%] rounded-full border border-sage-200/30" />
-            <EsferaRespira size={224} activo={activo} escala={escala} transMs={transMs} fase={faseActual} />
+            <EsferaRespira size={224} fase={faseTxt} />
           </div>
 
           {/* Controles */}
@@ -216,7 +234,7 @@ export default function BreathingCircle() {
           </button>
 
           <p className="mb-6 font-serif text-lg font-light text-ink-soft">{tec.para}</p>
-          <EsferaRespira size={300} activo={activo} escala={escala} transMs={transMs} fase={faseActual} />
+          <EsferaRespira size={300} fase={faseTxt} />
 
           <button onClick={toggle} className="btn-primary mt-10">
             {activo ? <Pause className="h-5 w-5" /> : <Play className="h-5 w-5" />}
