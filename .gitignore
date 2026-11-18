@@ -8,8 +8,14 @@
 # producción
 /build
 
-# entorno
-.env*.local
+# entorno / secretos (nunca subir)
+.env
+.env.*
+*.key
+*.pem
+*.p12
+secrets*.json
+serviceAccount*.json
 
 # sistema
 .DS_Store
