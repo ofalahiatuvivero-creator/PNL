@@ -3,6 +3,10 @@
 > App de PNL, respiración y sanación emocional.
 > Documento técnico y de proceso. Versión 1.0 · Noviembre 2026.
 
+**Autor y creador de la idea · Dirección y experto en PNL:**
+**Jhon Fredy Primiciero Malaver** — Programador Neurolingüístico.
+Autor de la concepción, el contenido y el enfoque de PNL de toda la aplicación.
+
 ---
 
 ## 1. Resumen ejecutivo
@@ -207,6 +211,17 @@ pantalla de evidencia. Se respeta la accesibilidad (etiquetas, foco, contraste).
 - **TWA:** técnica para publicar una PWA en Google Play.
 - **ASO:** optimización para posicionar la app en la tienda.
 - **localStorage:** almacenamiento en el propio dispositivo del usuario.
+
+---
+
+## Créditos
+
+**Autoría, concepción y contenido de PNL:** Jhon Fredy Primiciero Malaver —
+Programador Neurolingüístico, experto en todo lo aplicado en la app (ejercicios,
+técnicas, diccionario bio‑emocional, enfoque y experiencia).
+
+Raíces es una obra original de su autor. © 2026 Jhon Fredy Primiciero Malaver.
+Todos los derechos reservados.
 
 ---
 
