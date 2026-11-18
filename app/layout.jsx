@@ -39,7 +39,7 @@ export const metadata = {
     statusBarStyle: 'default',
   },
   icons: {
-    apple: '/apple-touch-icon.png',
+    apple: '/apple-touch-icon.png?v=2',
   },
 };
 
