@@ -1,21 +1,25 @@
 /**
- * SERVICE WORKER (PWA)
+ * SERVICE WORKER (PWA) — estrategia SEGURA
  * -------------------------------------------------------------
- * Estrategia "network-first": siempre intenta traer la versión más reciente
- * desde internet y, solo si no hay conexión, muestra lo guardado en caché.
- * Así la app funciona sin conexión, pero nunca se queda con contenido viejo
- * cuando sí hay internet.
+ * Un service worker que cachea de más causaba páginas viejas tras cada
+ * despliegue y, al fallar la red, servía el Inicio para cualquier ruta
+ * (rompía la navegación con un error de hidratación).
  *
- * Al cambiar la app, sube este número de versión para limpiar la caché anterior.
+ * Esta versión:
+ *   - NUNCA intercepta navegaciones (document) ni los datos de Next
+ *     (/_next/...): siempre van a la red / al caché propio del navegador,
+ *     así cada despliegue se ve fresco y sin mezclar páginas.
+ *   - Solo cachea medios estáticos (imágenes, audio, fuentes) con
+ *     "stale-while-revalidate" para que carguen rápido y offline.
+ *   - Al activarse borra TODAS las cachés anteriores.
+ *
+ * Al cambiar la app, sube el número de versión.
  */
-const CACHE = 'raices-v2';
-const CORE = ['/'];
+const CACHE = 'raices-v3';
+const MEDIA = /\.(?:png|jpg|jpeg|webp|gif|svg|ico|mp3|wav|ogg|m4a|woff2?|ttf)$/i;
 
-self.addEventListener('install', (event) => {
+self.addEventListener('install', () => {
   self.skipWaiting();
-  event.waitUntil(
-    caches.open(CACHE).then((c) => c.addAll(CORE)).catch(() => {})
-  );
 });
 
 self.addEventListener('activate', (event) => {
@@ -30,26 +34,30 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   const req = event.request;
-  // Solo peticiones GET del mismo origen.
   if (req.method !== 'GET') return;
-  if (new URL(req.url).origin !== self.location.origin) return;
 
-  event.respondWith(
-    (async () => {
-      try {
-        const fresh = await fetch(req);
+  const url = new URL(req.url);
+  if (url.origin !== self.location.origin) return;
+
+  // Navegaciones y datos de Next: NO tocar (siempre red). Evita servir una
+  // página por otra y los desajustes tras un despliegue.
+  if (req.mode === 'navigate') return;
+  if (url.pathname.startsWith('/_next/')) return;
+
+  // Solo medios estáticos: stale-while-revalidate.
+  if (MEDIA.test(url.pathname)) {
+    event.respondWith(
+      (async () => {
         const cache = await caches.open(CACHE);
-        cache.put(req, fresh.clone()).catch(() => {});
-        return fresh;
-      } catch {
-        const cached = await caches.match(req);
-        if (cached) return cached;
-        if (req.mode === 'navigate') {
-          const home = await caches.match('/');
-          if (home) return home;
-        }
-        throw new Error('sin conexión');
-      }
-    })()
-  );
+        const cached = await cache.match(req);
+        const red = fetch(req)
+          .then((res) => {
+            if (res && res.ok) cache.put(req, res.clone());
+            return res;
+          })
+          .catch(() => cached);
+        return cached || red;
+      })()
+    );
+  }
 });

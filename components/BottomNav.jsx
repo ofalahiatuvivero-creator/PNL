@@ -46,6 +46,7 @@ export default function BottomNav() {
       <div className="mb-2 flex justify-center">
         <span
           key={activo.href}
+          suppressHydrationWarning
           className="glass rounded-full px-4 py-1 font-display text-xs font-semibold text-ink animate-fade-up"
         >
           {activo.label}
