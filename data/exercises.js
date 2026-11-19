@@ -65,6 +65,7 @@ export const exercises = [
       { titulo: 'Prueba tu ancla', texto: 'Repite el gesto (pulgar con índice). Nota cómo regresa la emoción. Repite los pasos 2 a 4 varias veces para reforzarla.' },
     ],
     cierre: 'Ahora tienes un recurso portátil. Úsalo antes de un reto, una reunión o cuando necesites recordarte quién eres.',
+    audio: '/audios/ej-ancla-de-recursos.mp3',
   },
   {
     id: 'tecnica-del-swish',
@@ -85,6 +86,7 @@ export const exercises = [
       { titulo: 'Repite rápido', texto: 'Haz el Swish 5 o 6 veces, cada vez más rápido. Al final, intenta traer la imagen antigua: te costará, porque tu mente ya prefiere la nueva.' },
     ],
     cierre: 'La velocidad es la clave. Con la repetición, tu cerebro elige por defecto tu mejor camino.',
+    audio: '/audios/ej-tecnica-del-swish.mp3',
   },
   {
     id: 'respiracion-cuadrada',
@@ -105,6 +107,7 @@ export const exercises = [
       { titulo: 'Repite el ciclo', texto: 'Completa entre 5 y 8 ciclos. Puedes acompañarte con la "Respiración Guiada" de la Zona Zen.' },
     ],
     cierre: 'Tu respiración es el mando a distancia de tu calma. Siempre está contigo.',
+    audio: '/audios/ej-respiracion-cuadrada.mp3',
   },
   {
     id: 'espejo-amable',
@@ -125,6 +128,7 @@ export const exercises = [
       { titulo: 'Despídete con cariño', texto: 'Sonríe a tu reflejo. Regálate un gesto amable antes de irte.' },
     ],
     cierre: 'La forma en que te hablas construye la relación más importante de tu vida: la que tienes contigo.',
+    audio: '/audios/ej-espejo-amable.mp3',
   },
   {
     id: 'circulo-de-excelencia',
@@ -145,6 +149,7 @@ export const exercises = [
       { titulo: 'Vuelve a entrar', texto: 'Cuando necesites motivación, imagina el círculo y pisa dentro. Tu estado poderoso te estará esperando.' },
     ],
     cierre: 'Llevas tu círculo de excelencia siempre contigo. Es tuyo y nadie puede apagarlo.',
+    audio: '/audios/ej-circulo-de-excelencia.mp3',
   },
 ];
 
