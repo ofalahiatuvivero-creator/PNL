@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Sparkles, HeartHandshake, BookHeart, Leaf, Library, NotebookPen } from 'lucide-react';
+import { Sparkles, HeartHandshake, BookHeart, Leaf, Headphones, NotebookPen } from 'lucide-react';
 import Greeting from '@/components/Greeting';
 import AffirmationCard from '@/components/AffirmationCard';
 import DailyCheckIn from '@/components/DailyCheckIn';
@@ -42,10 +42,10 @@ const bento = [
     glow: 'rgba(157,197,176,0.6)',
   },
   {
-    href: '/biblioteca',
-    titulo: 'Biblioteca',
-    desc: 'Lecturas para tu camino.',
-    icon: Library,
+    href: '/audios',
+    titulo: 'Audioteca',
+    desc: 'PNL y bienestar en audio.',
+    icon: Headphones,
     glow: 'rgba(243,217,164,0.55)',
   },
   {

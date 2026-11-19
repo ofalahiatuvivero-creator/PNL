@@ -9,7 +9,7 @@ import {
   HeartHandshake,
   BookHeart,
   Leaf,
-  Library,
+  Headphones,
   NotebookPen,
 } from 'lucide-react';
 
@@ -32,7 +32,7 @@ const izquierda = [
 const derecha = [
   { href: '/diccionario', label: 'Diccionario Bio-Emocional', icon: BookHeart },
   { href: '/herbolaria', label: 'Herbolaria', icon: Leaf },
-  { href: '/biblioteca', label: 'Biblioteca', icon: Library },
+  { href: '/audios', label: 'Audioteca', icon: Headphones },
   { href: '/diario', label: 'Mi diario', icon: NotebookPen },
 ];
 const todos = [inicio, ...izquierda, ...derecha];
