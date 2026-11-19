@@ -5,6 +5,7 @@ import { Info, Leaf } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import SearchBar from '@/components/SearchBar';
 import HerbEntry from '@/components/HerbEntry';
+import HojasHerbolaria from '@/components/HojasHerbolaria';
 import { herbs, nota, categoriasHerbolaria } from '@/data/herbs';
 
 /**
@@ -48,7 +49,8 @@ export default function HerbolariaPage() {
   }, [query, cat]);
 
   return (
-    <main>
+    <main className="relative">
+      <HojasHerbolaria />
       <PageHeader
         title="Herbolaria"
         subtitle="Medicina botánica: la sabiduría de las plantas para acompañar tu bienestar."

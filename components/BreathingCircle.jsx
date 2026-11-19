@@ -101,11 +101,20 @@ export default function BreathingCircle() {
   const [activo, setActivo] = useState(false);
   const [inmersion, setInmersion] = useState(false);
   const [faseTxt, setFaseTxt] = useState(null);
+  const [duracionMin, setDuracionMin] = useState(0); // 0 = libre (sin cronómetro)
+  const [restante, setRestante] = useState(null); // segundos restantes
+  const [completo, setCompleto] = useState(false);
   const rootRef = useRef(null);
   const rafRef = useRef(0);
+  const duracionRef = useRef(0);
+  const segRef = useRef(-1);
 
   const tec = TECNICAS.find((t) => t.id === tecId) || TECNICAS[0];
   const esPatron = tec.tipo === 'patron';
+
+  useEffect(() => {
+    duracionRef.current = duracionMin;
+  }, [duracionMin]);
 
   const setEscalaVar = (s) => {
     if (rootRef.current) rootRef.current.style.setProperty('--resp-escala', String(s));
@@ -124,6 +133,7 @@ export default function BreathingCircle() {
       cancelAnimationFrame(rafRef.current);
       setEscalaVar(REPOSO);
       setFaseTxt(null);
+      setRestante(null);
       return;
     }
     const fases = tec.fases;
@@ -131,10 +141,30 @@ export default function BreathingCircle() {
     let from = REPOSO;
     let to = fases[0].escala;
     let inicio = performance.now();
+    const sesionInicio = inicio;
+    const durMs = duracionRef.current * 60000;
+    segRef.current = -1;
+    if (durMs > 0) setRestante(duracionRef.current * 60);
     setFaseTxt(fases[0].nombre);
     vibrar(16);
 
     const step = (now) => {
+      // Cronómetro de sesión (si hay duración elegida).
+      if (durMs > 0) {
+        const transcurrido = now - sesionInicio;
+        const rem = Math.max(0, Math.ceil((durMs - transcurrido) / 1000));
+        if (rem !== segRef.current) {
+          segRef.current = rem;
+          setRestante(rem);
+        }
+        if (transcurrido >= durMs) {
+          setEscalaVar(REPOSO);
+          setActivo(false);
+          setCompleto(true);
+          vibrar([30, 60, 30]);
+          return;
+        }
+      }
       const fase = fases[idx];
       const t = Math.min(1, (now - inicio) / fase.dur);
       const s = from + (to - from) * easeInOut(t);
@@ -156,7 +186,10 @@ export default function BreathingCircle() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activo, tecId, esPatron]);
 
-  const toggle = () => setActivo((a) => !a);
+  const toggle = () => {
+    setCompleto(false);
+    setActivo((a) => !a);
+  };
 
   const Selector = (
     <div className="grid w-full max-w-sm grid-cols-2 gap-2">
@@ -184,12 +217,41 @@ export default function BreathingCircle() {
 
       {esPatron ? (
         <>
+          {/* Duración de la sesión (cronómetro opcional) */}
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-1.5">
+            <span className="mr-1 text-xs font-medium text-ink-light">Duración</span>
+            {[0, 1, 3, 5].map((m) => (
+              <button
+                key={m}
+                onClick={() => setDuracionMin(m)}
+                aria-pressed={duracionMin === m}
+                className={`rounded-full px-3 py-1 text-xs font-display font-semibold transition ${
+                  duracionMin === m ? 'bg-sage-500 text-white shadow-glow' : 'glass text-ink-soft'
+                }`}
+              >
+                {m === 0 ? 'Libre' : `${m} min`}
+              </button>
+            ))}
+          </div>
+
           {/* Zona de la esfera */}
           <div className="relative mt-5 flex h-72 w-72 items-center justify-center">
             <span className="absolute h-full w-full rounded-full border border-sage-200/40" />
             <span className="absolute h-[72%] w-[72%] rounded-full border border-sage-200/30" />
             <EsferaRespira size={224} fase={faseTxt} />
           </div>
+
+          {/* Cronómetro restante / sesión completa */}
+          {activo && duracionMin > 0 && restante != null && (
+            <p className="mt-3 font-display text-base font-semibold text-sage-600">
+              {Math.floor(restante / 60)}:{String(restante % 60).padStart(2, '0')}
+            </p>
+          )}
+          {completo && !activo && (
+            <p className="mt-3 text-center font-serif text-base text-ink animate-fade-up">
+              Sesión completa. Bien hecho.
+            </p>
+          )}
 
           {/* Controles */}
           <div className="mt-8 flex items-center gap-3">
