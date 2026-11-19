@@ -34,9 +34,26 @@ export const audios = [
     src: '/audios/poder-creencias.mp3',
     categoria: 'pnl',
   },
+  {
+    id: 'anclaje',
+    titulo: 'Anclaje emocional: tu botón de calma',
+    descripcion: 'Crea un gesto que te devuelve la calma al instante.',
+    duracion: '1:01',
+    src: '/audios/anclaje.mp3',
+    categoria: 'pnl',
+  },
+  {
+    id: 'nino-interior',
+    titulo: 'Sanar a tu niño interior',
+    descripcion: 'Las bases para reconciliarte con quien fuiste.',
+    duracion: '0:59',
+    src: '/audios/nino-interior.mp3',
+    categoria: 'sanar',
+  },
 ];
 
 export const categoriasAudio = [
   { id: 'empezar', label: 'Para empezar' },
   { id: 'pnl', label: 'PNL en audio' },
+  { id: 'sanar', label: 'Sanar y reconectar' },
 ];
