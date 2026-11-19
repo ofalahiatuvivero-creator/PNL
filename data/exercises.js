@@ -44,6 +44,7 @@ export const exercises = [
       { titulo: 'Regresa y comprueba', texto: 'Abre los ojos. Vuelve a pensar en la situación. Nota cómo la sensación ahora es más manejable. Repite cuando lo necesites.' },
     ],
     cierre: 'Recuerda: tú diriges tu cine interior. Cuantas más veces lo practiques, más fácil será.',
+    audio: '/audios/ej-cambio-submodalidades.mp3',
   },
   {
     id: 'ancla-de-recursos',
